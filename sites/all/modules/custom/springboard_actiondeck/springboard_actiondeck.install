@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function springboard_actiondeck_schema() {
+  $schema['actiondeck'] = array(
+    'description' => 'The main store for actiondeck entity',
+    'fields' => array(
+      'pid' => array(
+        'description' => 'Primary key for the table of user-defined action decks',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'name' => array(
+        'description' => 'The name of the actiondeck - a human-readable identifier.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+      ),
+    ),
+    'primary key' => array('pid'),
+  );
+
+  return $schema;
+}

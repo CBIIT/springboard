@@ -1,0 +1,13 @@
+name = Menus and Links
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = menu-springboard
+features[menu_links][] = menu-springboard_get-support:springboard/get-support
+features[menu_links][] = menu-springboard_home:springboard
+features[menu_links][] = menu-springboard_stress--mood:springboard/stress-mood
+features[menu_links][] = menu-springboard_symptoms:springboard/symptoms
+features[menu_links][] = menu-springboard_wellness:springboard/wellness
+project path = sites/all/modules/custom/features

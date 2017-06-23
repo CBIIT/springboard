@@ -1,0 +1,126 @@
+.box {
+	border-radius:3px;
+	border-bottom:2px solid @mediumgray;
+	background-color:@lightgray;
+	padding:25px;	
+}
+a.subpage-link {
+	display: inline-block;
+	vertical-align: middle;
+  	-webkit-transform: translateZ(0);
+  	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;	
+}
+a.subpage-link:hover,
+a.subpage-link:focus {
+	-webkit-transform: translateY(-8px);
+  	transform: translateY(-8px);
+	text-decoration:none;
+}
+a.subpage-link .subpage-link-box {
+	display:block;
+	background-color:@lightgray;
+	border-radius:3px;
+	min-height:240px;
+	width:100%;
+	padding:25px;
+	margin-bottom:30px;
+	text-decoration:none;
+}
+.symptoms a.subpage-link .subpage-link-box {
+	border-top:6px solid @symptoms;
+	border-bottom:2px solid @mediumgray;
+}
+.stressmood a.subpage-link .subpage-link-box {
+	border-top:6px solid @stressmood;
+	border-bottom:2px solid @mediumgray;
+}
+.wellness a.subpage-link .subpage-link-box {
+	border-top:6px solid @wellness;
+	border-bottom:2px solid @mediumgray;
+}
+.getsupport a.subpage-link .subpage-link-box {
+	border-top:6px solid @getsupport;
+	border-bottom:2px solid @mediumgray;
+}
+a.subpage-link:hover .subpage-link-box,
+a.subpage-link:focus .subpage-link-box {
+	background-color:@darkblue;
+	box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.1);
+}
+a.subpage-link .subpage-link-box .subpage-link-title {
+	padding:0px;
+	margin: 0px 0px 8px 0px;
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 20px;
+  	line-height: 24px;
+  	font-weight:700;
+	color: @darkblue;
+	text-decoration:none;
+}
+a.subpage-link:hover .subpage-link-box .subpage-link-title,
+a.subpage-link:focus .subpage-link-box .subpage-link-title {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+a.subpage-link .subpage-link-box p {
+	padding:0px;
+	margin: 0px;
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 16px;
+  	font-weight:300;
+	color: @darkblue;
+	text-decoration:none;
+}
+a.subpage-link:hover .subpage-link-box p,
+a.subpage-link:focus .subpage-link-box p {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.fact-box {
+	border-radius:3px;
+	color:#FFFFFF;
+	background-color:@strongblue;
+	margin:30px 0px;
+	padding:25px;	
+}
+.fact-box p {
+	font-family: "Cormorant Garamond", "Times New Roman", Times, Georgia, serif;
+  	font-size: 26px;
+  	line-height: 1.333;
+  	font-weight:300;
+	margin:0px;
+}
+@media (max-width: 1200px) {
+	a.subpage-link .subpage-link-box {
+		min-height:230px;
+	}
+}
+@media (max-width: 992px) {
+	a.subpage-link .subpage-link-box {
+		min-height:190px;
+	}
+	.fact-box p {
+		font-size: 24px;	
+	}
+}
+@media (max-width: 767px) {
+	a.subpage-link {
+		width:100%;
+	}
+	a.subpage-link .subpage-link-box {
+		min-height:100px;
+		height:auto;
+	}
+	.fact-box p {
+		font-size: 22px;	
+	}
+}

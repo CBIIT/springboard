@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Content Types and Fields feature.
+ */
+
+include_once 'content_types_and_fields.features.inc';

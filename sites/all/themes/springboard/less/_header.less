@@ -1,0 +1,43 @@
+/* ------------------------------ Header ------------------------------ */
+header {
+	height: 100px;
+	width:100%;
+	position: fixed;
+	top: 0;
+	z-index:900;
+	background-color:#FFFFFF;
+	border-bottom:6px solid @mediumgray;
+	-webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.3);
+}
+#logo {
+	width:180px;
+	height:94px;	
+}
+@media (max-width: 992px) {
+	header {
+		height: 172px;	
+	}
+	#logo {
+		margin-bottom:10px;
+	}
+}
+@media (max-width: 768px) {
+  header {
+		height: 176px;	
+	}
+}
+@media (max-width: 550px) {
+	header {
+		height: 192px;	
+	}
+}
+@media (max-width: 380px) {
+	header {
+		height: 170px;	
+	}
+	#logo {
+		width:140px;
+		height:73px;	
+	}
+}

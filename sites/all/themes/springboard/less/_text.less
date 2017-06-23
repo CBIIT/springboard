@@ -1,0 +1,142 @@
+body {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 18px;
+  	line-height: 1.42857143;
+  	font-weight:300;
+	color: @darkblue;	
+}
+h1 {
+	font-family: "Cormorant Garamond", "Times New Roman", Times, Georgia, serif;
+  	font-size: 58px;
+  	line-height: 1.333;
+  	font-weight:300;
+	color: @darkblue;	
+	margin-top: 50px;	
+}
+h2 {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 24px;
+  	font-weight:700;
+	color: @darkblue;	
+	margin-top: 30px;
+	margin-bottom: 3px;	
+}
+h2.first {
+	margin-top:0px;	
+}
+h2.quiz-results {
+	font-size: 48px;
+  	font-weight:300;
+	color: @strongblue;
+	margin:0px;	
+}
+h3 {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 20px;
+  	font-weight:700;
+	color: @mediumblue;
+	margin-bottom:0px;
+}
+h4 {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: @lightblue;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom:0px;	
+}
+p a,
+li a {
+	color:@mediumblue;
+	text-decoration:underline;	
+}
+p a:focus,
+p a:hover,
+li a:focus,
+li a:hover {
+	color:@lightblue;
+	text-decoration:underline;	
+}
+p.intro,
+.intro,
+p.intro:last-child {
+	font-size: 24px;
+  	line-height: 1.42857143;
+  	font-weight:300;
+	margin: 0px 0px 30px 0px;
+}
+p:only-child { 
+	margin: 0px 0px 10px 0px;
+}
+h4.helpful {
+  margin-top: 30px;
+  margin-bottom:10px;
+  font-size:14px;
+  font-weight:400;
+  color:@mediumblue;
+  text-transform: none;
+  text-align:right;
+}
+.regular {
+	font-weight:400;	
+}
+.bold {
+	font-weight:700;		
+}
+@media (max-width: 991px) {
+	h1 {
+		font-size: 58px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+	body {
+		font-size: 17px;
+	}
+}
+@media (max-width: 767px) {
+	h1 {
+		font-size: 58px;
+	}
+	h2 {
+		font-size: 22px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+	body {
+		font-size: 16px;
+	}
+	p.intro,
+	.intro,
+	p.intro:last-child {
+		font-size: 20px;
+	}
+}
+@media (max-width: 413px) {
+	h1 {
+		font-size: 48px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 14px;
+	}
+	body {
+		font-size: 15px;
+	}
+}

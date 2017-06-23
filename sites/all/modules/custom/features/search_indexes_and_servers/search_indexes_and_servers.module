@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Search indexes and servers feature.
+ */
+
+include_once 'search_indexes_and_servers.features.inc';

@@ -1,0 +1,61 @@
+/* ------------------------------ Sidebar ------------------------------ */
+.sidebar h2 {
+	margin-top:0px;
+}
+.sidebar h3 {
+	margin-bottom:10px;
+}
+.sidebar .box {
+	margin-bottom:25px;
+	border-top:6px solid transparent;
+}
+.sidebar .box.symptoms {
+	border-top-color:@symptoms;	
+}
+.sidebar .box.stressmood {
+	border-top-color:@stressmood;	
+}
+.sidebar .box.wellness {
+	border-top-color:@wellness;	
+}
+.sidebar .box.getsupport {
+	border-top-color:@getsupport;	
+}
+.sidebar .box h2 {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 24px;
+  	font-weight:700;
+	color: @darkblue;
+	margin:0px 0px 10px 0px;
+}
+.sidebar h2 {
+	line-height: 1.42857143;
+}
+.sidebar .box h3 {
+	margin-top:0px;
+}
+.sidebar .card-lists {
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.sidebar .card-lists > li {
+	margin-bottom:4px;	
+}
+@media (max-width: 991px) {
+	.sidebar h2 {
+		margin-top:25px;
+	}
+	.sidebar .box h2 {
+		font-size: 22px;
+	}
+}
+@media (max-width: 767px) {
+	.sidebar .box h2 {
+		font-size: 22px;
+	}
+}
+@media (max-width: 413px) {
+	.sidebar .box h2 {
+		font-size: 20px;
+	}
+}

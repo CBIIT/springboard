@@ -1,0 +1,44 @@
+name = Springboard
+description = Used for Springboard related pages. A subtheme of Bootstrap.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]             		= 'Navigation'
+regions[help]                   		= 'Help'
+regions[content]                		= 'Content'
+regions[Springboard_SkipNav]    		= 'SkipNav'
+regions[Springboard_Logo]    			= 'Springboard Logo'
+regions[Springboard_Search_Link]    	= 'Springboard Search Drop Down'
+regions[Springboard_ActionDeck_Link]	= 'Springboard Action Deck Link'
+regions[Common_Symptoms]    			= 'Search Common Symptoms List'
+regions[Helpful_Tips]    				= 'Search Helpful Tips'
+regions[Springboard_Quiz_Banner]		= 'Springboard Quiz Banner'
+regions[Footer_Joint_Venture]    		= 'Footer Joint Venture'
+regions[Footer_Springboard_Links]    	= 'Footer Springboard Links'
+regions[Footer_NCI_Links]    			= 'Footer NCI Links'
+regions[Footer_HHS_Links]    			= 'Footer HHS Links'
+regions[Footer_ACS_Links]    			= 'Footer ACS Links'
+regions[Footer_Copyright]    			= 'Footer Copyright'
+regions[Springboard_BTT]    			= 'Back To Top'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Panels Layouts
+;;;;;;;;;;;;;;;;;;;;;
+
+plugins[panels][layouts] = layouts
+
+; For information on choosing the desired method, please read the Drupal
+; Bootstrap sub-theme "how-to" documentation:
+; https://drupal.org/node/1978010

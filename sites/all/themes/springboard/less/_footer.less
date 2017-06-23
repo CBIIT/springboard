@@ -1,0 +1,213 @@
+/* ------------------------------ Footer ------------------------------ */
+footer {
+	width: 100%;
+	background-color:#f2f6f7;
+	margin-top:0px;
+	padding-top:30px;
+}
+footer#homepage-footer {
+	margin-top:50px;
+}
+footer .sbc-logo-tagline {
+	padding-bottom: 46px;	
+}
+footer #sbc-footer-logo {
+	width:177px;
+	height:68px;	
+	display:inline;
+	padding-right:33px;
+	margin-right:33px;
+}
+footer .copyright-banner {
+	margin-top:40px;
+	background:@mediumblue;	
+}
+footer .copyright {
+	text-align:center;
+	margin-top:25px;
+	margin-bottom:25px;	
+	color:#FFFFFF;
+}
+
+footer p.tagline {
+	font-size:18px;
+	font-weight:400;	
+	display: inline;
+}
+
+footer .joint-venture {
+	width: 450px;
+	margin-top:15px;	
+}
+footer .joint-venture a {
+	font-weight:400;	
+	color:@darkblue;
+	text-decoration:none;	
+}
+footer .joint-venture a:focus,
+footer .joint-venture a:hover {
+	color:#005e8c;
+	text-decoration:underline;	
+}
+footer ul.list-unstyled {
+	font-size:16px;	
+}
+footer ul.list-unstyled > li {
+	margin-bottom:8px;
+}
+footer ul.list-unstyled > li > a {
+	color:@darkblue;
+	text-decoration: none;	
+}
+footer ul.list-unstyled > li > a:hover, 
+footer ul.list-unstyled > li > a:focus {
+	color:@mediumblue;
+	text-decoration: underline;	
+}
+footer a img.pinterest {
+	width:142px;
+	height:auto;
+	margin-top:12px;
+}
+footer a:hover img.pinterest,
+footer a:focus img.pinterest {
+	-webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.2);
+}
+footer .hhs-nih-nci-logos {
+	float:left;	
+}
+#HHS-logo {
+	width:49px;
+	height:45px;	
+}
+#NIH-logo {
+	width:59px;
+	height:45px;	
+}
+#NCI-logo {
+	width:54px;
+	height:45px;	
+}
+#ACS-logo {
+	width:75px;
+	height:45px;		
+}
+footer .border-right {
+	border-right:1px solid #c8cbcc;	
+}
+footer .divider-line {
+	width:1px;
+	height:310px;	
+	background:#c8cbcc;
+	margin:0 auto;
+}
+footer hr {
+	border-top: 1px solid #c8cbcc;
+}
+.springboard-links,
+.hhs-links,
+.acs-links {
+	width:200px;
+	margin:0 auto;
+	padding-top:10px;
+	margin-left: 0px;	
+}
+.hhs-links,
+.acs-links {
+	padding-top:25px;	
+}
+.hhs-links li:nth-of-type(2),
+.acs-links li:nth-of-type(2) {
+	padding-top:10px;	
+}
+@media (max-width: 1200px) {
+	footer #sbc-footer-logo {
+		width:162px;
+		height:68px;	
+		display:inline;
+		padding-right:15px;
+		margin-right:15px;
+	}
+	footer p.tagline {
+		font-size:16px;
+	}
+}
+@media (max-width: 992px) {
+	footer .sbc-logo-tagline {
+		padding-bottom: 20px;	
+	}
+	footer .joint-venture,
+	footer .copyright {
+		text-align:left;
+	}
+	.springboard-links,
+	.hhs-links,
+	.acs-links {
+		width:auto;
+		margin:0;	
+	}
+	ul.springboard-links > li {
+		display:inline-block;
+		border-right:1px solid #61cbf0;
+		padding-right:8px;
+		margin-right:8px;	
+	}
+	ul.springboard-links > li:last-of-type {
+		border-right:0px;
+		padding-right:0px;
+		margin-right:0px;	
+	}
+	footer .joint-venture {
+		width: auto;
+	}
+	footer a img.pinterest {
+		margin-top:0px;
+	}
+}
+@media (max-width: 500px) {
+	footer .border-right {
+		border-right:none;	
+		height:auto;
+	}
+	footer p.tagline {
+		display:none;
+	}
+}
+/* ------------------------------ Back to Top Button ------------------------------ */
+.backtotop {
+	position: fixed;
+	z-index:999;
+	bottom: 20px;
+	right: 20px;
+}
+a .btt-box {
+	width: 40px;
+	height: 40px;
+	border-radius:50%;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: @mediumblue;
+	cursor: pointer;
+	display: table;
+}
+div.up-arrow {
+	display:table-cell;
+	vertical-align:middle;
+	text-align: center;
+	margin: auto;
+	width:40px;
+	height:40px;
+	background: url(../images/up-arrow.svg) no-repeat center;
+	background-size:36px 36px;
+	cursor:pointer;	
+}
+a:hover .btt-box {
+	background-color: @darkblue;
+	cursor: pointer;
+}
+@media (max-width: 768px) {
+	.backtotop {
+		display: none !important;	
+	}
+}

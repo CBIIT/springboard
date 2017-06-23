@@ -1,0 +1,579 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function springboard_actiondeck_init() {
+  //ensure basic card functions will be available to all pages.
+    drupal_add_js(drupal_get_path('module', 'springboard_actiondeck') . '/js/springboard_actiondeck_cookies.js', array('scope' => 'header', 'every_page' => TRUE));
+}
+
+/**
+ * Implements hook_entity_info().
+ */
+function springboard_actiondeck_entity_info() {
+  return array(
+    'actiondeck' => array(
+      'label' => t('Action Deck'),
+      'plural label' => t('Action Decks'),
+      'entity class' => 'ActiondeckEntity',
+      'controller class' => 'EntityAPIController',
+      'base table' => 'actiondeck',
+      'entity keys' => array(
+        'id' => 'pid',
+      ),
+      'fieldable' => TRUE,
+      'bundles' => array(
+        'actiondeck' => array(
+          'label' => t('Action Deck'),
+          'uri callback' => 'entity_class_uri',
+          'admin' => array(
+            'path' => 'admin/structure/actiondeck/manage',
+          ),
+        ),
+      ),
+      // Use the default label() and uri() functions
+      'label callback' => 'entity_class_label',
+      'uri callback' => 'entity_class_uri',
+    ),
+  );
+}
+
+/**
+ * Helper function to return Taxonomy ID By term name.
+ *
+ * @param string $term_name
+ *    Name of the vocabulary term.
+ * @param string $vocabulary
+ *    Optional name of vocabulary to limit search to.
+ *
+ * @return string
+ *    Taxonomy ID as a string; Blank string if not found.
+ */
+function springboard_actiondeck_get_taxonomy_id_by_name($term_name, $vocabulary = NULL) {
+  $term_array = taxonomy_get_term_by_name($term_name, $vocabulary);
+  if (empty($term_array)) {
+    return '';
+  }
+  else {
+    return array_pop($term_array)->tid;
+  }
+}
+
+/**
+ * Load an actiondeck entity.
+ *
+ * @param int $pid.
+ *    ID of the entity to load.
+ * @param bool $reset.
+ *    Whether to reset entity.
+ *
+ * @return bool|mixed.
+ *    Returns entity or otherwise false.
+ */
+function actiondeck_load($pid = NULL, $reset = FALSE) {
+  $pids = (isset($pid) ? array($pid) : array());
+  $actiondeck = actiondeck_load_multiple($pids, $reset);
+  return $actiondeck ? reset($actiondeck) : FALSE;
+}
+
+/**
+ * Loads multiple actiondeck entities.
+ *
+ * @param array $pids.
+ *    Array of actiondeck ids.
+ * @param array $conditions.
+ *    Conditions.
+ * @param bool $reset.
+ *    Whether to reset entity.
+ *
+ * @return mixed.
+ *    Returns entities or otherwise false.
+ */
+function actiondeck_load_multiple($pids = array(), $conditions = array(), $reset = FALSE) {
+  return entity_load('actiondeck', $pids, $conditions, $reset);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function springboard_actiondeck_menu() {
+  $items['admin/structure/actiondeck/manage'] = array(
+    'title' => 'Actiondeck Admin',
+    'description' => 'Manage Actiondeck structure',
+    'page callback' => 'actiondeck_info',
+    'access arguments' => array('administer actiondecks'),
+  );
+  $items['springboard/actiondeck/%actiondeck'] = array(
+    'page callback' => 'actiondeck_page_view',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['springboard/create-action-deck'] = array(
+    'title' => 'Create Action Deck',
+    'description' => 'Create Action Deck',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('form_create_actiondeck'),
+    'access callback' => TRUE,
+  );
+  $items['springboard/print-action-deck-pdf/%actiondeck'] = array(
+    'title' => 'Print Action Deck PDF',
+    'description' => 'Print Action Deck PDF',
+    'page callback' => 'print_action_deck_pdf',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['springboard/print-action-deck-jpg/%actiondeck'] = array(
+    'title' => 'Print Action Deck JPG',
+    'description' => 'Print Action Deck JPG',
+    'page callback' => 'print_action_deck_jpg',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ *
+ */
+function springboard_actiondeck_theme($existing, $type, $theme, $path) {
+  $custom_theme = array();
+  $custom_theme['form_create_actiondeck'] = array(
+    'render element' => 'form',
+    'template' => 'createactiondeck',
+    'path' => drupal_get_path('module', 'springboard_actiondeck'),
+  );
+  $custom_theme['actiondeck'] = array(
+    'variables' => array('element' => null),
+    'template' => 'actiondeck',
+    'path' => drupal_get_path('module', 'springboard_actiondeck'),
+  );
+  $custom_theme['deck_nav_theme'] = array(
+    'render element' => 'form',
+    'template' => 'decknav',
+    'path' => drupal_get_path('module', 'springboard_actiondeck'),
+  );
+  return $custom_theme;
+}
+
+/**
+ * Passes all of the actiondeck cards to the actiondeck create template.
+ *
+ * @param array $variables.
+ *    Preprocessing variables.
+ */
+function template_preprocess_form_create_actiondeck(&$variables) {
+  $query = db_select('node', 'n');
+  $query->join('field_data_field_action_category', 'cat', 'n.nid = cat.entity_id');
+  $results = $query
+    ->fields('n', array('nid', 'title'))
+    ->fields('cat', array('field_action_category_target_id'))
+    ->orderBy('title', 'ASC')
+    ->condition('n.type', 'springboard_action_card', '=')
+    ->execute();
+  $wellness_cards = array();
+  $symptom_cards = array();
+  $get_support_cards = array();
+  $stress_mood_cards = array();
+  foreach ($results as $result) {
+    switch($result->field_action_category_target_id) {
+      case springboard_actiondeck_get_taxonomy_id_by_name('Wellness', 'action_categories'):
+        $wellness_cards[$result->nid] = $result->title;
+        break;
+
+      case springboard_actiondeck_get_taxonomy_id_by_name('Symptoms', 'action_categories'):
+        $symptom_cards[$result->nid] = $result->title;
+        break;
+
+      case springboard_actiondeck_get_taxonomy_id_by_name('Get Support', 'action_categories'):
+        $get_support_cards[$result->nid] = $result->title;
+        break;
+
+      case springboard_actiondeck_get_taxonomy_id_by_name('Stress & Mood', 'action_categories'):
+        $stress_mood_cards[$result->nid] = $result->title;
+        break;
+    }
+  }
+  $variables['wellness_cards'] = $wellness_cards;
+  $variables['symptom_cards'] = $symptom_cards;
+  $variables['get_support_cards'] = $get_support_cards;
+  $variables['stress_mood_cards'] = $stress_mood_cards;
+}
+
+/**
+ * Passes the chosen actiondeck cards to the actiondeck view template.
+ *
+ * @param array $variables.
+ *    Preprocessing variables.
+ */
+function template_preprocess_actiondeck(&$variables) {
+  $cards = array();
+  $wrapper = entity_metadata_wrapper('actiondeck', $variables['element']);
+  $variables['title'] = 'Action Deck: ' . $wrapper->getIdentifier();
+  $variables['eid'] = $wrapper->getIdentifier();
+  $entity_references = $wrapper->field_springboard_action_cards->value();
+  foreach ($entity_references as $entity_reference) {
+    $this_card = array();
+    $this_card['nid'] = $entity_reference->nid;
+    $this_card['title'] = $entity_reference->title;
+    $this_card['action_category'] = $entity_reference->field_action_category['und'][0]['target_id'];
+    $cards[] = $this_card;
+  }
+  $variables['wellness_cards'] = array_values(array_filter($cards, function($v){
+    return (isset($v['action_category']) && $v['action_category'] == springboard_get_taxonomy_id_by_name('Wellness', 'action_categories'));
+  }));
+  $variables['symptom_cards'] = array_values(array_filter($cards, function($v){
+    return (isset($v['action_category']) && $v['action_category'] == springboard_get_taxonomy_id_by_name('Symptoms', 'action_categories'));
+  }));
+  $variables['get_support_cards'] = array_values(array_filter($cards, function($v){
+    return (isset($v['action_category']) && $v['action_category'] == springboard_get_taxonomy_id_by_name('Get Support', 'action_categories'));
+  }));
+  $variables['stress_mood_cards'] = array_values(array_filter($cards, function($v){
+    return (isset($v['action_category']) && $v['action_category'] == springboard_get_taxonomy_id_by_name('Stress & Mood', 'action_categories'));
+  }));
+  drupal_add_js(drupal_get_path('module', 'springboard_actiondeck') . '/js/springboard_user_defined_deck.js');
+  drupal_add_js(array('springboard_user_defined_deck' => array('deck' => array_map(function($value){
+    return $value['nid'];
+  }, $cards))), array('type' => 'setting'));
+
+
+}
+
+/**
+ * Implements hook_permission().
+ */
+function springboard_actiondeck_permission(){
+  return array(
+    'administer actiondecks' => array(
+      'title' => t('Administer actiondecks'),
+      'restrict access' => TRUE,
+    ),
+    'view actiondecks' => array(
+      'title' => t('View actiondecks'),
+    ),
+  );
+}
+
+/**
+ * Callback for actiondeck admin page.
+ *
+ * @return string.
+ *    Page markup.
+ */
+function actiondeck_info() {
+  return ('Welcome to the administration page for actiondecks!');
+}
+
+
+function actiondeck_page_view($entity, $view_mode='full'){
+  $entity_id = entity_id('actiondeck', $entity);
+
+  $entity->content = array();
+  $entity->title = filter_xss($entity->title);
+  field_attach_prepare_view('actiondeck', array($entity_id => $entity), $view_mode);
+  entity_prepare_view('actiondeck', array($entity_id => $entity));
+
+  $entity->content += field_attach_view('actiondeck', $entity, $view_mode);
+  $entity->content += array(
+    '#theme'     => 'actiondeck',
+    '#element'   => $entity,
+    '#view_mode' => $view_mode,
+    '#language'  => LANGUAGE_NONE,
+  );
+
+  return $entity->content;
+
+}
+
+/**
+ * Compiles the individual card PDF files into a zip file and streams it.
+ * @param $entity
+ */
+function print_action_deck_pdf($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+  $file = tempnam("tmp", "zip");
+  $zip = new ZipArchive();
+  $zip->open($file, ZipArchive::OVERWRITE);
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_pdf)) {
+      $file_array = $action_card->field_card_image_pdf->value();
+      if (!empty($file_array['uri'])) {
+        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if(file_exists($pdf)) {
+          $zip->addFile($pdf, $file_array['filename']);
+        }
+      }
+    }
+  }
+  $zip->close();
+  header('Content-Type: application/zip');
+  header('Content-Length: ' . filesize($file));
+  header('Content-Disposition: attachment; filename="deckpdf.zip"');
+  readfile($file);
+  unlink($file);
+}
+
+/**
+ * Compiles jpg files from cards into a single ZIP archive and streams it.
+ * @param $entity
+ */
+function print_action_deck_jpg($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+  $file = tempnam("tmp", "zip");
+  $zip = new ZipArchive();
+  $zip->open($file, ZipArchive::OVERWRITE);
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_jpg)) {
+      $file_array = $action_card->field_card_image_jpg->value();
+      if (!empty($file_array['uri'])) {
+        $jpg = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if(file_exists($jpg)) {
+          $zip->addFile($jpg, $file_array['filename']);
+        }
+      }
+    }
+  }
+  $zip->close();
+  header('Content-Type: application/zip');
+  header('Content-Length: ' . filesize($file));
+  header('Content-Disposition: attachment; filename="deck.zip"');
+  readfile($file);
+  unlink($file);
+}
+
+/**
+ * Callback for Create Actiondeck form- just need one field to hold cards.
+ *
+ * @param array $form.
+ *    Original form.
+ * @param array $form_state.
+ *    Includes user responses.
+ *
+ * @return mixed.
+ *    The form.
+ */
+function form_create_actiondeck($form, &$form_state) {
+  $query = db_select('node', 'n');
+  $results = $query
+    ->fields('n', array('nid', 'title'))
+    ->orderBy('title', 'ASC')
+    ->condition('n.type', 'springboard_action_card', '=')
+    ->execute();
+  $options = $results->fetchAllKeyed();
+
+  $form['cards'] = array(
+    '#type' => 'select',
+    '#multiple' => TRUE,
+    '#title' => t('Select Cards'),
+    '#options' => $options,
+    '#attributes' => array('class' => array('hidden')),
+  );
+
+  $form['submit_button'] = array(
+    '#type' => 'submit',
+    '#value' => t('Create/View Your Action Deck'),
+    '#attributes' => array('class' => array('btn', 'btn-create')),
+  );
+  $form['#attached']['js'][] = drupal_get_path('module', 'springboard_actiondeck') . '/js/springboard_actiondeck.js';
+
+  return $form;
+}
+
+/**
+ * Submit handler for Create Actiondeck form.
+ *
+ * An actiondeck entity is manually created, populated with the chosen cards and
+ * saved. The extra data "name" was added because the entity would not save
+ * without at least one database field that wasn't the auto-generated pid.
+ *
+ * @param array $form.
+ *    Original form.
+ * @param array $form_state.
+ *    Includes user responses.
+ */
+function form_create_actiondeck_submit($form, &$form_state) {
+
+  $new_actiondeck = entity_create('actiondeck', array());
+  $new_actiondeck->name = 'name';
+
+  $wrapper = entity_metadata_wrapper('actiondeck', $new_actiondeck);
+  $wrapper->field_springboard_action_cards->set($form_state['values']['cards']);
+  $wrapper->save();
+
+  $entity_id = $wrapper->getIdentifier();
+  if (!empty($entity_id)) {
+    $form_state['redirect'] = 'springboard/actiondeck/' . $entity_id;
+  }
+}
+
+/**
+ * Validation handler for Create Actiondeck form.
+ *
+ * Users may not save an empty deck.
+ *
+ * @param array $form.
+ *    Original form.
+ * @param array $form_state.
+ *    Includes user responses.
+ */
+function form_create_actiondeck_validate($form, &$form_state) {
+  if (empty($form_state['values']['cards'])) {
+    form_set_error('Please select at least one card to save a deck');
+  }
+}
+
+
+/**
+ * Implements hook_node_view().
+ */
+function springboard_actiondeck_node_view($node, $view_mode, $langcode)
+{
+  if($node->type == 'springboard_pages' || $node->type == 'springboard_action_card')
+  {
+    $node->content['#attached']['js'][] = array
+    (
+      'type' => 'file',
+      'data' => drupal_get_path('module', 'springboard_actiondeck') . '/js/springboard_sidebar_card_links.js',
+    );
+  }
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function springboard_actiondeck_block_info()
+{
+    $blocks = array();
+
+    $blocks['deck_nav'] = array(
+        'info' => t('Navigate Action Decks'),
+        'title' => t('Deck Navigation'),
+    );
+
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ **/
+function springboard_actiondeck_block_view($delta = '') {
+$block = array();
+
+switch($delta) {
+  case 'deck_nav' :
+    // Commenting out because the client no longer wants load deck function. If
+    // they change their mind, uncomment to render form instead of raw html.
+
+    /* $block['content'] = drupal_get_form('deck_nav_form'); */
+    $block['content'] = get_html_version_of_deck_nav();
+    break;
+}
+
+return $block;
+}
+
+/**
+ * Produces raw html for the deck navigation block. Originally the client wanted
+ * this to load user-defined decks. If they decide they want that functionality,
+ * use the deck_nav_form instead (see hook_view_block above).
+ */
+function get_html_version_of_deck_nav() {
+  return <<< END
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="decks-nav-box">
+            <div class="row">
+              <div class="col-lg-12"><p><b>Explore Additional Pre-Made Action Decks or Create Your Own</b></p></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/create-action-deck" class="btn">Create an Action Deck</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/new-diagnosis" class="btn">New Diagnosis</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/surgery" class="btn">Surgery</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/chemotherapy" class="btn">Chemotherapy</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/radiation" class="btn">Radiation</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/coping-cancer" class="btn">Coping with Cancer</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/social-support" class="btn">Social Support</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/living-well" class="btn">Living Well</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+END;
+
+}
+
+/**
+ * Callback function for deck navigation form rendered in deck_nav block.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return array
+ *    The prepared form.
+ */
+function deck_nav_form($form, &$form_state)
+{
+  $form = array();
+
+  $form['node_id'] = array(
+    '#type' => 'textfield',
+    '#title' => 'ID',
+    '#title_display' => 'invisible',
+    '#maxlength' => 15,
+    //'#autocomplete_path' => 'actiondecks/autocomplete',
+    '#attributes' => array(
+      'class' => array('form-control'),
+      'placeholder' => t('Enter deck ID'),
+    ),
+  );
+  $form['submit_button'] = array(
+    '#type' => 'submit',
+    '#value' => t('Go!'),
+    '#attributes' => array(
+      'class' => array('btn'),
+    ),
+  );
+  $form['#theme'] = 'deck_nav_theme';
+
+  return $form;
+}
+
+/**
+ * Submit handler for Create deck_nav_form form.
+ *
+ * Redirects user to the selected actiondeck entity.
+ *
+ * @param array $form.
+ *    Original form.
+ * @param array $form_state.
+ *    Includes user responses.
+ */
+function deck_nav_form_submit($form, &$form_state) {
+  if (!empty($form_state['values']['node_id']) && drupal_valid_path('springboard/actiondeck/' . $form_state['values']['node_id'])) {
+    $form_state['redirect'] = '/springboard/actiondeck/' . $form_state['values']['node_id'];
+  }
+}
+
+/**
+ * Validation handler for Create deck_nav_form form.
+ *
+ * Throws an error if the chosen actiondeck does not exist.
+ *
+ * @param array $form.
+ *    Original form.
+ * @param array $form_state.
+ *    Includes user responses.
+ */
+function deck_nav_form_validate($form, &$form_state) {
+  if (empty($form_state['values']['node_id']) || !drupal_valid_path('springboard/actiondeck/' . $form_state['values']['node_id'])) {
+    form_set_error('node_id', 'Please choose a valid ID');
+  }
+}
+
+

@@ -1,0 +1,79 @@
+#homepage-poll {
+	span.submitted {
+		display:none;
+	}
+	h2.pane-title {
+		font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  		font-size: 20px;
+  		font-weight:700;
+		color: @mediumblue;
+		margin-top:0px;
+		margin-bottom:20px;	
+	}
+	.pane-content header {
+		position:relative;
+		height: auto;
+		width: auto;
+		top: auto;
+		z-index: 1;
+		background-color: transparent;
+		border-bottom: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		h2 {
+			font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			line-height: 1.42857143;
+			font-weight: 500;
+			color: @strongblue;
+			margin-top:0px;
+			margin-bottom:5px;
+		}
+		h2 a,
+		h2 a:hover,
+		h2 a:focus {
+			color: @strongblue;
+			text-decoration:none;	
+		}
+	}
+	.pane-content form {
+		.radio label, 
+		.checkbox label {
+			font-weight:300;	
+		}
+		.form-radios {
+			padding-bottom:0px;
+			width:100%;	
+		}
+		.checkbox {
+			text-align:left;	
+		}
+	}
+	.poll-message {
+		text-align:center;
+		margin:10px 0px;	
+	}
+	.poll .bar {
+		background-color: #ffffff;	
+	}
+	.poll .bar,
+	.poll .voted .bar {
+		border: 1px solid @mediumgray;	
+	}
+	.poll .bar .foreground {
+		background-color: @lightblue;	
+	}
+	.poll .poll-bar {
+		background-color: transparent;
+	}
+	.poll .poll-bar .text {
+		font-size:16px; 
+		font-weight:700;	
+	}
+	.poll .poll-bar .percent {
+		font-size:15px;	
+	}
+	.field-type-text-with-summary .field-items .field-item p {
+		margin:10px 0px;	
+	}
+}

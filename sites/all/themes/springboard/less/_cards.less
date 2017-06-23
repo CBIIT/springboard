@@ -1,0 +1,77 @@
+/* ------------------------------ Cards ------------------------------ */
+.card-box {
+  background-color:#FFFFFF;
+  border-radius:5px;
+  border:8px solid #f2f6f7;
+  padding:25px;
+  margin-bottom:25px;
+}
+.card-box ul.list-unstyled > li {
+  border-bottom:1px solid #f2f6f7;
+  padding-bottom:12px;
+  margin-bottom:12px;
+}
+.card-box ul.list-unstyled > li:last-of-type {
+  border-bottom: none;
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+ul.card-lists > li a {
+	text-decoration: none;	
+}
+.card-box h3 {
+  margin-top:30px;
+  margin-bottom:5px;
+}
+.sidebar .box h3 {
+	margin-top:0px;
+}
+.sidebar .card-lists {
+	font-size: 15px;
+	margin-bottom: 0px;
+}
+.sidebar .card-lists > li {
+	margin-bottom:4px;	
+}
+@media (max-width: 992px) {
+	.sidebar h2 {
+		margin-top:25px;
+	}
+}
+.top-banner {
+  background-color:@strongblue;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom:8px solid transparent;
+  padding:25px;
+  margin:-25px -25px 25px -25px;
+}
+.top-banner h2 {
+  color:#FFFFFF;
+  font-size: 36px;
+  line-height: 1.42857143;
+  font-weight: 400;
+  margin:0px;
+}
+.top-banner.symptoms {
+  border-bottom-color:@symptoms;
+}
+.top-banner.stressmood {
+  border-bottom-color:@stressmood;
+}
+.top-banner.wellness {
+  border-bottom-color:@wellness;
+}
+.top-banner.getsupport {
+  border-bottom-color:@getsupport;
+}
+.top-banner .btn-group {
+  margin-top:10px;
+}
+.checkbox {
+  text-align:right;
+}
+// IE specific bugfix. (SBC-101)
+.card-box .checkbox input[type="checkbox"] {
+  right: 6px;
+}

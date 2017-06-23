@@ -1,0 +1,277 @@
+/* ------------------------------ Buttons ------------------------------ */
+.btn {
+	position:relative;
+	background-color:#FFFFFF;
+	text-align:left;
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 18px;
+	line-height:30px;
+	font-weight:300;
+	color: @mediumblue;	
+	width:100%;
+	/* white-space: normal; */
+	height: 42px;
+	border: 0px;
+	border-radius:3px;
+	-webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+	padding-left:25px;
+	margin-bottom:25px;
+	transition: all .4s;
+}
+.btn.active {
+	-webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+}
+.btn .border-to-arrow {
+	position:absolute;
+	z-index:10;
+	width:8px;
+	height:100%;	
+	top: 0px;
+	left:0px;
+	background-color:@mediumblue;
+	border-top-left-radius: 3px;
+  	border-bottom-left-radius: 3px;
+	-webkit-transition: width .4s;
+    transition: width .4s;
+}
+.btn.symptoms .border-to-arrow {
+	background-color:@symptoms;
+}
+.btn.stressmood .border-to-arrow {
+	background-color:@stressmood;
+}
+.btn.wellness .border-to-arrow {
+	background-color:@wellness;
+}
+.btn.getsupport .border-to-arrow {
+	background-color:@getsupport;
+}
+.btn .btn-title {
+	position:absolute;
+	z-index:20;	
+}
+.btn-dropdown-white:focus .share-icon, .btn-dropdown-white:hover .share-icon {
+	background-position: -30px -4px;
+}
+.btn:focus .card-icon, .btn:hover .card-icon {
+	background-position: -30px -30px;
+}
+.btn-dropdown-white:focus .download-icon, .btn-dropdown-white:hover .download-icon{
+	background-position: -30px -55px;
+}
+.btn-blue .email-icon, .btn-blue .email-icon {
+	background-position: -30px -80px;
+}
+.btn:focus .change-icon, .btn:hover .change-icon {
+	background-position: -30px -100px;
+}
+.btn:focus .plus-icon, .btn:hover .plus-icon {
+	background-position: -30px -130px;
+}
+.btn:focus .minus-icon, .btn:hover .minus-icon {
+	background-position: -30px -155px;
+}
+.btn:hover .border-to-arrow,
+.btn.active .border-to-arrow {
+	width:85%;
+	background: -moz-linear-gradient(left, @mediumblue 0%, @strongblue 100%);
+	background: -webkit-linear-gradient(left, @mediumblue 0%,@strongblue 100%);
+	background: linear-gradient(to right, @mediumblue 0%,@strongblue 100%);
+}
+.btn.symptoms:hover .border-to-arrow,
+.btn.symptoms.active .border-to-arrow {
+	background: -moz-linear-gradient(left, #f9ae00 0%, #e5a100 100%);
+	background: -webkit-linear-gradient(left, #f9ae00 0%,#e5a100 100%);
+	background: linear-gradient(to right, #f9ae00 0%,#e5a100 100%);
+}
+.btn.stressmood:hover .border-to-arrow,
+.btn.stressmood.active .border-to-arrow {
+	background: -moz-linear-gradient(left, #893b69 0%, #733158 100%);
+	background: -webkit-linear-gradient(left, #893b69 0%,#733158 100%);
+	background: linear-gradient(to right, #893b69 0%,#733158 100%);
+}
+.btn.wellness:hover .border-to-arrow,
+.btn.wellness.active .border-to-arrow {
+	background: -moz-linear-gradient(left, #00bbed 0%, #00a0cc 100%);
+	background: -webkit-linear-gradient(left, #00bbed 0%,#00a0cc 100%);
+	background: linear-gradient(to right, #00bbed 0%,#00a0cc 100%);
+}
+.btn.getsupport:hover .border-to-arrow,
+.btn.getsupport.active .border-to-arrow {
+	background: -moz-linear-gradient(left, #158f7a 0%, #117362 100%);
+	background: -webkit-linear-gradient(left, #158f7a 0%,#117362 100%);
+	background: linear-gradient(to right, #158f7a 0%,#117362 100%);
+}
+.btn.symptoms:hover .btn-title,
+.btn.symptoms.active .btn-title {
+	color:#000000;	
+}
+.btn:hover .border-to-arrow:after, 
+.btn:hover .border-to-arrow:before,
+.btn.active .border-to-arrow:after,
+.btn.active .border-to-arrow:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.btn:hover .border-to-arrow:after,
+.btn.active .border-to-arrow:after {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: @strongblue;
+	border-width: 20px;
+	margin-top: -20px;
+}
+.btn.symptoms:hover .border-to-arrow:after,
+.btn.symptoms.active .border-to-arrow:after {
+	border-left-color: #e5a100; /* @symptoms color + darker for gradient */
+}
+.btn.stressmood:hover .border-to-arrow:after,
+.btn.stressmood.active .border-to-arrow:after {
+	border-left-color: #733158; /* @stressmood color + darker for gradient */
+}
+.btn.wellness:hover .border-to-arrow:after,
+.btn.wellness.active .border-to-arrow:after {
+	border-left-color: #00a0cc; /* @wellness color + darker for gradient */
+}
+.btn.getsupport:hover .border-to-arrow:after,
+.btn.getsupport.active .border-to-arrow:after {
+	border-left-color: #117362; /* @getsupport color + darker for gradient */
+}
+.btn:hover .border-to-arrow:before,
+.btn.active .border-to-arrow:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: transparent;
+	border-width: 26px;
+	margin-top: -26px;
+}	
+.btn:hover .btn-title,
+.btn.active .btn-title {
+	color:#FFFFFF;
+}
+.btn:focus {
+	color:#FFFFFF;
+	background-color:@mediumblue;	
+}
+/* ------------------------------ Dropdown Buttons ------------------------------ */
+.btn-white,
+.btn-blue,
+.form-submit,
+.btn-dropdown-white,
+.btn-dropdown-blue {
+	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-size: 14px;
+  	line-height: 36px;
+  	font-weight:700;
+	text-transform:uppercase;
+	display: inline-block;
+  	padding: 2px 18px 2px 16px;
+	margin-bottom: 0px;
+  	text-align: center;
+  	white-space: nowrap;
+  	vertical-align: middle;
+  	-ms-touch-action: manipulation;
+      touch-action: manipulation;
+  	cursor: pointer;
+  	-webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  	background-image: none;
+  	border: 0px solid transparent;
+    border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+}
+.btn-dropdown-blue .share-icon {
+	background-position: -30px -4px;
+}
+.btn-dropdown-blue .download-icon {
+	background-position: -30px -55px;
+}
+.btn-white,
+.btn-dropdown-white {
+	color:#005e8c;
+	background-color:#FFFFFF;
+	text-decoration:none;
+}
+.btn-blue:focus,
+.btn-blue:hover,
+.form-submit:focus,
+.form-submit:hover,
+.btn-dropdown-blue:focus,
+.btn-dropdown-blue:hover {
+	color:#FFFFFF;
+	background-color:@darkblue;
+	text-decoration:none;
+}
+.btn-blue,
+.form-submit,
+.btn-dropdown-blue,
+.btn-white:focus,
+.btn-white:hover,
+.btn-dropdown-white:focus,
+.btn-dropdown-white:hover {
+	color:#FFFFFF;
+	background-color:@mediumblue;
+	text-decoration:none;
+}
+.btn-group.open .dropdown-toggle {
+	-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+	background-color: @darkblue;
+	color: #FFFFFF;
+}
+.dropdown-menu>li>a {
+	color:@darkblue;
+	text-decoration:none;		
+}
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+	color:@darkblue;
+	background-color: @lightgray;
+}
+.deck-share .btn-group,
+.deck-share .btn-blue {
+	margin-top:5px;
+}
+/* ------------------------------ RSS Buttons ------------------------------ */
+.btn.sbc-rss-btn {
+  width: 250px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  background-image: url(/sites/all/themes/springboard/images/rss-sprite.png);
+  background-repeat: no-repeat;
+  background-size: 40px 20px;
+  background-position: 18px 10px;
+  padding-left:0px;
+  .btn-title {
+    left: 46px;
+  }
+}
+.btn.sbc-rss-btn:hover:before {
+  content: "";
+  background-image: url(/sites/all/themes/springboard/images/rss-sprite.png);
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 28px;
+  z-index: 20;
+  background-size: 40px 20px;
+  background-position: 0px 4px;
+  position: absolute;
+}
+/* ------------------------------ Responsive ------------------------------ */
+@media (max-width: 991px) {
+	.btn-group {
+		margin-top: 15px;		
+	}
+	.btn.sbc-rss-btn {
+		width:100%;	
+	}
+}
