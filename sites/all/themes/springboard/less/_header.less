@@ -12,29 +12,53 @@ header {
 }
 #logo {
 	width:180px;
-	height:94px;	
+	height:94px;
+	-webkit-transition: all 0.3s; /* Safari */
+   	transition: all 0.3s;
 }
-@media (max-width: 992px) {
+header,
+.shrink-header {
+	-webkit-transition: all 0.3s; /* Safari */
+    transition: all 0.3s;	
+	#logo {
+		-webkit-transition: all 0.3s; /* Safari */
+   		transition: all 0.3s;
+	}
+}
+@media (max-width: 991px) {
 	header {
 		height: 172px;	
 	}
 	#logo {
 		margin-bottom:10px;
+		padding-left:15px;
+	}
+	.shrink-header {
+		#logo {
+			margin-bottom:0px;
+		}
+	}
+	#header-row {
+		margin-right: auto;
+    	margin-left: auto;
+    	padding-left: 0px;
+    	padding-right: 0px;
+		width:100%;
 	}
 }
 @media (max-width: 768px) {
   header {
-		height: 176px;	
+		height: 177px;	
 	}
 }
 @media (max-width: 550px) {
 	header {
-		height: 192px;	
+		height: 203px;	
 	}
 }
 @media (max-width: 380px) {
 	header {
-		height: 170px;	
+		height: 182px;	
 	}
 	#logo {
 		width:140px;

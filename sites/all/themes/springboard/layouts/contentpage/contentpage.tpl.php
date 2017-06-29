@@ -17,10 +17,6 @@
 			<?php print $content['pagetitle']; ?>
 		</div> <!-- end column -->
 	</div> <!-- end row -->
-</div> <!-- end container -->
-
-
-<div class="container">
 	<div class="row">
 		<div class="col-md-7 col-lg-8">
 			<?php print $content['pagecontent']; ?>
@@ -28,5 +24,8 @@
 		<div class="col-md-5 col-lg-4 sidebar">
 			<?php print $content['sidebar']; ?>
 		</div> <!-- end column -->
+	</div> <!-- end row -->
+	<div class="row">
+			<?php print $content['moreinfo']; ?>
 	</div> <!-- end row -->
 </div> <!-- end container -->

@@ -61,6 +61,20 @@
 		return false;  
 	  	}
 	}); 
+// Landing Page Card Animation
+	/* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+        /* Check the location of each desired element */
+        $('.subpage-link').each( function(i){ 
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                $(this).animate({'opacity':'1'},200); 
+				$(this).animate({'top':'0'},200);
+            }
+        }); 
+    });
 // Deck Page - Card View
 	$('.card_select').find('.btn').click(function() {
 		if ($(this).hasClass('active')) {
@@ -163,7 +177,7 @@
 	
 	//Billy, Radio buttons - custom
 	$('.form-type-radio label.control-label input.form-radio').after('<div class="control__indicator"></div>');
-	
+    
 	//Billy, Quiz Error Message
 	$('form').attr('novalidate', 'novalidate');
 	$('fieldset .form-radios .has-error:first-of-type').prepend('<div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Error</strong> This field is required. Please answer and resubmit.</div>');
@@ -177,9 +191,30 @@
 				$(this).append(' <span class="sr-only">This card has been added to your deck.</span> ');	
 			}
 		});
+        
+        //Zhao, Fix control__indicator regenerate
+		if ( !$( ".control__indicator" ).length ) {
+            $('.form-type-radio label.control-label input.form-radio').after('<div class="control__indicator"></div>');
+        };
 	}, 1000);
 	
-	
+	//navigation and search shrink on scroll
+  	shrinkNav();
+
+  	$(document).scroll(function() {
+    	shrinkNav();
+  	});
+
+	function shrinkNav() {
+	  if ($(document).scrollTop() >= 70) {
+		$('header').addClass('shrink-header');
+		$('#search').addClass('shrink-search');
+	  }
+	  else {
+		$('header').removeClass('shrink-header');
+		$('#search').removeClass('shrink-search');
+	  }
+	}
 }(jQuery));	
 
 (function ($) {

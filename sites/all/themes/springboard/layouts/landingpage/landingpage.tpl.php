@@ -13,7 +13,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-9">
+		<div class="col-lg-12">
 			<?php print $content['pagetitle']; ?>
 			<?php print $content['pageintro']; ?>
 		</div> <!-- end column -->

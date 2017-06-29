@@ -14,7 +14,7 @@
     	<?php print render($page['Springboard_SkipNav']); ?>
     <?php endif; ?>
 
-	<div class="container">
+	<div class="container" id="header-row">
 		<div class="row">
 			<div class="col-sm-6 col-md-3">
 				<?php if (!empty($page['Springboard_Logo'])): ?>
@@ -39,6 +39,7 @@
 			</div> <!-- end column -->
 		</div> <!-- end row -->
 	</div> <!-- end container -->
+</header>
 
 	<!-- Search Dropdown for Site -->
 	<div id="search">
@@ -79,7 +80,7 @@
 	</div> <!-- end container -->
 	</div>
 	<!-- End Search -->
-</header>
+
 
 <main id="main-content" role="main" tabindex="-1">
 <?php print render($page['content']); ?>

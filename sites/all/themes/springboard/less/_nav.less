@@ -14,10 +14,11 @@ ul.menu.nav > li > a {
 	display: table-cell;
 	vertical-align: middle;
 	background-color: #FFFFFF;
-	padding-top: 10px;
-  	padding-bottom: 10px;
+	padding: 10px 20px;
   	line-height: 20px;
   	text-decoration:none;
+	-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
 }
 ul.menu.nav {
   margin: 7.5px -15px;
@@ -27,7 +28,7 @@ ul.menu.nav {
 }
 #block-menu-menu-springboard > ul > li > a {
 	color:@darkblue;
-	font-size:18px;
+	font-size:16px;
 	font-weight:300;
 	height:94px;	
 	border-top:4px solid transparent;
@@ -108,12 +109,18 @@ a#nav-decks:hover .btn-nav-deck {
 }
 .btn-nav-deck hr {
 	margin-top: 3px;
-	margin-bottom: 5px;	
+	margin-bottom: 5px;
+	-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
 }
 .btn-nav-deck-title {
 	font-size:18px;
 	font-weight:700;
 	padding:0px 13px;
+	visibility: visible;
+  	opacity: 1;
+	-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
 }
 .btn-nav-deck-custom {
 	font-size:13px;
@@ -135,20 +142,78 @@ button #nav-search-title {
 	font-weight:400;
 	color:@darkblue;
 	text-align:center;
+	visibility: visible;
+  	opacity: 1;
+	-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
 }
 button:hover #nav-search-title,
 button:focus #nav-search-title {
 	text-decoration:underline;	
 }
-@media (max-width: 992px) {
-	.nav-container {
-		float:none;	
+//reduce size on scroll
+.shrink-header {
+	height:60px;
+	#logo {
+		height:47px;
+		width:90px;
+		margin-top:3px;
 	}
+	#block-menu-menu-springboard > ul > li > a {
+		height: 54px;
+		font-size:14px;
+		-webkit-transition: all 0.3s; /* Safari */
+   		transition: all 0.3s;
+	}
+	.btn-nav-deck {
+		margin-top:10px;
+		-webkit-transition: all 0.3s; /* Safari */
+   		transition: all 0.3s;
+		.btn-nav-deck-title {
+			visibility: hidden;
+  			opacity: 0;
+			font-size: 1px;
+			-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
+		}
+		hr {
+			visibility: hidden;
+  			opacity: 0;
+			margin-top: 0px;
+   			margin-bottom: 0px;
+			-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
+		}
+	}
+	#nav-search {
+		padding-top:10px;
+		-webkit-transition: all 0.3s; /* Safari */
+   		transition: all 0.3s;
+	}
+	.nav-search-btn {
+		#nav-search-icon {
+			width: 34px;
+    		height: 34px;
+			-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
+		}
+		#nav-search-title {
+			visibility: hidden;
+  			opacity: 0;
+			font-size: 1px;
+			-webkit-transition: all 0.3s; /* Safari */
+   			transition: all 0.3s;
+		}
+	}
+}
+//responsive
+@media (max-width: 991px) {
 	.nav-container div.region.region-navigation {
 		float:none;	
 	}
 	#block-menu-menu-springboard > ul.menu.nav {
 		float:none;
+		border-top: 1px solid #ddd;
 	}
 	#block-menu-menu-springboard > ul.menu.nav > li > a {
 		height:40px;	
@@ -162,15 +227,32 @@ button:focus #nav-search-title {
 		width:20%;
 		text-align: center;	
 	}
+	.nav-container {
+		float:none;	
+	}
 	#nav-search {
 		position:absolute;
 		top: -110px;
-		right: 15px;
+		right: 30px;
 	}
 	#nav-decks {
 		position:absolute;
 		top: -110px;
-		right: 70px;
+		right: 85px;
+	}
+	.shrink-header {
+		height:107px;
+		#nav-decks {
+			top: -57px;
+			right:55px;
+		}
+		#nav-search {
+			top: -57px;
+		}
+		ul.menu.nav > li > a {
+			padding-top:6px;
+			padding-bottom:6px;
+		}
 	}
 }
 @media (max-width: 768px) {
@@ -185,6 +267,12 @@ button:focus #nav-search-title {
 	}
 	ul.menu.nav > li > a {
 		padding: 10px 8px;	
+	}
+	.shrink-header {
+		height:107px;
+		ul.menu.nav {
+			margin: 0px -15px;
+		}
 	}
 }
 @media (max-width: 550px) {
@@ -201,8 +289,9 @@ button:focus #nav-search-title {
 		display:none;	
 	}
 	#nav-decks {
-		top: auto;
-		right: auto;
+		position:relative;
+		top: -67px;
+		right: -16px;
 		width:100%;	
 	}
 	#nav-decks hr {
@@ -229,8 +318,9 @@ button:focus #nav-search-title {
 		width: 50%;
 	}
 	#block-menu-menu-springboard > ul.menu.nav {
-		position: absolute;
+		position: relative;
 		top: 30px;
+		right:-16px;
 		width: 100%;
 	}
 	ul.menu.nav > li > a {
@@ -247,6 +337,28 @@ button:focus #nav-search-title {
 		display: block;
 		float: none;	
 	}
+	.shrink-header {
+		height:143px;
+		#nav-decks {
+			top: -47px;
+			right: -16px;
+		}
+		.btn-nav-deck {
+			margin-top:0px;
+			height: 36px;
+		}
+		.btn-nav-deck-custom {
+			font-size: 15px;
+    		line-height: 20px;
+			width: 100%;
+		}
+		#block-menu-menu-springboard > ul.menu.nav {
+			top:36px;
+		}
+		#block-menu-menu-springboard > ul.menu.nav > li > a {
+			font-size:15px;
+		}
+	}
 }
 @media (max-width: 420px) {
 	#block-menu-menu-springboard > ul.menu.nav > li > a {
@@ -262,6 +374,11 @@ button:focus #nav-search-title {
 	}
 	#nav-search {
 		top: -100px;
+	}
+	.shrink-header {
+		#block-menu-menu-springboard > ul.menu.nav > li > a {
+			font-size:14px;
+		}
 	}
 }
 @media (max-width: 380px) {
@@ -283,6 +400,11 @@ button:focus #nav-search-title {
 	#nav-search {
 		top: -86px;
 	}
+	.shrink-header {
+		#block-menu-menu-springboard > ul.menu.nav > li > a {
+			font-size:13px;
+		}
+	}
 }
 @media (max-width: 370px) {
 	#block-menu-menu-springboard > ul.menu.nav > li > a {
@@ -298,6 +420,11 @@ button:focus #nav-search-title {
 	.btn-nav-deck-custom {
 		font-size:12px;
 		line-height:18px;
+	}
+	.shrink-header {
+		#block-menu-menu-springboard > ul.menu.nav > li > a {
+			font-size:12px;
+		}
 	}
 }
 @media (min-width: 769px) {

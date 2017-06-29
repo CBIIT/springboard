@@ -10,5 +10,6 @@ $plugin = array(
     'pagetitle' => t('Page Title'),
 	'pagecontent' => t('Page Content'),
 	'sidebar' => t('Sidebar Content'),
+	'moreinfo' => t('More For You'),
   ),
 );
