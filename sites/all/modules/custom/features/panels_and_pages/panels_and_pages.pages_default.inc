@@ -1444,6 +1444,7 @@ function panels_and_pages_default_page_manager_pages() {
       'additional-resources-video2' => NULL,
       'additional-resources-video3' => NULL,
       'additional-resources-poll' => NULL,
+      'link-to-videos' => NULL,
     ),
   );
   $display->cache = array();
@@ -1597,47 +1598,51 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-2f75ad3f-487b-4fcb-a27e-25c30a9150a0'] = $pane;
   $display->panels['hero-fact1'][0] = 'new-2f75ad3f-487b-4fcb-a27e-25c30a9150a0';
   $pane = new stdClass();
-  $pane->pid = 'new-32f6adf1-92f3-465c-bf40-1163fdaad9da';
+  $pane->pid = 'new-780d74de-35f7-455c-9f42-aa5ed619884e';
   $pane->panel = 'hero-fact2';
   $pane->type = 'block';
-  $pane->subtype = 'randomblocks-herofact2';
+  $pane->subtype = 'boxes-homepage_random_block_1';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '<none>',
+    'override_title' => 0,
+    'override_title_text' => '',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = '32f6adf1-92f3-465c-bf40-1163fdaad9da';
-  $display->content['new-32f6adf1-92f3-465c-bf40-1163fdaad9da'] = $pane;
-  $display->panels['hero-fact2'][0] = 'new-32f6adf1-92f3-465c-bf40-1163fdaad9da';
+  $pane->uuid = '780d74de-35f7-455c-9f42-aa5ed619884e';
+  $display->content['new-780d74de-35f7-455c-9f42-aa5ed619884e'] = $pane;
+  $display->panels['hero-fact2'][0] = 'new-780d74de-35f7-455c-9f42-aa5ed619884e';
   $pane = new stdClass();
-  $pane->pid = 'new-bf75487d-a7e0-4699-a4d5-edd4a0bf4ed7';
+  $pane->pid = 'new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408';
   $pane->panel = 'hero-fact3';
   $pane->type = 'block';
-  $pane->subtype = 'randomblocks-herofact3';
+  $pane->subtype = 'boxes-homepage_random_block_2';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
-    'override_title_text' => '<none>',
+    'override_title' => 0,
+    'override_title_text' => '',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'bf75487d-a7e0-4699-a4d5-edd4a0bf4ed7';
-  $display->content['new-bf75487d-a7e0-4699-a4d5-edd4a0bf4ed7'] = $pane;
-  $display->panels['hero-fact3'][0] = 'new-bf75487d-a7e0-4699-a4d5-edd4a0bf4ed7';
+  $pane->uuid = 'f0d2ef9c-0b04-4a35-9513-c72b33d5c408';
+  $display->content['new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408'] = $pane;
+  $display->panels['hero-fact3'][0] = 'new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408';
   $pane = new stdClass();
   $pane->pid = 'new-fb5b3c9d-ef6b-43b2-a968-495fb7fa8e3d';
   $pane->panel = 'hero-intro';
@@ -1733,7 +1738,9 @@ function panels_and_pages_default_page_manager_pages() {
     'substitute' => TRUE,
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 0;

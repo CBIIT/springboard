@@ -19,7 +19,9 @@ function blocks_and_views_default_box() {
   $box->description = 'Ask for help.';
   $box->options = array(
     'body' => array(
-      'value' => '<p><strong>Ask for help.</strong> Your loved ones want to support you. Be specific about the kinds of help you need.</p>
+      'value' => '<h3>Need Help from Loved Ones?</h3>
+
+<p><strong>Ask for help.</strong> Your loved ones want to support you. Be specific about the kinds of help you need.</p>
 ',
       'format' => 'full_html',
     ),
@@ -33,10 +35,12 @@ function blocks_and_views_default_box() {
   $box->delta = 'buildrelationship';
   $box->plugin_key = 'simple';
   $box->title = '';
-  $box->description = 'Build a relationship';
+  $box->description = 'Appetite';
   $box->options = array(
     'body' => array(
-      'value' => '<p><strong>Build a relationship with your health care providers.</strong> Let your health care team know what you need from them.</p>
+      'value' => '<h3>Lost Your Appetite?</h3>
+
+<p><strong>Eat bland foods.</strong> Avoid foods with strong smells and flavors.</p>
 ',
       'format' => 'full_html',
     ),
@@ -91,7 +95,7 @@ function blocks_and_views_default_box() {
   $box->description = 'forget things';
   $box->options = array(
     'body' => array(
-      'value' => '<h3>Do you forget things during the day?</h3>
+      'value' => '<h3>Having Memory Problems?</h3>
 
 <p><strong>Leave notes for yourself.</strong> Post reminder notes where you’ll see them, or set alerts on your phone.</p>
 ',
@@ -181,11 +185,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_New_Diagnosis_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_New_Diagnosis_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_New_Diagnosis.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_New_Diagnosis.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -197,17 +201,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4b7F" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/new-diagnosis" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=You%20may%20not%20know%20where%20to%20start%20when%20diagnosed%20with%20cancer.%20Use%20this%20action%20deck%20to%20get%20tips%20on%20coping.%0Ahttp%3A//go.usa.gov/x4b7F" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=You%20may%20not%20know%20where%20to%20start%20when%20diagnosed%20with%20cancer.%20Use%20this%20action%20deck%20to%20get%20tips%20on%20coping.%0Ahttp%3A//survivorship.cancer.gov/springboard/new-diagnosis" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20New Diagnosis%20Action%20Deck&amp;body=Check%20out%20the%20New%20Diagnosis%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/new-diagnosis.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20New Diagnosis%20Action%20Deck&amp;body=Check%20out%20the%20New%20Diagnosis%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/new-diagnosis.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -270,11 +274,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Surgery_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Surgery_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Surgery.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Surgery.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -286,17 +290,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bAm" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/surgery" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=Surgery%20is%20a%20common%20treatment%20for%20a%20cancer%20tumor.%20Use%20this%20action%20deck%20to%20get%20information%20after%20surgery.%0Ahttp%3A//go.usa.gov/x4bAm" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=Surgery%20is%20a%20common%20treatment%20for%20a%20cancer%20tumor.%20Use%20this%20action%20deck%20to%20get%20information%20after%20surgery.%0Ahttp%3A//survivorship.cancer.gov/springboard/surgery" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Surgery%20Action%20Deck&amp;body=Check%20out%20the%20Surgery%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/surgery.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Surgery%20Action%20Deck&amp;body=Check%20out%20the%20Surgery%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/surgery.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -364,11 +368,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Chemotherapy_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Chemotherapy_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Chemotherapy.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Chemotherapy.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -380,17 +384,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bAA" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/chemotherapy" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=Chemo%20kills%20cancer%20cells%20but%20it%20gets%20healthy%20ones%20too.%20Use%20this%20action%20deck%20to%20get%20info%20on%20chemo%20side%20effects.%0Ahttp%3A//go.usa.gov/x4bAA" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=Chemo%20kills%20cancer%20cells%20but%20it%20gets%20healthy%20ones%20too.%20Use%20this%20action%20deck%20to%20get%20info%20on%20chemo%20side%20effects.%0Ahttp%3A//survivorship.cancer.gov/springboard/chemotherapy" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Chemotherapy%20Action%20Deck&amp;body=Check%20out%20the%20Chemotherapy%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/chemotherapy.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Chemotherapy%20Action%20Deck&amp;body=Check%20out%20the%20Chemotherapy%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/chemotherapy.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -453,11 +457,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Radiation_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Radiation_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Radiation.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Radiation.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -469,17 +473,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bsQ" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/radiation" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=About%201/2%20of%20all%20cancer%20patients%20get%20radiation.%20Use%20this%20action%20deck%20to%20get%20information%20on%20symptoms%20of%20radiation.%0Ahttp%3A//go.usa.gov/x4bsQ" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=About%201/2%20of%20all%20cancer%20patients%20get%20radiation.%20Use%20this%20action%20deck%20to%20get%20information%20on%20symptoms%20of%20radiation.%0Ahttp%3A//survivorship.cancer.gov/springboard/radiation" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Radiation%20Action%20Deck&amp;body=Check%20out%20the%20Radiation%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/radiation.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Radiation%20Action%20Deck&amp;body=Check%20out%20the%20Radiation%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/radiation.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -540,11 +544,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Coping_With_Cancer_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Coping_With_Cancer_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Coping_With_Cancer.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Coping_With_Cancer.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -556,17 +560,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bse" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/coping-cancer" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=Cancer%20can%20bring%20up%20a%20wide%20range%20of%20emotions.%20Use%20this%20action%20deck%20to%20get%20information%20on%20stress%20and%20mood%20issues.%0Ahttp%3A//go.usa.gov/x4bse" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=Cancer%20can%20bring%20up%20a%20wide%20range%20of%20emotions.%20Use%20this%20action%20deck%20to%20get%20information%20on%20stress%20and%20mood%20issues.%0Ahttp%3A//survivorship.cancer.gov/springboard/coping-cancer" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Coping%20with%20Cancer%20Action%20Deck&amp;body=Check%20out%20the%20Coping%20with%20Cancer%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/coping-cancer.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Coping%20with%20Cancer%20Action%20Deck&amp;body=Check%20out%20the%20Coping%20with%20Cancer%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/coping-cancer.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -624,11 +628,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Social_Support_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Social_Support_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Social_Support.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Social_Support.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -640,17 +644,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bHx" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/social-support" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=Strong%20social%20support%20can%20help%20during%20your%20cancer%20care.%20Use%20this%20action%20deck%20to%20make%20the%20most%20of%20this%20help.%20http%3A//go.usa.gov/x4bHx" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=Strong%20social%20support%20can%20help%20during%20your%20cancer%20care.%20Use%20this%20action%20deck%20to%20make%20the%20most%20of%20this%20help.%20http%3A//survivorship.cancer.gov/springboard/social-support" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Social Support%20Action%20Deck&amp;body=Check%20out%20the%20Social%20Support%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/social-support.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Social Support%20Action%20Deck&amp;body=Check%20out%20the%20Social%20Support%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/social-support.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -708,11 +712,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/Springboard_Beyond_Cancer_Living_Well_Deck.pdf">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Living_Well_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/Springboard_Beyond_Cancer_Living_Well.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Living_Well.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -724,17 +728,17 @@ function blocks_and_views_default_box() {
 											<div class="share-icon"></div>
 											SHARE ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//go.usa.gov/x4bHh" title="Share on Facebook">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/living-well" title="Share on Facebook">
 													<div class="facebook-icon"></div>
 													Facebook</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="https://twitter.com/home?status=A%20healthy%20lifestyle%20benefits%20you%20during%20and%20after%20cancer%20treatment.%20This%20action%20deck%20focuses%20on%20healthy%20living.%0Ahttp%3A//go.usa.gov/x4bHh" title="Share on Twitter">
+												<li><a href="https://twitter.com/home?status=A%20healthy%20lifestyle%20benefits%20you%20during%20and%20after%20cancer%20treatment.%20This%20action%20deck%20focuses%20on%20healthy%20living.%0Ahttp%3A//survivorship.cancer.gov/springboard/living-well" title="Share on Twitter">
 													<div class="twitter-icon"></div>
 													Twitter</a></li>
 											</ul>
 										</div>
 										<!-- end share --> 
-										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Living Well%20Action%20Deck&amp;body=Check%20out%20the%20Living%20Well%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://smokefree.gov/springboard/living-well.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Living Well%20Action%20Deck&amp;body=Check%20out%20the%20Living%20Well%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/living-well.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
 									<!-- end bottom-links --> 
 								</div>
 								<!-- end column --> 
@@ -840,7 +844,7 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<h1>Manage Cancer—Your Way</h1>
 
-<p>Cancer can bring many challenges. Springboard Beyond Cancer gives you information and resources to help you cope and be in control.</p>
+<p class="intro">Cancer can bring many challenges. Springboard Beyond Cancer gives you information and resources to help you cope and be in control.</p>
 
 <h2>Springboard Beyond Cancer Can Help</h2>
 ',
@@ -870,6 +874,178 @@ function blocks_and_views_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'homepage_random_block_1';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Homepage Random Fact Box 1';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="symptoms">
+<div class="fact-box" id="randomize-symptoms"><script>
+
+(function() {
+    var symptoms = [
+        {
+            title: "Are you struggling with side effects?",
+            content:  \'Explore the <a href=\\"/springboard/symptoms\\">Symptoms</a> section for information on <a href=\\"/springboard/symptoms/fatigue\\">fatigue</a>, <a href=\\"/springboard/symptoms/nausea\\">nausea</a>, and more physical side-effects of cancer.\',
+        },
+        {
+            title: "Is your cancer treatment causing your hair to fall out?",
+            content:  \'Explore information on <a href=\\"/springboard/symptoms/hairloss\\">hair loss</a>.\',
+        },
+        {
+            title: "Do you have trouble eating?",
+            content:  \'Explore information on <a href="/springboard/symptoms/appetite-changes">appetite changes</a> and <a href="/springboard/symptoms/nausea">nausea</a>.\',
+        },
+        {
+            title: "Do you often feel tired?",
+            content:  \'Explore information on the causes of and treatment for <a href="/springboard/symptoms/fatigue">fatigue</a>.\',
+        },
+        {
+            title: "Do you have trouble thinking and remembering?",
+            content:  \'Explore information on <a href="/springboard/symptoms/chemo-brain">chemo-brain and memory problems</a>.\',
+        },
+        {
+            title: "Are you dealing with bowel issues?",
+            content:  \'Explore information on <a href="/springboard/symptoms/constipation">constipation</a> and <a href="/springboard/symptoms/diarrhea">diarrhea</a>.\',
+        },
+        {
+            title: "Is your cancer treatment causing your hair to fall out?",
+            content:  \'Explore information on <a href=\\"/springboard/symptoms/hairloss\\">hair loss</a>.\',
+        },
+        {
+            title: "Are you worried about having sex during treatment?",
+            content:  \'Explore how to decrease sexual problems due to cancer for <a href="/springboard/symptoms/sexual-problems-for-men">men</a> and <a href="/springboard/symptoms/sexual-problems-for-women">women</a>.\',
+        },{
+            title: "Does pain affect your daily activities?",
+            content:  \'Explore information about <a href="/springboard/symptoms/pain">pain</a> and how to manage it.\',
+        },
+
+
+    ];
+    var symptom = symptoms[Math.floor(Math.random() * symptoms.length)];
+    document.getElementById("randomize-symptoms").innerHTML =
+        \'<h3>\' + symptom.title + \'</h3>\' +
+        \'<p>\' + symptom.content + \'</p>\';
+})();
+  </script></div>
+<!-- end fact-box --></div>
+',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['homepage_random_block_1'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'homepage_random_block_2';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Homepage Random Fact Box 2';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="getsupport">
+<div class="fact-box" id="randomize-facts">
+<script>
+(function() {
+    var facts = [
+        {
+            title: "Want to improve the support you receive from doctors and loved ones?",
+            content:  \'Learn to make the most of your support system in the <a href="/springboard/get-support">Get Support</a> section.\',
+        },
+        {
+            title: "Want help talking to your doctor about your needs?",
+            content:  \'Learn how to <a href="/springboard/get-support/health-care-team">communicate with your health care team</a>.\',
+        },
+        {
+            title: "Not sure what to ask your doctors?",
+            content:  \'Find out what questions you should be <a href="/springboard/get-support/health-care-team">asking your health care team</a>.\',
+        },
+        {
+            title: "Want to talk to loved ones about your cancer diagnosis but not sure where to start?",
+            content:  \'Find out how to start the conversation with <a href="/springboard/get-support/family-friends-caregivers">family, friends, and loved ones</a>.\',
+        },
+        {
+            title: "Need help getting the support you need from your caregiver(s)?",
+            content:  \'Learn how to have your needs met from <a href="/springboard/get-support/family-friends-caregivers">family, friends, and loved ones</a>.\',
+        },
+        {
+            title: "Worried about the security of your job while in treatment?",
+            content:  \'Understand your <a href="/springboard/get-support/in-the-workplace">rights in the workplace</a>.\',
+        },
+        {
+            title: "Need to talk to your employer about your diagnosis?",
+            content:  \'Learn how to <a href="/springboard/get-support/in-the-workplace">communicate with people in the workplace</a>.\',
+        },
+        {
+            title: "Looking to talk to people who share your experiences?",
+            content:  \'Find out about <a href="/springboard/get-support/peer-to-peersupport">peer-to-peer support groups</a>.\',
+        },
+        {
+            title: "Feeling like no one understands what you’re going through?",
+            content:  \'Find a <a href="/springboard/get-support/peer-to-peersupport">peer-to-peer support group</a>.\',
+        },
+        {
+            title: "Is your diagnosis keeping you from enjoying your life?",
+            content:  \'Learn how to <a href="/springboard/stress-mood/coping-with-cancer">cope with cancer in everyday life</a>.\',
+        },
+        {
+            title: "Are you feeling sad and hopeless?",
+            content:  \'Find out if you are <a href="/springboard/stress-mood/depression">depressed</a> and what you can do to improve your mood.\',
+        },
+        {
+            title: "Do you have trouble controlling anxious thoughts?",
+            content:  \'Learn how to cope with <a href="/springboard/stress-mood/anxiety">anxiety</a>.\',
+        },
+        {
+            title: "Have you had panic attacks?",
+            content:  \'Learn to recognize the signs of panic attacks and learn how to cope with <a href="/springboard/stress-mood/anxiety">anxiety</a>.\',
+        },
+        {
+            title: "Want to cope with stress and your emotions?",
+            content:  \'Try some <a href="/springboard/stress-mood/practice-mindfulness">mindfulness and relaxation</a> exercises.\',
+        },
+        {
+            title: "Are you feeling weighed down by your emotions?",
+            content:  \'Learn about <a href="/springboard/stress-mood/distress">distress</a> and how to cope with it.\',
+        },
+        {
+            title: "Feeling stressed or overwhelmed?",
+            content:  \'Understand the emotional challenges of cancer and what you can do to improve your stress levels in <a href="/springboard/stress-mood">Stress &amp; Mood</a>.\',
+        },
+        {
+            title: "Feeling upset or worried?",
+            content:  \'Understand the emotional challenges of cancer and what you can do to improve your stress levels in <a href="/springboard/stress-mood">Stress &amp; Mood</a>.\',
+        },
+        {
+            title: "Feeling sad or anxious?",
+            content:  \'Understand the emotional challenges of cancer and what you can do to improve your stress levels in <a href="/springboard/stress-mood">Stress &amp; Mood</a>.\',
+        },
+        {
+            title: "Are you worried about cancer coming back?",
+            content:  \'Learn how to cope with <a href="/springboard/stress-mood/fear-of-recurrence">fear of recurrence</a>.\',
+        },
+
+
+    ];
+    var fact = facts[Math.floor(Math.random() * facts.length)];
+    document.getElementById("randomize-facts").innerHTML =
+        \'<h3>\' + fact.title + \'</h3>\' +
+        \'<p>\' + fact.content + \'</p>\';
+})();
+</script>
+</div>
+<!-- end fact-box --></div>
+',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['homepage_random_block_2'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'homepage_video2';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -884,7 +1060,7 @@ function blocks_and_views_default_box() {
 <!-- end column -->
 
 <div class="col-md-4">
-<p>Angie, a breast cancer survivor, talks about her cancer diagnosis and treatment, as well as her fatigue symptoms during chemotherapy and radiation. By walking between treatments and playing tennis, Angie was able to boost her energy levels and battle fatigue. Angie recommends finding a physical activity you enjoy and pursuing it in a modified way until you\'re able to return to a fully active lifestyle. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
+<p class="video-summary">Angie, a breast cancer survivor, talks about her cancer diagnosis and treatment, as well as her fatigue symptoms during chemotherapy and radiation. By walking between treatments and playing tennis, Angie was able to boost her energy levels and battle fatigue. Angie recommends finding a physical activity you enjoy and pursuing it in a modified way until you\'re able to return to a fully active lifestyle. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
 </div>
 <!-- end column -->',
       'format' => 'full_html',
@@ -910,7 +1086,7 @@ function blocks_and_views_default_box() {
 <!-- end column -->
 
 <div class="col-md-4">
-<p>Montessa, a lung cancer survivor, talks about her diagnosis and the treatment symptom she struggled with most - fatigue. She discusses the importance of working with your healthcare team and relying on your support networks for help. She also emphasizes the importance of striving to live rather than just survive. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
+<p class="video-summary">Montessa, a lung cancer survivor, talks about her diagnosis and the treatment symptom she struggled with most - fatigue. She discusses the importance of working with your healthcare team and relying on your support networks for help. She also emphasizes the importance of striving to live rather than just survive. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
 </div>
 <!-- end column -->',
       'format' => 'full_html',
@@ -928,7 +1104,7 @@ function blocks_and_views_default_box() {
   $box->description = 'insomnia';
   $box->options = array(
     'body' => array(
-      'value' => '<h3>Is insomnia keeping you up at night?</h3>
+      'value' => '<h3>Having Trouble Sleeping?</h3>
 
 <p><strong>Keep a schedule.</strong> Wake up, go to bed, and rest at the same times each day.</p>
 ',
@@ -941,6 +1117,85 @@ function blocks_and_views_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'random_helptips';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Displays Random Helptips';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="tips" id="randomize-tips"><script>
+
+(function() {
+  var tips = [
+                    {
+                      title: "Feeling Alone?",
+                        content:  \'<strong>Join a peer group.</strong> It may be helpful to talk with others who have had the same experiences.\',
+                    },
+                    {
+                      title: "Lost Your Appetite?",
+                        content:  \'<strong>Eat bland foods.</strong> Avoid foods with strong smells and flavors.\',
+                    },
+                    {
+                      title: "Feeling Distressed?",
+                        content:  "<strong>Don\'t overwhelm yourself. </strong>Focus on one thing, one day at a time. Take small steps.",
+                    },
+                    {
+                      title: "Starting a new exercise routine?",
+                        content:  \'<strong>Begin with warm-up exercises.</strong> Start slowly and warm up for at least 2 to 3 minutes.\',
+                    },
+                    {
+                      title: "Feeling Fatigued?",
+                        content:  \'<strong>Set Priorities.</strong> Identify the most important tasks each day, and then focus your energy on those tasks.\',
+                    },
+                    {
+                      title: "Having Memory Problems?",
+                        content:  \'<strong>Leave notes for yourself.</strong> Post reminder notes where you’ll see them, or set alerts on your phone.\',
+                    },
+                    {
+                      title: "Has Your Hair Fallen Out?",
+                        content:  \'<strong>Protect your skin.</strong> Use sunscreen or wear a head cover to avoid sun exposure.\',
+                    },
+                    {
+                      title: "Having Trouble Sleeping?",
+                        content:  \'<strong>Keep a schedule.</strong> Wake up, go to bed, and rest at the same times each day.\',
+                    },
+                    {
+                      title: "Having Mouth or Throat Problems?",
+                        content:  \'<strong>Eat soft foods.</strong> Choose foods that are soft, wet, and easy to swallow.\',
+                    },
+                    {
+                      title: "Nauseated After Treatment?",
+                        content:  "<strong>Fast before and after treatment.</strong> Don\'t eat for one hour before and after treatment.",
+                    },
+                    {
+                      title: "Numb in Your Hands or Feet?",
+                        content:  \'<strong>Be careful at night.</strong> Avoid injuries by using a night light or flashlight.\',
+                    },
+                    {
+                      title: "Feeling Anxious?",
+                        content:  \'<strong>Relax. </strong>Set aside time each day to do relaxation exercises.\',
+                    },
+                    {
+                      title: "Need Help from Loved Ones?",
+                        content:  \'<strong>Ask for help.</strong> Your loved ones want to support you. Be specific about the kinds of help you need.\',
+                    },
+
+
+                ];
+                var tip = tips[Math.floor(Math.random() * tips.length)];
+                document.getElementById("randomize-tips").innerHTML =
+                  \'<p>\' + tip.title + \'</p>\' +
+                  \'<p>\' + tip.content + \'</p>\';
+            })();
+        </script></div>',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['random_helptips'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'sb_home_placeholder2';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -948,69 +1203,56 @@ function blocks_and_views_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<div class="row">
-<div class="col-lg-12">
-<h2>What Are Action Decks?</h2>
-</div>
-<!-- end column --></div>
+	<div class="col-lg-12">
+		<h2>What Are Action Decks?</h2>
+	</div>
+	<!-- end column --></div>
 <!-- end row -->
-
 <div class="row">
-<div class="col-lg-12">
-<div class="box">
-<p>Action Decks are collections of information related to a cancer topic or treatment.</p>
-</div>
-
-<div id="infographic-container">
-<div id="infographic-slider">
-<div class="infographic1">
-<div class="graphic"><img alt="Creating an Action Deck on their computer" src="/sites/all/themes/springboard/images/infographic-1.png" /></div>
-
-<div class="step">
-<p>Number 1</p>
-
-<p>CREATE or choose an<br />
-action deck</p>
-</div>
-</div>
-
-<div class="infographic2">
-<div class="graphic"><img alt="Downloading and printing out their action deck" src="/sites/all/themes/springboard/images/infographic-2.png" /></div>
-
-<div class="step">
-<p>Number 2</p>
-
-<p>DOWNLOAD and print your<br />
-action deck.</p>
-</div>
-</div>
-
-<div class="infographic3">
-<div class="graphic"><img alt="Using their action deck for manage symptoms" src="/sites/all/themes/springboard/images/infographic-3.png" /></div>
-
-<div class="step">
-<p>Number 3</p>
-
-<p>USE THE ACTION DECK to help manage<br />
-your symptoms.</p>
-</div>
-</div>
-
-<div class="infographic4">
-<div class="graphic"><img alt="Revisiting Springboard Beyond Cancer for additional help as needed" src="/sites/all/themes/springboard/images/infographic-4.png" /></div>
-
-<div class="step">
-<p>Number 4</p>
-
-<p>COME BACK for more help when<br />
-you need it.</p>
-</div>
-</div>
-</div>
-<!-- end infographic-slider --></div>
-<!-- end infographic-container --></div>
-<!-- end column --></div>
+	<div class="col-lg-12">
+		<div class="box">
+			<p class="infographic-summary">Action Decks are collections of information related to a cancer topic or treatment.</p>
+		</div>
+		<div id="infographic-container">
+			<div id="infographic-slider">
+				<a href="/springboard/create-action-deck" class="infographic1">
+					<div class="graphic">
+						<img alt="Creating an Action Deck on their computer" src="/sites/all/themes/springboard/images/infographic-1.png"></div>
+					<div class="step">
+						<p class="sr-only">Number 1</p>
+						<p><span class="infographic-title">CREATE</span>or choose an<br>action deck</p>
+					</div>
+				</a>
+				<a href="/springboard/create-action-deck" class="infographic2">
+					<div class="graphic">
+						<img alt="Downloading and printing out their action deck" src="/sites/all/themes/springboard/images/infographic-2.png"></div>
+					<div class="step">
+						<p class="sr-only">Number 2</p>
+						<p><span class="infographic-title">DOWNLOAD</span>and print your<br>action deck.</p>
+					</div>
+				</a>
+				<a href="/springboard/create-action-deck" class="infographic3">
+					<div class="graphic">
+						<img alt="Using their action deck for manage symptoms" src="/sites/all/themes/springboard/images/infographic-3.png"></div>
+					<div class="step">
+						<p class="sr-only">Number 3</p>
+						<p><span class="infographic-title">USE THE ACTION DECK</span>to help manage<br>your symptoms.</p>
+					</div>
+				</a>
+				<a href="/springboard/create-action-deck" class="infographic4">
+					<div class="graphic">
+						<img alt="Revisiting Springboard Beyond Cancer for additional help as needed" src="/sites/all/themes/springboard/images/infographic-4.png"></div>
+					<div class="step">
+						<p class="sr-only">Number 4</p>
+						<p><span class="infographic-title">COME BACK</span>for more help when<br>you need it.</p>
+					</div>
+				</a>
+			</div>
+			<!-- end infographic-slider --></div>
+		<!-- end infographic-container --></div>
+	<!-- end column --></div>
 <!-- end row -->',
-      'format' => 'full_html',
+      'format' => 'raw_html',
     ),
     'additional_classes' => '',
   );

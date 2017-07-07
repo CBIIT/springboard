@@ -62,7 +62,7 @@
 				<?php if (!empty($page['Helpful_Tips'])): ?>
 					<?php print render($page['Helpful_Tips']); ?>
 				<?php endif; ?>
-				<?php $block = module_invoke('randomblocks', 'block_view', 'helptips');
+				<?php $block = module_invoke('boxes', 'block_view', 'random_helptips');
 				if (!empty($block['content'])): ?>
 					<style>
 						.search-extras .col-md-6 > .boxes-box > .boxes-box-controls > ul.links {display: none;}
@@ -167,3 +167,72 @@
 	'scope' => 'footer',
 	'weight' => 4));
 ?>
+
+
+    <div class="tips" id="randomize-tips"><script>
+
+            (function() {
+                var tips = [
+                    {
+                        title: "Feeling Alone?",
+                        content:  '<strong>Join a peer group.</strong> It may be helpful to talk with others who have had the same experiences.',
+                    },
+                    {
+                        title: "Lost Your Appetite?",
+                        content:  '<strong>Eat bland foods.</strong> Avoid foods with strong smells and flavors.',
+                    },
+                    {
+                        title: "Feeling Distressed?",
+                        content:  "<strong>Don't overwhelm yourself. </strong>Focus on one thing, one day at a time. Take small steps.",
+                    },
+                    {
+                        title: "Starting a new exercise routine?",
+                        content:  '<strong>Begin with warm-up exercises.</strong> Start slowly and warm up for at least 2 to 3 minutes.',
+                    },
+                    {
+                        title: "Feeling Fatigued?",
+                        content:  '<strong>Set Priorities.</strong> Identify the most important tasks each day, and then focus your energy on those tasks.',
+                    },
+                    {
+                        title: "Having Memory Problems?",
+                        content:  '<strong>Leave notes for yourself.</strong> Post reminder notes where you’ll see them, or set alerts on your phone.',
+                    },
+                    {
+                        title: "Has Your Hair Fallen Out?",
+                        content:  '<strong>Protect your skin.</strong> Use sunscreen or wear a head cover to avoid sun exposure.',
+                    },
+                    {
+                        title: "Having Trouble Sleeping?",
+                        content:  '<strong>Keep a schedule.</strong> Wake up, go to bed, and rest at the same times each day.',
+                    },
+                    {
+                        title: "Having Mouth or Throat Problems?",
+                        content:  '<strong>Eat soft foods.</strong> Choose foods that are soft, wet, and easy to swallow.',
+                    },
+                    {
+                        title: "Nauseated After Treatment?",
+                        content:  "<strong>Fast before and after treatment.</strong> Don't eat for one hour before and after treatment.",
+                    },
+                    {
+                        title: "Numb in Your Hands or Feet?",
+                        content:  '<strong>Be careful at night.</strong> Avoid injuries by using a night light or flashlight.',
+                    },
+                    {
+                        title: "Feeling Anxious?",
+                        content:  '<strong>Relax. </strong>Set aside time each day to do relaxation exercises.',
+                    },
+                    {
+                        title: "Need Help from Loved Ones?",
+                        content:  '<strong>Ask for help.</strong> Your loved ones want to support you. Be specific about the kinds of help you need.',
+                    },
+
+
+                ];
+                var tip = symptoms[Math.floor(Math.random() * symptoms.length)];
+                document.getElementById("randomize-symptoms").innerHTML =
+                    '<h3>' + symptom.title + '</h3>' +
+                    '<p>' + symptom.content + '</p>';
+            })();
+        </script></div>
+    <!-- end fact-box --></div>
+

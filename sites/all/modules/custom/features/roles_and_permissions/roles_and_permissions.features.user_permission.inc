@@ -197,6 +197,7 @@ function roles_and_permissions_user_default_permissions() {
     'name' => 'administer boxes',
     'roles' => array(
       'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
     ),
     'module' => 'boxes',
   );
