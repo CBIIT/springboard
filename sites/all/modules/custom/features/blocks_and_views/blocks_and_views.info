@@ -58,6 +58,7 @@ features[ctools][] = boxes:box:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = card_page_link
+features[views_view][] = more_for_you
 features[views_view][] = springboard
 features[views_view][] = springboard_search
 features[views_view][] = springboard_sidebar_card_link

@@ -1184,7 +1184,7 @@ function blocks_and_views_default_box() {
                 ];
                 var tip = tips[Math.floor(Math.random() * tips.length)];
                 document.getElementById("randomize-tips").innerHTML =
-                  \'<p>\' + tip.title + \'</p>\' +
+                  \'<h3>\' + tip.title + \'</h3>\' +
                   \'<p>\' + tip.content + \'</p>\';
             })();
         </script></div>',

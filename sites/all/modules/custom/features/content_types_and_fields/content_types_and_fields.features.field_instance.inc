@@ -1425,7 +1425,51 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_pages-field_action_category'.
+  $field_instances['node-springboard_pages-field_action_category'] = array(
+    'bundle' => 'springboard_pages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_action_category',
+    'label' => 'Action Category',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
     ),
   );
 
@@ -1465,7 +1509,7 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -2,
+      'weight' => 2,
     ),
   );
 
@@ -1505,7 +1549,47 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => -3,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_pages-field_more_related_links'.
+  $field_instances['node-springboard_pages-field_more_related_links'] = array(
+    'bundle' => 'springboard_pages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_more_related_links',
+    'label' => 'More Related Links',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
     ),
   );
 
@@ -1662,6 +1746,7 @@ function content_types_and_fields_field_default_field_instances() {
   t('Image');
   t('Intro');
   t('Maximum choices');
+  t('More Related Links');
   t('Permission settings are necessary for allowing write-in voting, visibility of individual votes and administration of electoral lists.');
   t('Poll Choice');
   t('Poll availability');

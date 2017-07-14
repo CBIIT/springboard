@@ -1029,6 +1029,7 @@ springboard/get-support/vision-board',
       'pagecontent' => NULL,
       'sidebar' => NULL,
       'pagetitle' => NULL,
+      'moreinfo' => NULL,
     ),
   );
   $display->cache = array();
@@ -1038,6 +1039,32 @@ springboard/get-support/vision-board',
   $display->storage_id = 'node_view__panel_context_c2c854c2-67b3-48f2-abc3-0fd058db9623';
   $display->content = array();
   $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-4d3ed837-bbe9-43b9-9277-941271f1db7f';
+  $pane->panel = 'moreinfo';
+  $pane->type = 'block';
+  $pane->subtype = 'views-more_for_you-block';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'more-related-links-view',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '4d3ed837-bbe9-43b9-9277-941271f1db7f';
+  $display->content['new-4d3ed837-bbe9-43b9-9277-941271f1db7f'] = $pane;
+  $display->panels['moreinfo'][0] = 'new-4d3ed837-bbe9-43b9-9277-941271f1db7f';
   $pane = new stdClass();
   $pane->pid = 'new-06bb3624-87b8-4293-9cd9-1a24679ada26';
   $pane->panel = 'pagecontent';
@@ -1081,7 +1108,9 @@ springboard/get-support/vision-board',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
-  $pane->style = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
   $pane->css = array();
   $pane->extras = array();
   $pane->position = 1;

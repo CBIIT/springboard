@@ -1,4 +1,4 @@
-All Drupal code is Copyright 2001 - 2013 by the original authors.
+﻿All Drupal code is Copyright 2001 - 2013 by the original authors.
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -41,4 +41,4 @@ Javascript
 
 PHP
 
-  ArchiveTar - Copyright (c) 1997 - 2008 Vincent Blavet
+  ArchiveTar - Copyright (c) 1997 - 2008 Vincent Blavet 
