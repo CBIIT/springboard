@@ -1190,6 +1190,7 @@ function blocks_and_views_default_box() {
         </script></div>',
       'format' => 'raw_html',
     ),
+    'additional_classes' => '',
   );
   $export['random_helptips'] = $box;
 
