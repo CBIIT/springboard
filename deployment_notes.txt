@@ -10,3 +10,4 @@ Springboard 1.2 2017-07-27
 -----------------------
 - SBC-137 Create user directions for card adding
 - Add secondary sort to video story view
+- SF-510 Fixes poll not showing up on homepage
