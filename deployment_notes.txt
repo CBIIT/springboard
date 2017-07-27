@@ -5,3 +5,8 @@ Springboard 1.1 2017-07-13
 - SBC-139 corrects broken link for JPG zip download on the coping with cancer deck.
 - SBC-133 various performance improvements incuding removing dependence on random
 blocks module in order to remove cookie and facilitate using varnish.
+
+Springboard 1.2 2017-07-27
+-----------------------
+- SBC-137 Create user directions for card adding
+- Add secondary sort to video story view
