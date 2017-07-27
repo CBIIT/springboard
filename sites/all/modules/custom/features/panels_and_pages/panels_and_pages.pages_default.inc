@@ -1484,10 +1484,10 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-a0251a2c-cf6f-4074-8b4e-ffe3c64056fd';
+  $pane->pid = 'new-ac298d0f-2bfa-48e3-a16a-2c799b0622c8';
   $pane->panel = 'additional-resources-poll';
   $pane->type = 'block';
-  $pane->subtype = 'randomblocks-springboardpoll';
+  $pane->subtype = 'advpoll-advpoll_block_180';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -1506,9 +1506,9 @@ function panels_and_pages_default_page_manager_pages() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'a0251a2c-cf6f-4074-8b4e-ffe3c64056fd';
-  $display->content['new-a0251a2c-cf6f-4074-8b4e-ffe3c64056fd'] = $pane;
-  $display->panels['additional-resources-poll'][0] = 'new-a0251a2c-cf6f-4074-8b4e-ffe3c64056fd';
+  $pane->uuid = 'ac298d0f-2bfa-48e3-a16a-2c799b0622c8';
+  $display->content['new-ac298d0f-2bfa-48e3-a16a-2c799b0622c8'] = $pane;
+  $display->panels['additional-resources-poll'][0] = 'new-ac298d0f-2bfa-48e3-a16a-2c799b0622c8';
   $pane = new stdClass();
   $pane->pid = 'new-73f92cdd-216a-4b2e-a47c-c794169aae0e';
   $pane->panel = 'additional-resources-title';

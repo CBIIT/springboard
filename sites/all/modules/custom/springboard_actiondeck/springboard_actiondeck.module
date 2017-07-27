@@ -157,6 +157,11 @@ function springboard_actiondeck_theme($existing, $type, $theme, $path) {
     'template' => 'decknav',
     'path' => drupal_get_path('module', 'springboard_actiondeck'),
   );
+  $custom_theme['user_directions'] = array(
+      'variables' => array(),
+      'template' => 'userdirections',
+      'path' => drupal_get_path('module', 'springboard_actiondeck'),
+  );
   return $custom_theme;
 }
 
@@ -456,6 +461,11 @@ function springboard_actiondeck_block_info()
         'title' => t('Deck Navigation'),
     );
 
+    $blocks['user_directions'] = array(
+        'info' => t('User Directions'),
+        'title' => t('User Directions'),
+    );
+
     return $blocks;
 }
 
@@ -473,6 +483,11 @@ switch($delta) {
     /* $block['content'] = drupal_get_form('deck_nav_form'); */
     $block['content'] = get_html_version_of_deck_nav();
     break;
+
+    case 'user_directions' :
+        $variables = array(); //do stuff here
+        $block['content'] = theme('user_directions', $variables);
+        break;
 }
 
 return $block;

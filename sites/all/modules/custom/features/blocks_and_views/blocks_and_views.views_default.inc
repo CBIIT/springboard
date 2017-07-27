@@ -1004,6 +1004,19 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Block area */
+  $handler->display->display_options['footer']['block']['id'] = 'block';
+  $handler->display->display_options['footer']['block']['table'] = 'views';
+  $handler->display->display_options['footer']['block']['field'] = 'block';
+  $handler->display->display_options['footer']['block']['block_to_insert'] = 'springboard_actiondeck:user_directions';
+  $handler->display->display_options['footer']['block']['title'] = '<none>';
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = 'The <a href="[path]">[title]</a> has been added to <a href="/springboard/create-action-deck">your action deck</a>. You can review <a href="/springboard/create-action-deck">your action deck</a> by clicking on the link at the top or below. 
+<a href="/springboard/create-action-deck" class="btn btn-create btn-success form-submit">View Your Action Deck</a>';
+  $handler->display->display_options['footer']['area_text_custom']['tokenize'] = TRUE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_springboard_page_target_id']['id'] = 'field_springboard_page_target_id';
   $handler->display->display_options['relationships']['field_springboard_page_target_id']['table'] = 'field_data_field_springboard_page';
@@ -1030,7 +1043,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['text'] = '<h2>The [title] Card </h2>
 <a href="[path]" class="btn">
    <div class="border-to-arrow"></div>
@@ -1041,6 +1054,21 @@ function blocks_and_views_views_default_views() {
    <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
 </a>';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>The [title] Card </h2>
+<a href="[path]" class="btn">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title"><div class="card-icon"></div>View this Card</div>
+</a>
+<a role="button" tabindex="0" class="btn">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
+</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -1073,6 +1101,55 @@ function blocks_and_views_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'sidebar_cards');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['alter']['text'] = '<h2>The [title] Card </h2>
+<a href="[path]" class="btn">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title"><div class="card-icon"></div>View this Card</div>
+</a>
+<a role="button" tabindex="0" class="btn">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
+</a>';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>The [title] Card </h2>
+<a href="[path]" class="btn">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title"><div class="card-icon"></div>View this Card</div>
+</a>
+<a role="button" tabindex="0" class="btn add-to-deck">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
+</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
 
   /* Display: Add this card to deck */
   $handler = $view->new_display('block', 'Add this card to deck', 'block_1');
@@ -1100,13 +1177,24 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['path']['table'] = 'node';
   $handler->display->display_options['fields']['path']['field'] = 'path';
   $handler->display->display_options['fields']['path']['label'] = '';
-  $handler->display->display_options['fields']['path']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
   $handler->display->display_options['fields']['path']['alter']['text'] = '<h2>The [title] Card </h2>
 <a role="button" tabindex="0" class="btn">
    <div class="border-to-arrow"></div>
    <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
 </a>';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h2>The [title] Card </h2>
+<a role="button" tabindex="0" class="btn add-to-deck">
+   <div class="border-to-arrow"></div>
+   <div class="btn-title add-card-link btn-[nid]"><div class="plus-icon"></div>Add to Your Action Deck</div>
+</a>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';

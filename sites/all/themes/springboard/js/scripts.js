@@ -116,7 +116,18 @@
 			}
 		});
 	}, 1000);
-
+	
+	//
+    
+    $(".view-springboard-sidebar-card-link .add-to-deck .add-card-link").on('click', function(event) {
+        if ($(this).parent().hasClass('active')) {
+            $(".view-springboard-sidebar-card-link .view-footer").hide();
+        } else {
+            $(".view-springboard-sidebar-card-link .view-footer").show();
+        }
+    });
+	
+	
 // Zhao, Highlight menu items on certain springboard pages
 // Billy, Add color bottom bar to certain action card pages
 	if(window.location.href.indexOf("/springboard/symptoms/") > -1){
@@ -223,7 +234,10 @@
 	}};
 
 })(jQuery);
-jQuery(document).ready(function() { 
+jQuery(document).ready(function() {
+    if (jQuery(".view-springboard-sidebar-card-link .add-to-deck").hasClass('active')) {
+        jQuery(".view-springboard-sidebar-card-link .view-footer").show();
+    }
   var panel1 = new tabpanel("tabpanel1", false); 
 }); 
 
