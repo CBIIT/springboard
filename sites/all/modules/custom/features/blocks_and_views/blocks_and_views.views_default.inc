@@ -892,6 +892,202 @@ function blocks_and_views_views_default_views() {
   $export['springboard'] = $view;
 
   $view = new view();
+  $view->name = 'springboard_homepage_deck';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Springboard Homepage Deck';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 0,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'title' => 'title',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Card Image PDF */
+  $handler->display->display_options['fields']['field_card_image_pdf']['id'] = 'field_card_image_pdf';
+  $handler->display->display_options['fields']['field_card_image_pdf']['table'] = 'field_data_field_card_image_pdf';
+  $handler->display->display_options['fields']['field_card_image_pdf']['field'] = 'field_card_image_pdf';
+  $handler->display->display_options['fields']['field_card_image_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_card_image_pdf']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_card_image_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_card_image_pdf']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_card_image_pdf']['click_sort_column'] = 'fid';
+  /* Field: Content: Card Image JPG */
+  $handler->display->display_options['fields']['field_card_image_jpg']['id'] = 'field_card_image_jpg';
+  $handler->display->display_options['fields']['field_card_image_jpg']['table'] = 'field_data_field_card_image_jpg';
+  $handler->display->display_options['fields']['field_card_image_jpg']['field'] = 'field_card_image_jpg';
+  $handler->display->display_options['fields']['field_card_image_jpg']['label'] = '';
+  $handler->display->display_options['fields']['field_card_image_jpg']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_card_image_jpg']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_card_image_jpg']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_card_image_jpg']['click_sort_column'] = 'fid';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['element_default_classes'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '600',
+  );
+  /* Field: Field: Springboard Action Cards */
+  $handler->display->display_options['fields']['field_springboard_action_cards']['id'] = 'field_springboard_action_cards';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['table'] = 'field_data_field_springboard_action_cards';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['field'] = 'field_springboard_action_cards';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['label'] = '';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_springboard_action_cards']['alter']['text'] = '<div class="col-md-6"><div class="symptoms-box"><h3>Symptoms</h3>[field_springboard_action_cards]</div></div>';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_springboard_action_cards']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_springboard_action_cards']['settings'] = array(
+    'link' => 1,
+  );
+  $handler->display->display_options['fields']['field_springboard_action_cards']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_springboard_action_cards']['separator'] = '<br>';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<li> <a class="btn visible-xs-block visible-sm-block" href="[path]">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">[title]</div>
+					</a> <a class="btn hidden-xs hidden-sm" data-toggle="collapse" data-parent="#accordion" href="#[title]-preview" aria-expanded="false" aria-controls="collapse">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">[title]</div>
+					</a>
+					<div class="deck-previews">
+						<div id="[title]-preview" class="collapse">
+							<div class="row">
+								<div class="col-lg-9">
+									<h2>[title]</h2>
+									<p>[body]</p>
+									<a class="btn" href="[path]">
+									<div class="border-to-arrow"></div>
+									<div class="btn-title">View the [title] Deck</div>
+									</a>
+									<div class="row">
+										[field_springboard_action_cards]
+									</div>
+									<!-- end row -->
+									<div class="bottom-links"> 
+										<!-- Download Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="download-icon"></div>
+											DOWNLOAD ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="[field_card_image_pdf]">
+													<div class="pdf-icon"></div>
+													PDF</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="[field_card_image_jpg]">
+													<div class="jpg-icon"></div>
+													JPGs</a></li>
+											</ul>
+										</div>
+										<!-- end download --> 
+										<!-- Share Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="share-icon"></div>
+											SHARE ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov[path]" title="Share on Facebook">
+													<div class="facebook-icon"></div>
+													Facebook</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://twitter.com/home?status=Chemo%20kills%20cancer%20cells%20but%20it%20gets%20healthy%20ones%20too.%20Use%20this%20action%20deck%20to%20get%20info%20on%20chemo%20side%20effects.%0Ahttp%3A//survivorship.cancer.gov[path]" title="Share on Twitter">
+													<div class="twitter-icon"></div>
+													Twitter</a></li>
+											</ul>
+										</div>
+										<!-- end share --> 
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Chemotherapy%20Action%20Deck&amp;body=Check%20out%20the%20Chemotherapy%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov[path].%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+									<!-- end bottom-links --> 
+								</div>
+								<!-- end column --> 
+							</div>
+							<!-- end row --> 
+						</div> <!-- end collapse -->
+					</div> <!-- end deck-previews -->
+				</li>';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'springboard_action_deck' => 'springboard_action_deck',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['springboard_homepage_deck'] = $view;
+
+  $view = new view();
   $view->name = 'springboard_search';
   $view->description = '';
   $view->tag = 'default';

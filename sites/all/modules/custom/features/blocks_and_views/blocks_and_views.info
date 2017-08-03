@@ -60,6 +60,7 @@ features[features_api][] = api:2
 features[views_view][] = card_page_link
 features[views_view][] = more_for_you
 features[views_view][] = springboard
+features[views_view][] = springboard_homepage_deck
 features[views_view][] = springboard_search
 features[views_view][] = springboard_sidebar_card_link
 features[views_view][] = springboard_sidebar_related_decks
