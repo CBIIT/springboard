@@ -1384,6 +1384,99 @@ function content_types_and_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-springboard_landing-body'.
+  $field_instances['node-springboard_landing-body'] = array(
+    'bundle' => 'springboard_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_landing-field_paragraphs'.
+  $field_instances['node-springboard_landing-field_paragraphs'] = array(
+    'bundle' => 'springboard_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'block_reference' => 'block_reference',
+      ),
+      'bundle_weights' => array(
+        'block_reference' => 2,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-springboard_pages-body'.
   $field_instances['node-springboard_pages-body'] = array(
     'bundle' => 'springboard_pages',
@@ -1726,11 +1819,145 @@ function content_types_and_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-springboard_video-field_video_playlist'.
+  $field_instances['node-springboard_video-field_video_playlist'] = array(
+    'bundle' => 'springboard_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_playlist',
+    'label' => 'Video Playlist',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-block_reference-field_block_layout_class'.
+  $field_instances['paragraphs_item-block_reference-field_block_layout_class'] = array(
+    'bundle' => 'block_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block_layout_class',
+    'label' => 'Block Layout Class',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-block_reference-field_block_reference'.
+  $field_instances['paragraphs_item-block_reference-field_block_reference'] = array(
+    'bundle' => 'block_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block_reference',
+    'label' => 'Block Reference',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'advpoll' => 0,
+        'backup_migrate' => 0,
+        'block' => 'block',
+        'boxes' => 'boxes',
+        'menu' => 0,
+        'node' => 0,
+        'print' => 0,
+        'print_pdf' => 0,
+        'print_ui' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'springboard_actiondeck' => 0,
+        'system' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Action Category');
   t('Add at least 2 choices for your poll.  Write-in values indicate user generated content.  If you approve of a choice that has been written in by a user, uncheck it and it will be integrated into the poll for others to vote upon.');
   t('Approval voting weighs each vote against each individual choice rather than pooling all votes.');
+  t('Block Layout Class');
+  t('Block Reference');
   t('Body');
   t('Card Image JPG');
   t('Card Image PDF');
@@ -1747,6 +1974,7 @@ function content_types_and_fields_field_default_field_instances() {
   t('Intro');
   t('Maximum choices');
   t('More Related Links');
+  t('Paragraphs');
   t('Permission settings are necessary for allowing write-in voting, visibility of individual votes and administration of electoral lists.');
   t('Poll Choice');
   t('Poll availability');
@@ -1761,6 +1989,7 @@ function content_types_and_fields_field_default_field_instances() {
   t('Try This');
   t('Twitter Link');
   t('Upload an image to go with this article.');
+  t('Video Playlist');
   t('Vote storage mode');
   t('Voting behavior');
   t('Voting options');

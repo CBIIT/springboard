@@ -49,6 +49,14 @@ function content_types_and_fields_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'springboard_landing' => array(
+      'name' => t('Springboard Landing'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'springboard_pages' => array(
       'name' => t('Springboard Pages'),
       'base' => 'node_content',
@@ -67,5 +75,19 @@ function content_types_and_fields_node_info() {
     ),
   );
   drupal_alter('node_info', $items);
+  return $items;
+}
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function content_types_and_fields_paragraphs_info() {
+  $items = array(
+    'block_reference' => array(
+      'name' => 'Block Reference',
+      'bundle' => 'block_reference',
+      'locked' => '1',
+    ),
+  );
   return $items;
 }
