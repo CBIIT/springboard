@@ -889,6 +889,58 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['arguments']['title']['limit'] = '0';
   $handler->display->display_options['path'] = 'springboard/symptoms/%/feed';
   $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Get Support Paragraphs */
+  $handler = $view->new_display('block', 'Get Support Paragraphs', 'block_9');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Get Support';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-8 col-lg-6';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'springboard_pages' => 'springboard_pages',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Action Category (field_action_category) */
+  $handler->display->display_options['filters']['field_action_category_target_id']['id'] = 'field_action_category_target_id';
+  $handler->display->display_options['filters']['field_action_category_target_id']['table'] = 'field_data_field_action_category';
+  $handler->display->display_options['filters']['field_action_category_target_id']['field'] = 'field_action_category_target_id';
+  $handler->display->display_options['filters']['field_action_category_target_id']['relationship'] = 'reverse_field_springboard_page_node';
+  $handler->display->display_options['filters']['field_action_category_target_id']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_action_category_target_id']['group'] = 1;
+  /* Filter criterion: Content: Title */
+  $handler->display->display_options['filters']['title']['id'] = 'title';
+  $handler->display->display_options['filters']['title']['table'] = 'node';
+  $handler->display->display_options['filters']['title']['field'] = 'title';
+  $handler->display->display_options['filters']['title']['operator'] = 'contains';
+  $handler->display->display_options['filters']['title']['value'] = 'Create Your Own Vision Board';
+  $handler->display->display_options['filters']['title']['group'] = 2;
   $export['springboard'] = $view;
 
   $view = new view();
@@ -1613,6 +1665,103 @@ function blocks_and_views_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'springboard/video-stories.html';
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_1');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'title' => 'title',
+    'field_springboard_video_link' => 'field_springboard_video_link',
+    'field_springboard_video_descript' => 'field_springboard_video_descript',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>%1</h1>
+		</div> <!-- end column -->
+	</div> <!-- end row -->
+</div> <!-- end container -->';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Springboard Video Link */
+  $handler->display->display_options['fields']['field_springboard_video_link']['id'] = 'field_springboard_video_link';
+  $handler->display->display_options['fields']['field_springboard_video_link']['table'] = 'field_data_field_springboard_video_link';
+  $handler->display->display_options['fields']['field_springboard_video_link']['field'] = 'field_springboard_video_link';
+  $handler->display->display_options['fields']['field_springboard_video_link']['label'] = '';
+  $handler->display->display_options['fields']['field_springboard_video_link']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_springboard_video_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_springboard_video_link']['click_sort_column'] = 'video_url';
+  $handler->display->display_options['fields']['field_springboard_video_link']['settings'] = array(
+    'video_style' => 'normal',
+  );
+  /* Field: Content: Springboard Video Description */
+  $handler->display->display_options['fields']['field_springboard_video_descript']['id'] = 'field_springboard_video_descript';
+  $handler->display->display_options['fields']['field_springboard_video_descript']['table'] = 'field_data_field_springboard_video_descript';
+  $handler->display->display_options['fields']['field_springboard_video_descript']['field'] = 'field_springboard_video_descript';
+  $handler->display->display_options['fields']['field_springboard_video_descript']['label'] = '';
+  $handler->display->display_options['fields']['field_springboard_video_descript']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_springboard_video_descript']['alter']['text'] = '<div class="col-md-6"><div class="col-md-12"><div class="embed-responsive embed-responsive-16by9">
+  				[field_springboard_video_link]
+			</div> <!-- end youtube embed --></div><div class="col-md-12"><h2>[title]</h2></div><div class="col-md-12">[field_springboard_video_descript]</div></div>';
+  $handler->display->display_options['fields']['field_springboard_video_descript']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Video Playlist (field_video_playlist) */
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['id'] = 'field_video_playlist_tid';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['table'] = 'field_data_field_video_playlist';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['field'] = 'field_video_playlist_tid';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['title'] = '%1';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['default_argument_options']['index'] = '0';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['validate_options']['vocabularies'] = array(
+    'video_playlists' => 'video_playlists',
+  );
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['validate_options']['type'] = 'convert';
+  $handler->display->display_options['arguments']['field_video_playlist_tid']['validate_options']['transform'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'springboard_video' => 'springboard_video',
+  );
+  $handler->display->display_options['path'] = 'video-stories-playlist/%';
   $export['springboard_video_stories'] = $view;
 
   return $export;
