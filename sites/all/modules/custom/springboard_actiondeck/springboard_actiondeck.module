@@ -179,6 +179,7 @@ function template_preprocess_form_create_actiondeck(&$variables) {
     ->fields('cat', array('field_action_category_target_id'))
     ->orderBy('title', 'ASC')
     ->condition('n.type', 'springboard_action_card', '=')
+    ->condition('n.status', 1, '=')
     ->execute();
   $wellness_cards = array();
   $symptom_cards = array();
