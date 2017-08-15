@@ -1518,7 +1518,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1562,7 +1562,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -1602,7 +1602,7 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1642,7 +1642,7 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1682,7 +1682,44 @@ function content_types_and_fields_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_pages-field_support_for'.
+  $field_instances['node-springboard_pages-field_support_for'] = array(
+    'bundle' => 'springboard_pages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_support_for',
+    'label' => 'Support for',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
@@ -1984,6 +2021,7 @@ function content_types_and_fields_field_default_field_instances() {
   t('Springboard Page');
   t('Springboard Video Description');
   t('Springboard Video Link');
+  t('Support for');
   t('Tags');
   t('This value determines when to show the results of a poll.  By default, while voting is on going, users will see the results so long as they are no longer eligible to vote.  To display results without allowing an opportunity to vote, select \'After poll is closed\' and close the poll.');
   t('Try This');

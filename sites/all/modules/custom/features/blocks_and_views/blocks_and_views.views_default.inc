@@ -890,10 +890,10 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['path'] = 'springboard/symptoms/%/feed';
   $handler->display->display_options['sitename_title'] = 0;
 
-  /* Display: Get Support Paragraphs */
-  $handler = $view->new_display('block', 'Get Support Paragraphs', 'block_9');
+  /* Display: Get Support Paragraphs Survivors */
+  $handler = $view->new_display('block', 'Get Support Paragraphs Survivors', 'block_9');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Get Support';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-8 col-lg-6';
@@ -929,18 +929,109 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_action_category_target_id']['id'] = 'field_action_category_target_id';
   $handler->display->display_options['filters']['field_action_category_target_id']['table'] = 'field_data_field_action_category';
   $handler->display->display_options['filters']['field_action_category_target_id']['field'] = 'field_action_category_target_id';
-  $handler->display->display_options['filters']['field_action_category_target_id']['relationship'] = 'reverse_field_springboard_page_node';
   $handler->display->display_options['filters']['field_action_category_target_id']['value'] = array(
     1 => '1',
   );
   $handler->display->display_options['filters']['field_action_category_target_id']['group'] = 1;
+  /* Filter criterion: Content: Support for (field_support_for) */
+  $handler->display->display_options['filters']['field_support_for_value']['id'] = 'field_support_for_value';
+  $handler->display->display_options['filters']['field_support_for_value']['table'] = 'field_data_field_support_for';
+  $handler->display->display_options['filters']['field_support_for_value']['field'] = 'field_support_for_value';
+  $handler->display->display_options['filters']['field_support_for_value']['operator'] = 'and';
+  $handler->display->display_options['filters']['field_support_for_value']['value'] = array(
+    'survivors' => 'survivors',
+  );
+
+  /* Display: Create Your Own Vision Board */
+  $handler = $view->new_display('block', 'Create Your Own Vision Board', 'block_10');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-12 col-lg-12';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'springboard_pages' => 'springboard_pages',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Title */
   $handler->display->display_options['filters']['title']['id'] = 'title';
   $handler->display->display_options['filters']['title']['table'] = 'node';
   $handler->display->display_options['filters']['title']['field'] = 'title';
   $handler->display->display_options['filters']['title']['operator'] = 'contains';
   $handler->display->display_options['filters']['title']['value'] = 'Create Your Own Vision Board';
-  $handler->display->display_options['filters']['title']['group'] = 2;
+  $handler->display->display_options['filters']['title']['group'] = 1;
+
+  /* Display: Get Support Paragraphs Caregivers */
+  $handler = $view->new_display('block', 'Get Support Paragraphs Caregivers', 'block_11');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<none>';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-8 col-lg-6';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'springboard_pages' => 'springboard_pages',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Action Category (field_action_category) */
+  $handler->display->display_options['filters']['field_action_category_target_id']['id'] = 'field_action_category_target_id';
+  $handler->display->display_options['filters']['field_action_category_target_id']['table'] = 'field_data_field_action_category';
+  $handler->display->display_options['filters']['field_action_category_target_id']['field'] = 'field_action_category_target_id';
+  $handler->display->display_options['filters']['field_action_category_target_id']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_action_category_target_id']['group'] = 1;
+  /* Filter criterion: Content: Support for (field_support_for) */
+  $handler->display->display_options['filters']['field_support_for_value']['id'] = 'field_support_for_value';
+  $handler->display->display_options['filters']['field_support_for_value']['table'] = 'field_data_field_support_for';
+  $handler->display->display_options['filters']['field_support_for_value']['field'] = 'field_support_for_value';
+  $handler->display->display_options['filters']['field_support_for_value']['operator'] = 'and';
+  $handler->display->display_options['filters']['field_support_for_value']['value'] = array(
+    'caregivers' => 'caregivers',
+  );
   $export['springboard'] = $view;
 
   $view = new view();
