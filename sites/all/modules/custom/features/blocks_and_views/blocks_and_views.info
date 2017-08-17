@@ -65,5 +65,6 @@ features[views_view][] = springboard_search
 features[views_view][] = springboard_sidebar_card_link
 features[views_view][] = springboard_sidebar_related_decks
 features[views_view][] = springboard_video_stories
+features[views_view][] = video_stories
 features_exclude[dependencies][ctools] = ctools
 project path = sites/all/modules/custom/features
