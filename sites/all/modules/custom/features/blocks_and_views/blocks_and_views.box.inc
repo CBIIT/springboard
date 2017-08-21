@@ -2030,5 +2030,26 @@ function blocks_and_views_default_box() {
   );
   $export['stress'] = $box;
 
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'video_stories_featured';
+  $box->plugin_key = 'simple';
+  $box->title = 'Featured Video';
+  $box->description = 'Video Stories Featured Video';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="col-md-12">
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W3B7SWwHBiU?rel=0"></iframe></div>
+
+<h3>Carolyn\'s Breast Cancer Experience — Getting Through the Tough Days</h3>
+
+<p class="video-summary">Carolyn, a breast cancer survivor, talks about her initial diagnosis and treatment, and difficult decisions she had to make during her treatment process due to unexpected bumps in the road, including testing positive for the breast cancer gene. She discusses the need to keep moving, how to get through the tough days, and the importance of taking things one day at a time.</p>
+</div>',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['video_stories_featured'] = $box;
+
   return $export;
 }
