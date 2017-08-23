@@ -9464,7 +9464,9 @@ a.infographic4 p {
 #radiation-preview,
 #copingwithcancer-preview,
 #socialsupport-preview,
-#livingwell-preview {
+#livingwell-preview,
+#post-treatment-preview,
+#caregivers-preview {
   position: absolute;
   top: 0px;
   left: 280px;
@@ -9501,6 +9503,12 @@ a.infographic4 p {
 }
 #livingwell-preview {
   background-image: url(../images/premade-deck-background-7.jpg);
+}
+#post-treatment-preview {
+  background-image: url(../images/premade-deck-background-8.jpg);
+}
+#caregivers-preview {
+  background-image: url(../images/premade-deck-background-9.jpg);
 }
 .symptoms-box,
 .stressmood-box,
@@ -9558,7 +9566,9 @@ a.infographic4 p {
   #radiation-preview,
   #copingwithcancer-preview,
   #socialsupport-preview,
-  #livingwell-preview {
+  #livingwell-preview,
+  #post-treatment-preview,
+  #caregivers-preview {
     width: 600px;
     left: 310px;
   }
@@ -9570,7 +9580,9 @@ a.infographic4 p {
   #radiation-preview,
   #copingwithcancer-preview,
   #socialsupport-preview,
-  #livingwell-preview {
+  #livingwell-preview,
+  #post-treatment-preview,
+  #caregivers-preview {
     display: none !important;
   }
 }

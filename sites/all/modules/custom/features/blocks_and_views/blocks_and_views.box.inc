@@ -747,6 +747,184 @@ function blocks_and_views_default_box() {
 						</div> <!-- end collapse -->
 					</div> <!-- end deck-previews -->
 				</li>
+<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/post-treatment">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Post-Treatment</div>
+					</a> <a class="btn hidden-xs hidden-sm" data-toggle="collapse" data-parent="#accordion" href="#post-treatment-preview" aria-expanded="false" aria-controls="collapse">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Post-Treatment</div>
+					</a>
+					<div class="deck-previews">
+						<div id="post-treatment-preview" class="collapse">
+							<div class="row">
+								<div class="col-lg-9">
+									<h2>Post-Treatment</h2>
+									<p>Some of the challenges of cancer continue after you finish treatment. Find out what you can expect when treatment ends</p>
+									<a class="btn" href="/springboard/post-treatment">
+									<div class="border-to-arrow"></div>
+									<div class="btn-title">View the Post-Treatment Deck</div>
+									</a>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="stressmood-box">
+												<h3>Stress &amp; Mood</h3>
+												<ul class="list-unstyled">
+												    <li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+													<li><a href="/springboard/stress-mood/fear-of-recurrence-card">Fear of Recurrence</a></li>
+													<li><a href="/springboard/stress-mood/distress-card">Distress</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="symptoms-box">
+												<h3>Symptoms</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/symptoms/fatigue-card">Fatigue</a></li>
+													<li><a href="/springboard/symptoms/chemo-brain-card">Chemo-Brain &amp; Memory Problems</a></li>
+													<li>Sexual Problems for <a href="/springboard/symptoms/sexual-problems-for-men-card">Men</a> and <a href="/springboard/symptoms/sexual-problems-for-women-card">Women</a></li>
+													<li><a href="/springboard/symptoms/hot-flashes-card">Hot Flashes &amp; Night Sweats</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column -->
+										<div class="col-md-6">
+											<div class="wellness-box">
+												<h3>Wellness</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/wellness/healthy-eating-card">Healthy Eating</a></li>
+													<li><a href="/springboard/wellness/be-active-card">Be Active</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="getsupport-box">
+												<h3>Get Support</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/get-support/in-the-workplace-card">In the Workplace</a></li>
+													<li><a href="/springboard/get-support/health-care-team-card">Health Care Team</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column --> 
+									</div>
+									<!-- end row -->
+									<div class="bottom-links"> 
+										<!-- Download Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="download-icon"></div>
+											DOWNLOAD ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Post_Treatment_Deck.pdf">
+													<div class="pdf-icon"></div>
+													PDF</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Post_Treatment.zip">
+													<div class="jpg-icon"></div>
+													JPGs</a></li>
+											</ul>
+										</div>
+										<!-- end download --> 
+										<!-- Share Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="share-icon"></div>
+											SHARE ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/post-treatment" title="Share on Facebook">
+													<div class="facebook-icon"></div>
+													Facebook</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://twitter.com/home?status=Finishing%20treatment%20starts%20a%20new%20chapter%20in%20your%20#CancerJourney.%20Find%20out%20what%20to%20expect:%20http%3A//survivorship.cancer.gov/springboard/post-treatment" title="Share on Twitter">
+													<div class="twitter-icon"></div>
+													Twitter</a></li>
+											</ul>
+										</div>
+										<!-- end share --> 
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Post Treatment%20Action%20Deck&amp;body=Check%20out%20the%20Post%20Treatment%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/post-treatment.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+									<!-- end bottom-links --> 
+								</div>
+								<!-- end column --> 
+							</div>
+							<!-- end row --> 
+						</div> <!-- end collapse -->
+					</div> <!-- end deck-previews -->
+				</li>
+<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/support-for-caregivers">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Support for Caregivers</div>
+					</a> <a class="btn hidden-xs hidden-sm" data-toggle="collapse" data-parent="#accordion" href="#caregivers-preview" aria-expanded="false" aria-controls="collapse">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Support for Caregivers</div>
+					</a>
+					<div class="deck-previews">
+						<div id="caregivers-preview" class="collapse">
+							<div class="row">
+								<div class="col-lg-9">
+									<h2>Support for Caregivers</h2>
+									<p>As a caregiver, you need to know how to take care of yourself and the cancer patient in your life.</p>
+									<a class="btn" href="/springboard/support-for-caregivers">
+									<div class="border-to-arrow"></div>
+									<div class="btn-title">View the Support for Caregivers Deck</div>
+									</a>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="getsupport-box">
+												<h3>Get Support</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/get-support/being-a-caregiver">Being a Caregiver</a></li>
+													<li><a href="/springboard/get-support/care-for-your-mind">Care for Your Body</a></li>
+													<li><a href="/springboard/get-support/care-for-your-body">Care for Your Mind</a></li>
+													<li><a href="/springboard/get-support/finding-meaning-purpose">Finding Meaning & Purpose</a></li>
+													<li><a href="/springboard/get-support/after-treatment-ends">After Treatment Ends</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column --> 
+									</div>
+									<!-- end row -->
+									<div class="bottom-links"> 
+										<!-- Download Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="download-icon"></div>
+											DOWNLOAD ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Support_Caregivers.pdf">
+													<div class="pdf-icon"></div>
+													PDF</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Support_Caregivers.zip">
+													<div class="jpg-icon"></div>
+													JPGs</a></li>
+											</ul>
+										</div>
+										<!-- end download --> 
+										<!-- Share Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="share-icon"></div>
+											SHARE ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/support-for-caregivers" title="Share on Facebook">
+													<div class="facebook-icon"></div>
+													Facebook</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://twitter.com/home?status=Build%20self-management%20skills%20for%20yourself%20to%20help%20you%20be%20an%20effective%20cancer%20caregiver:%20http%3A//survivorship.cancer.gov/springboard/support-for-caregivers" title="Share on Twitter">
+													<div class="twitter-icon"></div>
+													Twitter</a></li>
+											</ul>
+										</div>
+										<!-- end share --> 
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Support for Caregivers%20Action%20Deck&amp;body=Check%20out%20the%20Support%20Caregivers%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/support-for-caregivers.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+									<!-- end bottom-links --> 
+								</div>
+								<!-- end column --> 
+							</div>
+							<!-- end row --> 
+						</div> <!-- end collapse -->
+					</div> <!-- end deck-previews -->
+				</li>
 			</ul>
 		</div>
 		<!-- end column --> 
