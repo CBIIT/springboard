@@ -10,7 +10,6 @@
  *
  */
 ?>
-
 <div class="homepage">
 <div class="homepage-hero">
 <div class="container">
@@ -20,14 +19,20 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-5">
-			<?php print $content['hero-fact1']; ?>
-			<?php print $content['hero-fact2']; ?>
-			<?php print $content['hero-fact3']; ?>
-		</div> <!-- end column -->
-		<div class="col-md-7">
-			<!-- Region for Youtube Video -->
-			<?php print $content['hero-video']; ?>
+        <div class="col-md-6">
+            <!-- Region for Youtube Video -->
+            <?php print $content['hero-video']; ?>
+        </div> <!-- end column -->
+		<div class="col-md-6 is-table-row">
+            <div class="col-md-6">
+                <?php print $content['hero-fact1']; ?>
+            </div>
+            <div class="col-md-6">
+                <?php print $content['hero-fact2']; ?>
+            </div>
+            <div class="col-md-6">
+                <?php print $content['hero-fact3']; ?>
+            </div>
 		</div> <!-- end column -->
 	</div> <!-- end row -->
 </div> <!-- end container -->

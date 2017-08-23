@@ -9181,7 +9181,6 @@ button.btn-search-submit:hover {
   border-left: 8px solid transparent;
   padding: 15px;
   margin: 0px 0px 25px 0px;
-  width: 80%;
 }
 .homepage .symptoms .fact-box {
   border-left-color: #f9ae00;
@@ -9588,6 +9587,11 @@ h3.poll {
   display: block;
   width: 100%;
   margin: 20px 0px;
+}
+@media only screen and (min-width: 768px) {
+  .is-table-row .fact-box {
+    height: 175px;
+  }
 }
 /* ------------------------------ Sidebar ------------------------------ */
 .sidebar h2 {
