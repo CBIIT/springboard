@@ -1558,28 +1558,31 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-d7ba0e8c-1758-4402-8874-23a85fff1cbc'] = $pane;
   $display->panels['additional-resources-video2'][0] = 'new-d7ba0e8c-1758-4402-8874-23a85fff1cbc';
   $pane = new stdClass();
-  $pane->pid = 'new-d494a330-9f26-488d-af79-3f3bd8994275';
+  $pane->pid = 'new-c4188045-4aef-4260-8d7a-52e5693ca7ca';
   $pane->panel = 'additional-resources-video3';
   $pane->type = 'block';
-  $pane->subtype = 'boxes-homepage_video3';
+  $pane->subtype = 'boxes-take_our_quiz_box';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
-    'override_title_heading' => 'span',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'col-sm-6',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'd494a330-9f26-488d-af79-3f3bd8994275';
-  $display->content['new-d494a330-9f26-488d-af79-3f3bd8994275'] = $pane;
-  $display->panels['additional-resources-video3'][0] = 'new-d494a330-9f26-488d-af79-3f3bd8994275';
+  $pane->uuid = 'c4188045-4aef-4260-8d7a-52e5693ca7ca';
+  $display->content['new-c4188045-4aef-4260-8d7a-52e5693ca7ca'] = $pane;
+  $display->panels['additional-resources-video3'][0] = 'new-c4188045-4aef-4260-8d7a-52e5693ca7ca';
   $pane = new stdClass();
   $pane->pid = 'new-65d064eb-84a0-410c-aed0-a021fd889715';
   $pane->panel = 'deckpreview';

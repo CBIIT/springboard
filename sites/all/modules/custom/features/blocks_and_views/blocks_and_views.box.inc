@@ -116,7 +116,7 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<div class="box">
 	<div class="row">
-		<div class="col-sm-9 col-md-7">
+		<div class="col-sm-12 col-md-12">
 			<h2>Create your own action deck or choose an action deck we’ve made for you.</h2>
 		</div>
 		<!-- end column --> 
@@ -929,7 +929,16 @@ function blocks_and_views_default_box() {
 		</div>
 		<!-- end column --> 
 		<div class="col-md-8 col-lg-9">
-			<p class="deck-summary">Your experience with cancer is unique. You can build an action deck with topics that are important to you. Or select an action deck that gives you tips and tools on a specific topic about cancer or treatment.</p>
+<div class="col-md-8 col-lg-8">
+<p><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offer action deck. Watch this video to learn how to create action deck and use them in your self-management journey. </p>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s3hjuqTEn7I?rel=0"></iframe></div>
+<a class="btn" href="/springboard/create-action-deck">
+			<div class="border-to-arrow"></div>
+			<div class="btn-title">Create an Action Deck</div>
+		</a>
+</div>
+			<!-- <p class="deck-summary">Your experience with cancer is unique. You can build an action deck with topics that are important to you. Or select an action deck that gives you tips and tools on a specific topic about cancer or treatment.</p>-->
 		</div>
 		<!-- end column -->
 	</div>
