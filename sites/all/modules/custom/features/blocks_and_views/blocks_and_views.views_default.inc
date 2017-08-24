@@ -909,6 +909,16 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="col-sm-12 get-support-survivors-intro"><h2>Support for Cancer Survivors</h2><p>Strong communication and the support of others can be extremely important when dealing with cancer</p></div>';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Published */
+  $handler->display->display_options['sorts']['status']['id'] = 'status';
+  $handler->display->display_options['sorts']['status']['table'] = 'node';
+  $handler->display->display_options['sorts']['status']['field'] = 'status';
+  $handler->display->display_options['sorts']['status']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
@@ -1006,6 +1016,16 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="col-sm-12 get-support-caregivers-intro"><h2>Support for Caregivers</h2><p>People who provide care and support sometimes need some help too. Find out what is means to be a cancer caregiver and get information on how to take care of yourself and the cancer patient in your life. </p></div>';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Published */
+  $handler->display->display_options['sorts']['status']['id'] = 'status';
+  $handler->display->display_options['sorts']['status']['table'] = 'node';
+  $handler->display->display_options['sorts']['status']['field'] = 'status';
+  $handler->display->display_options['sorts']['status']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   $handler->display->display_options['filter_groups']['groups'] = array(
@@ -1940,6 +1960,17 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/video-stories-playlist/[name_1]" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><span class="subpage-link-title">[name]</span><p>[description]</p><div class="subpage-videos-count">[nid]</div></span></a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Sort criterion: Content: Published */
+  $handler->display->display_options['sorts']['status']['id'] = 'status';
+  $handler->display->display_options['sorts']['status']['table'] = 'node';
+  $handler->display->display_options['sorts']['status']['field'] = 'status';
+  $handler->display->display_options['sorts']['status']['relationship'] = 'reverse_field_video_playlist_node';
+  $handler->display->display_options['sorts']['status']['order'] = 'DESC';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
+  $handler->display->display_options['sorts']['title']['relationship'] = 'reverse_field_video_playlist_node';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
