@@ -33,6 +33,9 @@
             <div class="col-md-6">
                 <?php print $content['hero-fact3']; ?>
             </div>
+            <div class="col-md-6">
+                <?php print $content['hero-fact4']; ?>
+            </div>
 		</div> <!-- end column -->
 	</div> <!-- end row -->
 </div> <!-- end container -->

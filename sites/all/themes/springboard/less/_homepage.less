@@ -8,6 +8,9 @@
 	margin-top: 50px;
 	margin-bottom: 15px;	
 }
+.homepage .additional-resources .col-md-9 > .row:first-child {
+	background: #F2F6F7;
+}
 .homepage .additional-resources h2 {
 	margin-top: 20px;	
 }
@@ -238,7 +241,7 @@ a.infographic4 p {
 }
 .decks .box {
 	background-image: url(../images/decks-graphic.png);
-	background-position: right bottom;
+	background-position: 120% bottom;
 	background-repeat: no-repeat;
 	min-height:650px;
 }
@@ -298,6 +301,41 @@ a.infographic4 p {
 .decks .btn-create:hover .btn-create-title {
 	color: #FFFFFF;
 	text-decoration:none;
+}
+.decks #boxes-box-homepage_deck_preview {
+	.plus-action-deck {
+		height: 75px;
+		display: inherit;
+		margin-top: 50px;
+		&:hover{
+			p {color: white;}
+		}
+		.circle-graphic-plus {
+			width: 60px;
+			height: 60px;
+			display: inline-block;
+			background-image: url(../images/deck-plus-icon.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+			font-weight: 500;
+		}
+		p {
+			display: inline-block;
+			font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.42857143;
+			font-weight: 300 !important;
+			color: #002b41;
+			vertical-align: top;
+			margin-top: 30px;
+		}
+	}
+	.embed-responsive.embed-responsive-16by9 {
+		margin-top: 40px;
+	}
 }
 @media (max-width: 1200px) {
 	.decks .box {
@@ -435,6 +473,22 @@ h3.poll {
 	display:block;
 	width:100%;
 	margin:20px 0px;	
+}
+#boxes-box-homepage_video2 {
+	.watch-more {
+		display: inherit;
+		.circle-graphic-play {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-image: url(../images/sbc-featured-video.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+		}
+	}
 }
 
 //.equal-height {

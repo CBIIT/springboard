@@ -125,10 +125,6 @@ function blocks_and_views_default_box() {
 	<div class="row">
 		<div class="col-md-4 col-lg-3">
 			<ul class="list-unstyled premade-deck-links" id="accordion">
-				<li><a href="/springboard/create-action-deck" class="btn-create">
-					<div class="plus-icon-large"></div>
-					<div class="btn-create-title">Create an Action Deck</div>
-					Create an Action Deck with the topics that are most important to you. </a> </li>
 				<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/new-diagnosis">
 					<div class="border-to-arrow"></div>
 					<div class="btn-title">New Diagnosis</div>
@@ -930,12 +926,14 @@ function blocks_and_views_default_box() {
 		<!-- end column --> 
 		<div class="col-md-8 col-lg-9">
 <div class="col-md-8 col-lg-8">
-<p><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offer action deck. Watch this video to learn how to create action deck and use them in your self-management journey. </p>
+<p style=" font-weight: 500; "><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offer action deck. Watch this video to learn how to create action deck and use them in your self-management journey. </p>
 <div class="embed-responsive embed-responsive-16by9">
 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s3hjuqTEn7I?rel=0"></iframe></div>
-<a class="btn" href="/springboard/create-action-deck">
+<a class="btn plus-action-deck" href="/springboard/create-action-deck">
 			<div class="border-to-arrow"></div>
+<div class="circle-graphic-plus"></div>
 			<div class="btn-title">Create an Action Deck</div>
+<p class="btn-title">Create an Action Deck with topics that are most important to you. </p>
 		</a>
 </div>
 			<!-- <p class="deck-summary">Your experience with cancer is unique. You can build an action deck with topics that are important to you. Or select an action deck that gives you tips and tools on a specific topic about cancer or treatment.</p>-->
@@ -1240,17 +1238,22 @@ function blocks_and_views_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<div class="col-md-8">
-<h3>Angie\'s Experience With Breast Cancer - Fatigue</h3>
+<h3>Featured Video Story</h3>
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ipM_QF9sbpE?rel=0"></iframe></div>
+<a class="btn watch-more" href="/springboard/video-stories"><div class="border-to-arrow"></div>
+<div class="circle-graphic-play"></div>
+<div class="btn-title">Watch More Video Stories</div></a>
 <!-- end youtube embed --></div>
 <!-- end column -->
 
 <div class="col-md-4">
+<h3>Angie\'s Experience With Breast Cancer - Fatigue</h3>
+
 <p class="video-summary">Angie, a breast cancer survivor, talks about her cancer diagnosis and treatment, as well as her fatigue symptoms during chemotherapy and radiation. By walking between treatments and playing tennis, Angie was able to boost her energy levels and battle fatigue. Angie recommends finding a physical activity you enjoy and pursuing it in a modified way until you\'re able to return to a fully active lifestyle. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
 </div>
 <!-- end column -->',
-      'format' => 'full_html',
+      'format' => 'raw_html',
     ),
     'additional_classes' => '',
   );

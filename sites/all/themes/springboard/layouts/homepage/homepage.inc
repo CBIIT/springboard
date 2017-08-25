@@ -11,6 +11,7 @@ $plugin = array(
 	'hero-fact1' => t('Hero Area Fact 1'),
 	'hero-fact2' => t('Hero Area Fact 2'),
 	'hero-fact3' => t('Hero Area Fact 3'),
+      'hero-fact4' => t('Hero Area Fact 4'),
 	'hero-video' => t('Hero Area Video'),
     'infographic' => t('Infographic Area'),
 	'deckpreview' => t('Decks Preview'),

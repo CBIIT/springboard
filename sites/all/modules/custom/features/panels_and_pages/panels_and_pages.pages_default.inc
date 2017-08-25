@@ -1474,6 +1474,7 @@ function panels_and_pages_default_page_manager_pages() {
       'additional-resources-video3' => NULL,
       'additional-resources-poll' => NULL,
       'link-to-videos' => NULL,
+      'hero-fact4' => NULL,
     ),
   );
   $display->cache = array();
@@ -1676,6 +1677,29 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408'] = $pane;
   $display->panels['hero-fact3'][0] = 'new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408';
   $pane = new stdClass();
+  $pane->pid = 'new-d5b851d8-5122-470f-ac2a-2717579a4499';
+  $pane->panel = 'hero-fact4';
+  $pane->type = 'block';
+  $pane->subtype = 'boxes-springboard_fact_box_get_support';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'd5b851d8-5122-470f-ac2a-2717579a4499';
+  $display->content['new-d5b851d8-5122-470f-ac2a-2717579a4499'] = $pane;
+  $display->panels['hero-fact4'][0] = 'new-d5b851d8-5122-470f-ac2a-2717579a4499';
+  $pane = new stdClass();
   $pane->pid = 'new-fb5b3c9d-ef6b-43b2-a968-495fb7fa8e3d';
   $pane->panel = 'hero-intro';
   $pane->type = 'block';
@@ -1749,7 +1773,7 @@ function panels_and_pages_default_page_manager_pages() {
   $pane->panel = 'link-to-videos';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Link to Video Page',
