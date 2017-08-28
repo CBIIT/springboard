@@ -30,11 +30,37 @@
         }
 	}
 	$('#nav-search').click(function(){
+        $('#nav-more-title').text('MORE');
+        $('#nav-more').attr('aria-expanded', false);
+        $('#more-dropdown').slideUp('fast');
+        $('#nav-more-icon').attr('src', '/sites/all/themes/springboard/images/more-btn.png');
 		searchOverlay();
 	});
 	$('#close-search').click(function(){
 		searchOverlay();
 	});
+// More Open and Close
+    function moreOverlay() {
+        $('#more-dropdown').slideToggle('fast');
+        var src = ($('#nav-more-icon').attr('src') === '/sites/all/themes/springboard/images/more-btn.png') ? '/sites/all/themes/springboard/images/search-close.png' : '/sites/all/themes/springboard/images/more-btn.png';
+        $('#nav-more-icon').attr('src', src);
+        if ($('#nav-more-title').text() === 'MORE') {
+            $('#nav-more-title').text('CLOSE');
+            $('#nav-more').attr('aria-expanded', true);
+        }
+        else {
+            $('#nav-more-title').text('MORE');
+            $('#nav-more').attr('aria-expanded', false);
+        }
+    }
+    $('#nav-more').click(function(){
+        $('#nav-search-title').text('SEARCH');
+        $('#nav-search').attr('aria-expanded', false);
+        $('#close-search').attr('aria-expanded', false);
+        $('#nav-search-icon').attr('src', '/sites/all/themes/springboard/images/search-open.png');
+        $('#search').slideUp('fast');
+        moreOverlay();
+    });
 // Homepage Deck Preview
 	$('.premade-deck-links').find('.btn').click(function() {
 		if ($(this).hasClass('active')) {

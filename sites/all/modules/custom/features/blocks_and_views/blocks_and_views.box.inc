@@ -1049,8 +1049,11 @@ function blocks_and_views_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iHFJ2vznMtA?rel=0"></iframe></div>
+<a class="btn watch-more" href="/springboard/video-stories"><div class="border-to-arrow"></div>
+<div class="circle-graphic-play"></div>
+<div class="btn-title">Watch More Video Stories</div></a>
 <!-- end youtube embed -->',
-      'format' => 'full_html',
+      'format' => 'raw_html',
     ),
     'additional_classes' => '',
   );

@@ -10,6 +10,12 @@
 }
 .homepage .additional-resources .col-md-9 > .row:first-child {
 	background: #F2F6F7;
+	margin-bottom: 30px;
+}
+.homepage .additional-resources .col-md-9 > .row:nth-child(2) {
+	> .panel-pane {
+		padding: 0;
+	}
 }
 .homepage .additional-resources h2 {
 	margin-top: 20px;	
@@ -55,22 +61,22 @@
 	background-color:#FFFFFF;
 	border-radius:3px;
 	box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.1);
-	border-left:8px solid transparent;
+	border-top:6px solid transparent;
 	padding:15px;
 	margin:0px 0px 25px 0px;
 	//width:80%;
 }
 .homepage .symptoms .fact-box {
-	border-left-color:@symptoms;	
+	border-top-color:@symptoms;
 }
 .homepage .stressmood .fact-box {
-	border-left-color:@stressmood;	
+	border-top-color:@stressmood;
 }
 .homepage .wellness .fact-box {
-	border-left-color:@wellness;	
+	border-top-color:@wellness;
 }
 .homepage .getsupport .fact-box {
-	border-left-color:@getsupport;	
+	border-top-color:@getsupport;
 }
 .homepage .fact-box h3 {
 	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -488,6 +494,74 @@ h3.poll {
 		.btn-title {
 			display: inline-block;
 		}
+	}
+}
+
+#boxes-box-homepage_hero_video {
+	.watch-more {
+		display: inherit;
+		.circle-graphic-play {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-image: url(../images/sbc-featured-video.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+		}
+	}
+}
+
+.view-display-id-block_12 {
+	.create-vision-board {
+		padding-left: 0;
+		padding-right: 30px;
+		a.subpage-link {
+			&:hover {
+				.subpage-link-box {
+				.subpage-link-title, p {
+				color: white;}}
+			}
+		.subpage-link-box {
+			padding-top: 25px;
+			padding-left: 25px;
+			padding-right: 25px;
+			padding-bottom: 25px;
+			border-top: 6px solid transparent;
+			border-top-color: #158f7a;
+			.subpage-link-title {
+				padding: 0px;
+				margin: 0px 0px 8px 0px;
+				font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 700;
+				color: #002b41;
+				text-decoration: none;
+			}
+			p {
+				padding: 0px;
+				margin: 0px;
+				font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				color: #002b41;
+				text-decoration: none;
+			}
+		}
+		}
+	}
+}
+
+#boxes-box-take_our_quiz_box {
+	.col-sm-12 {
+		padding: 0;
+	}
+	.subpage-link-box {
+		border-top: 6px solid transparent;
+		border-top-color: #005F8E;
 	}
 }
 

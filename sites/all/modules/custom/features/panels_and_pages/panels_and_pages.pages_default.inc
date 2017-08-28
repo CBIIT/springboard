@@ -1585,6 +1585,32 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-c4188045-4aef-4260-8d7a-52e5693ca7ca'] = $pane;
   $display->panels['additional-resources-video3'][0] = 'new-c4188045-4aef-4260-8d7a-52e5693ca7ca';
   $pane = new stdClass();
+  $pane->pid = 'new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
+  $pane->panel = 'additional-resources-video3';
+  $pane->type = 'block';
+  $pane->subtype = 'views-springboard-block_12';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'col-sm-6',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
+  $display->content['new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3'] = $pane;
+  $display->panels['additional-resources-video3'][1] = 'new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
+  $pane = new stdClass();
   $pane->pid = 'new-65d064eb-84a0-410c-aed0-a021fd889715';
   $pane->panel = 'deckpreview';
   $pane->type = 'block';
