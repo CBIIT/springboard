@@ -1,5 +1,10 @@
 <?php
 
+libraries_load('fpdf');
+libraries_load('fpdi');
+
+
+
 /**
  * Implements hook_init().
  */
@@ -133,6 +138,14 @@ function springboard_actiondeck_menu() {
     'access arguments' => array('view actiondecks'),
     'type' => MENU_CALLBACK,
   );
+  $items['springboard/print-action-deck-txt/%actiondeck'] = array(
+    'title' => 'Print Action Deck TXT',
+    'description' => 'Print Action Deck Text',
+    'page callback' => 'print_action_deck_txt',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 
@@ -219,6 +232,7 @@ function template_preprocess_actiondeck(&$variables) {
   $cards = array();
   $wrapper = entity_metadata_wrapper('actiondeck', $variables['element']);
   $variables['title'] = 'Action Deck: ' . $wrapper->getIdentifier();
+  $variables['name'] = $wrapper->name->value();
   $variables['eid'] = $wrapper->getIdentifier();
   $entity_references = $wrapper->field_springboard_action_cards->value();
   foreach ($entity_references as $entity_reference) {
@@ -294,10 +308,67 @@ function actiondeck_page_view($entity, $view_mode='full'){
 
 }
 
+
 /**
+ * Using FPDI library to join the individual card PDF files into an action deck for download by user
+ * @param $entity
+ */
+function print_action_deck_pdf($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+
+  if (class_exists('fpdi')) {
+    //Initiate FPDI
+    $file = new FPDI();
+  }
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_pdf)) {
+      $file_array = $action_card->field_card_image_pdf->value();
+      if (!empty($file_array['uri'])) {
+        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if (file_exists($pdf)) {
+
+          //check the number of pages in the pdf
+          $pageCount = $file->setSourceFile($pdf);
+
+          //import all pages in this pdf to the action deck
+          for($pageNo=1; $pageNo<=$pageCount; $pageNo++){
+
+            //read each page in an action card
+            $templateId = $file->ImportPage($pageNo);
+
+            //Check size of page in each action card
+            $size = $file->getTemplateSize($templateId);
+
+            //create a blank page in portrait mode or landscape mode - depending on page orientation
+            if($size['w'] > $size['h']) {
+              //Landscape Mode
+              $file->AddPage('L', array($size['w'] , $size['h']));
+            } else {
+              //Portrait Mode
+              $file->AddPage('P', array($size['w'] , $size['h']));
+            }
+
+            //import the page to the action deck
+            $file->useTemplate($templateId);
+          }
+        }
+      }
+
+    }
+  }
+  //Output the action deck pdf
+  $file->Output('Action_deck.pdf', 'I');
+  unlink($file);
+}
+
+
+/**
+ * Old function - used to zip all the individual pdf files and present for download
  * Compiles the individual card PDF files into a zip file and streams it.
  * @param $entity
  */
+/*
 function print_action_deck_pdf($entity) {
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
   $file = tempnam("tmp", "zip");
@@ -322,6 +393,8 @@ function print_action_deck_pdf($entity) {
   readfile($file);
   unlink($file);
 }
+*/
+
 
 /**
  * Compiles jpg files from cards into a single ZIP archive and streams it.
@@ -353,6 +426,30 @@ function print_action_deck_jpg($entity) {
 }
 
 /**
+ * Compiles an action deck txt files from cards and streams it.
+ * @param $entity
+ */
+function print_action_deck_txt($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_pdf)) {
+      $file_array = $action_card->field_card_image_pdf->value();
+      if (!empty($file_array['uri'])) {
+        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if (file_exists($pdf)) {
+          //$zip->addFile($pdf, $file_array['filename']);
+          //dpr("The selected file name is:" . $pdf . "\n", $return = FALSE, $name = NULL);
+        }
+      }
+    }
+  }
+
+}
+
+
+
+/**
  * Callback for Create Actiondeck form- just need one field to hold cards.
  *
  * @param array $form.
@@ -380,6 +477,13 @@ function form_create_actiondeck($form, &$form_state) {
     '#attributes' => array('class' => array('hidden')),
   );
 
+  $form['card_name'] = array(
+    '#type' => 'textfield',
+    '#maxlength' => 50,
+    '#size' => 20,
+    '#required' => TRUE,
+  );
+
   $form['submit_button'] = array(
     '#type' => 'submit',
     '#value' => t('Create/View Your Action Deck'),
@@ -405,7 +509,8 @@ function form_create_actiondeck($form, &$form_state) {
 function form_create_actiondeck_submit($form, &$form_state) {
 
   $new_actiondeck = entity_create('actiondeck', array());
-  $new_actiondeck->name = 'name';
+  //$new_actiondeck->name = 'name';
+  $new_actiondeck->name = $form_state['values']['card_name'];
 
   $wrapper = entity_metadata_wrapper('actiondeck', $new_actiondeck);
   $wrapper->field_springboard_action_cards->set($form_state['values']['cards']);
@@ -429,7 +534,13 @@ function form_create_actiondeck_submit($form, &$form_state) {
  */
 function form_create_actiondeck_validate($form, &$form_state) {
   if (empty($form_state['values']['cards'])) {
-    form_set_error('Please select at least one card to save a deck');
+    form_set_error('', 'Please select at least one card to save a deck.');
+  }
+  if(empty($form_state['values']['card_name'])){
+    form_set_error('card_name', 'Name of your action deck is a required field.');
+  }
+  if(webpurify_api_check($form_state['values']['card_name']) == 1){
+    form_set_error('card_name', 'Profanity is not allowed in the name of an action deck. Please choose a different name.');
   }
 }
 
@@ -480,7 +591,7 @@ switch($delta) {
     // Commenting out because the client no longer wants load deck function. If
     // they change their mind, uncomment to render form instead of raw html.
 
-    /* $block['content'] = drupal_get_form('deck_nav_form'); */
+    $block['content'] = drupal_get_form('deck_nav_form');
     $block['content'] = get_html_version_of_deck_nav();
     break;
 

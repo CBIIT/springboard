@@ -908,7 +908,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="col-sm-12 get-support-survivors-intro"><h2>Support for Cancer Survivors</h2><p>Strong communication and the support of others can be extremely important when dealing with cancer</p></div>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="survivor-icon"></div><div class="col-sm-12 get-support-survivors-intro"><h2>Support for Cancer Survivors</h2><p>Strong communication and the support of others can be extremely important when dealing with cancer. Find out how to get the support you need.</p></div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Published */
   $handler->display->display_options['sorts']['status']['id'] = 'status';
@@ -964,7 +964,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-12 col-lg-12';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-12 col-lg-12 create-vision-board';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1015,7 +1015,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="col-sm-12 get-support-caregivers-intro"><h2>Support for Caregivers</h2><p>People who provide care and support sometimes need some help too. Find out what is means to be a cancer caregiver and get information on how to take care of yourself and the cancer patient in your life. </p></div>';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="caregiver-icon"></div><div class="col-sm-12 get-support-caregivers-intro"><h2>Support for Caregivers</h2><p>People who provide care and support sometimes need some help too. Find out what is means to be a cancer caregiver and get information on how to take care of yourself and the cancer patient in your life. </p></div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Published */
   $handler->display->display_options['sorts']['status']['id'] = 'status';
