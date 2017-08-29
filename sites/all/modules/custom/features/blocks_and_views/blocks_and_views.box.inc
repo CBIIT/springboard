@@ -2189,6 +2189,28 @@ function blocks_and_views_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'springboard_fact_box_get_support';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Springboard Homepage Fact Box Get Support';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="getsupport">
+<div class="fact-box">
+<h3>Are you a <a href="/springboard/get-support/being-a-caregiver-card">caregiver</a>?</h3>
+
+<p>Understand the importance of taking care of yourself while being there for your loved one. </p>
+</div>
+<!-- end fact-box --></div>
+',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['springboard_fact_box_get_support'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'springboard_helpful_tips';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -2203,6 +2225,34 @@ function blocks_and_views_default_box() {
     'additional_classes' => '',
   );
   $export['springboard_helpful_tips'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'springboard_more_btn';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Springboard More Button Open';
+  $box->options = array(
+    'body' => array(
+      'value' => '<button id="nav-more" aria-expanded="false">
+						<div class="nav-more-btn">
+							<img src="/sites/all/themes/springboard/images/more-btn.png" id="nav-more-icon" alt="More Open and Close">
+							<div id="nav-more-title">MORE</div>
+						</div>
+					</button>
+<ul id="more-dropdown" class="dropdown-menu more-dropdown">
+<li><a href="/springboard/about">About Springboard Beyond Cancer</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="/springboard/springboard-stress-quiz">Take Our Quiz</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="/springboard/video-stories">Video Stories</a></li>
+</ul>',
+      'format' => 'raw_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['springboard_more_btn'] = $box;
 
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -2222,6 +2272,25 @@ function blocks_and_views_default_box() {
     'additional_classes' => '',
   );
   $export['stress'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'take_our_quiz_box';
+  $box->plugin_key = 'simple';
+  $box->title = '<none>';
+  $box->description = 'Take our quiz box';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="col-sm-12 col-md-12 col-lg-12">
+
+	<div>        <span><a href="/springboard/springboard-stress-quiz" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><div class="col-xs-6"><span class="subpage-link-title">Take Our Quiz</span><p>Take this short quiz to understand how much stress you\'re experiencing and find out how you can manage it. </p></div><div class="col-xs-6" style="margin-top: 5%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/graphic.png"></div>
+	</span></a></span>  </div>  </div> ',
+      'format' => 'raw_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['take_our_quiz_box'] = $box;
 
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
