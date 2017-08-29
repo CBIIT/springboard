@@ -313,6 +313,7 @@ a.infographic4 p {
 		height: 75px;
 		display: inherit;
 		margin-top: 50px;
+		overflow: hidden;
 		&:hover{
 			p {color: white;}
 		}
@@ -550,7 +551,24 @@ h3.poll {
 				color: #002b41;
 				text-decoration: none;
 			}
+			@media (max-width: 768px) {
+				img {
+					max-height: 195px;
+				}
+			}
 		}
+			@media (max-width: 992px) {
+				.subpage-link-box {
+					height: 250px;
+				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		.create-vision-board {
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-left: 0px;
 		}
 	}
 }
@@ -562,6 +580,20 @@ h3.poll {
 	.subpage-link-box {
 		border-top: 6px solid transparent;
 		border-top-color: #005F8E;
+	}
+	@media (max-width: 992px) {
+		.subpage-link-box {
+			height: 250px;
+		}
+	}
+	@media (max-width: 768px) {
+		.col-sm-12 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.subpage-link-box {
+			height: 220px;
+		}
 	}
 }
 

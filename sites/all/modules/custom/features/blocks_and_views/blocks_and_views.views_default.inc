@@ -1115,8 +1115,8 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]" class="subpage-link"><span class="subpage-link-box"><div class="col-sm-5" style="margin-top: 10%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/visionboard_2x.png"></div>
-<div class="col-sm-7"><span class="subpage-link-title">[title]</span>[body]</div></span></a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]" class="subpage-link"><span class="subpage-link-box"><div class="col-xs-5" style="margin-top: 10%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/visionboard_2x.png"></div>
+<div class="col-xs-7"><span class="subpage-link-title">[title]</span>[body]</div></span></a>';
   $handler->display->display_options['fields']['nothing']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['nothing']['element_default_classes'] = FALSE;

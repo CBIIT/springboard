@@ -9663,6 +9663,7 @@ a.infographic4 p {
   height: 75px;
   display: inherit;
   margin-top: 50px;
+  overflow: hidden;
 }
 .decks #boxes-box-homepage_deck_preview .plus-action-deck:hover p {
   color: white;
@@ -9931,12 +9932,43 @@ h3.poll {
   color: #002b41;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box img {
+    max-height: 195px;
+  }
+}
+@media (max-width: 992px) {
+  .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box {
+    height: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .view-display-id-block_12 .create-vision-board {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0px;
+  }
+}
 #boxes-box-take_our_quiz_box .col-sm-12 {
   padding: 0;
 }
 #boxes-box-take_our_quiz_box .subpage-link-box {
   border-top: 6px solid transparent;
   border-top-color: #005F8E;
+}
+@media (max-width: 992px) {
+  #boxes-box-take_our_quiz_box .subpage-link-box {
+    height: 250px;
+  }
+}
+@media (max-width: 768px) {
+  #boxes-box-take_our_quiz_box .col-sm-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #boxes-box-take_our_quiz_box .subpage-link-box {
+    height: 220px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .is-table-row .fact-box {
