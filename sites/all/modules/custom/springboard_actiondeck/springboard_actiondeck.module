@@ -187,8 +187,10 @@ function springboard_actiondeck_theme($existing, $type, $theme, $path) {
 function template_preprocess_form_create_actiondeck(&$variables) {
   $query = db_select('node', 'n');
   $query->join('field_data_field_action_category', 'cat', 'n.nid = cat.entity_id');
+  $query->leftJoin('field_data_field_get_support_for', 'sup', 'n.nid = sup.entity_id');
   $results = $query
     ->fields('n', array('nid', 'title'))
+    ->fields('sup', array('field_get_support_for_value'))
     ->fields('cat', array('field_action_category_target_id'))
     ->orderBy('title', 'ASC')
     ->condition('n.type', 'springboard_action_card', '=')
@@ -209,6 +211,7 @@ function template_preprocess_form_create_actiondeck(&$variables) {
 
       case springboard_actiondeck_get_taxonomy_id_by_name('Get Support', 'action_categories'):
         $get_support_cards[$result->nid] = $result->title;
+        $get_support_cards[$result->title] = $result->field_get_support_for_value;
         break;
 
       case springboard_actiondeck_get_taxonomy_id_by_name('Stress & Mood', 'action_categories'):
@@ -429,24 +432,75 @@ function print_action_deck_jpg($entity) {
  * Compiles an action deck txt files from cards and streams it.
  * @param $entity
  */
+/*
 function print_action_deck_txt($entity) {
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+  //$wrapper = entity_metadata_wrapper('springboard page', $entity);
+  //dpr("The selected action card pages is : " . print_r($wrapper, true) , $return = FALSE, $name = NULL);
+  $i=0;
+  foreach ($wrapper->field_springboard_action_cards as $action_page) {
+    //dpr("The selected action card pages is : " . print_r($action_page, true) , $return = FALSE, $name = NULL);
+    if(!empty($action_page->title)) {
+      //$title =
+      $file_array[$i]['title'] = $action_page->title->value();
+      //$file_array[$i]['page'] = $action_page->field_springboard_page->value();
+      $file_array[$i]['category'] = $action_page->field_action_category->optionsList();
+      $file_array[$i]['Description'] = $action_page->body->value->value();
+      //$file_array[$i]['try this'] = $action_page->field_try_this->value->value();
+      $try_this = $action_page->field_try_this->value->value();
+      $try_this = preg_replace("/\s+/", " ", $try_this);
+      $file_array[$i]['try this'] =preg_replace("/[\r\n]+/", "\n", $try_this);
 
-  foreach ($wrapper->field_springboard_action_cards as $action_card) {
-    if (!empty($action_card->field_card_image_pdf)) {
-      $file_array = $action_card->field_card_image_pdf->value();
+      $check_this = $action_page->field_check_this_out->value->value();
+      //$check_this = preg_replace("/\s+/", " ", $check_this);
+      //$check_this = wordwrap($check_this,120, '<br/>', true);
+      //$check_this = nl2br($check_this);
+      //$check_this = preg_replace('#\R+#', '</p><p>', $check_this);
+      $file_array[$i]['check this'] = preg_replace("/[\r\n]+/", "\n", $check_this);
+
+
+      //$file_array[$i]['check this'] = $action_page->field_check_this_out->value->value();
+      //dpr("The selected action card pages is : " . print_r($action_page->title, true) , $return = FALSE, $name = NULL);
       if (!empty($file_array['uri'])) {
+        //dpr("The selected action card pages is : " . print_r($file_array['uri'], true) , $return = FALSE, $name = NULL);
+      }
+      dpr("[". $i. "][0]->card title is :  " . $file_array[$i]['title'] , $return = FALSE, $name = NULL);
+      dpr("[". $i. "][1]->card category is :  " . print_r($file_array[$i]['category'], true) , $return = FALSE, $name = NULL);
+      dpr("[". $i. "][2]->card description is :  " . $file_array[$i]['Description'] , $return = FALSE, $name = NULL);
+      dpr("[". $i. "][3]->card -try this- is :  \n" . $file_array[$i]['try this'], $return = FALSE, $name = NULL);
+      dpr("[". $i. "][4]->card -check this- is : \n " . $file_array[$i]['check this'] , $return = FALSE, $name = NULL);
+      dpr("\n\n",$return = FALSE, $name = NULL);
+     $i++;
+    }
+  }
+  dpr("The selected action card pages is : <pre> " . print_r($file_array, true) . "</pre>", $return = FALSE, $name = NULL);
+
+  /*
+  //$wrapper = entity_metadata_wrapper('actiondeck', $entity);
+  $wrapper12 = entity_metadata_wrapper('springboard page', $entity);
+  //dpr("The selected action card pages is : " . print_r($wrapper12, true) , $return = FALSE, $name = NULL);
+  foreach ($wrapper12->field_springboard_action_cards as $action_page) {
+    dpr("The selected action card pages is : " . print_r($action_page, true) , $return = FALSE, $name = NULL);
+    //if (!empty($action_card->field_card_image_pdf)) {
+    if (!empty($action_page->title)) {
+      $file_array = $action_page->title->value();
+
+      //dpr("The selected action card pages is : " . print_r ($file_array) . "\n", $return = FALSE, $name = NULL);
+      //dpr("and this action card is of type: " . print_r ($action_card->field_action_category->value()) . "\n", $return = FALSE, $name = NULL);
+      if (!empty($file_array['uri'])) {
+        //dpr("The selected action card pages are :" . $file_array['uri'] . "\n", $return = FALSE, $name = NULL);
         $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
         if (file_exists($pdf)) {
           //$zip->addFile($pdf, $file_array['filename']);
-          //dpr("The selected file name is:" . $pdf . "\n", $return = FALSE, $name = NULL);
+
         }
       }
     }
   }
-
+*/
+/*
 }
-
+*/
 
 
 /**

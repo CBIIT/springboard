@@ -426,6 +426,31 @@ function content_types_and_fields_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_get_support_for'.
+  $field_bases['field_get_support_for'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_get_support_for',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'survivors' => 'Cancer Survivors',
+        'caregivers' => 'Caregivers',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_image'.
   $field_bases['field_image'] = array(
     'active' => 1,

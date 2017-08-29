@@ -7652,6 +7652,23 @@ label.control-label input:disabled ~ .control__indicator:after {
 .create-vision-board a.subpage-link .subpage-link-box p {
   font-size: 20px;
 }
+/* create action deck page - get support tab */
+.survivor-intro,
+.caregiver-intro {
+  display: block;
+  padding-left: 50px;
+}
+h3.support {
+  display: inline-block;
+  color: #0e5c4f;
+  padding-left: 15px;
+  vertical-align: top;
+}
+.row.survivor-support,
+.row.caregiver-support {
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -8173,6 +8190,15 @@ visionboard-icon:focus {
   background-color: #002b41;
   color: #FFFFFF;
   text-decoration: none;
+}
+.survivor-support .survivor-icon,
+.caregiver-support .caregiver-icon {
+  width: 52px;
+  height: 52px;
+  background-size: 52px 52px;
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
 }
 /* ------------------------------ Buttons ------------------------------ */
 .btn {
