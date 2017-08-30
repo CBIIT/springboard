@@ -1965,7 +1965,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'springboard_video' => 'springboard_video',
   );
-  $handler->display->display_options['path'] = 'video-stories-playlist/%';
+  $handler->display->display_options['path'] = 'springboard/video-stories-playlist/%';
   $export['springboard_video_stories'] = $view;
 
   $view = new view();
