@@ -166,6 +166,11 @@
 	'type' => 'file',
 	'scope' => 'footer',
 	'weight' => 4));
+    drupal_add_js("sites/all/themes/springboard/js/jquery.matchHeight-min.js",
+    array(
+        'type' => 'file',
+        'scope' => 'footer',
+        'weight' => 5));
 ?>
 
 

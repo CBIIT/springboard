@@ -7,7 +7,12 @@
       $("a[href^='http']").attr('target','_blank');
     }
   };
-
+    
+    $(function() {
+        $('.view-springboard-video-stories.view-display-id-page_1 .views-row .col-md-6').matchHeight();
+    });
+  // $('.view-springboard-video-stories.view-display-id-page_1 .views-row .col-md-6').matchHeight();
+  
 // Smooth scroll back to top
 	$('.scrollToTop').click(function(){
 		$('body,html,document').animate({scrollTop:0}, 'slow');
