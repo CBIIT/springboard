@@ -1897,6 +1897,35 @@ function blocks_and_views_views_default_views() {
 </div> <!-- end container -->';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['header']['area']['tokenize'] = TRUE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="col-md-3">
+<a class="btn" href="/springboard/video-stories.html"><div class="border-to-arrow"></div><div class="btn-title">View All Videos</div></a>
+</div>
+<div class="col-md-9 pull-right">
+<div class="col-sm-4"><span>Video Playlists: </span></div>
+<div class="col-sm-8">
+<div class="col-sm-6">
+<div class="col-sm-12">
+<a class="btn" href="/springboard/video-stories-playlist/Symptoms-&-Side-Effects"><div class="border-to-arrow Symptoms-Side-Effects"></div><div class="btn-title">Symptoms & Side Effects</div></a>
+</div>
+<div class="col-sm-12">
+<a class="btn" href="/springboard/video-stories-playlist/Relaxation-Exercises"><div class="border-to-arrow Relaxation-Exercises"></div><div class="btn-title">Relaxation Exercises</div></a>
+</div>
+</div>
+<div class="col-sm-6">
+<div class="col-sm-12">
+<a class="btn" href="/springboard/video-stories-playlist/Diagnosis-&-Treatment"><div class="border-to-arrow Diagnosis-Treatment"></div><div class="btn-title">Diagnosis & Treatment</div></a>
+</div>
+<div class="col-sm-12">
+<a class="btn" href="/springboard/video-stories-playlist/Support-&-Self-Management"><div class="border-to-arrow Support-Self-Management"></div><div class="btn-title">Support & Self-Management</div></a>
+</div>
+</div>
+</div>
+</div>';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

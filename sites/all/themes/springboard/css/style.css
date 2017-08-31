@@ -7669,8 +7669,61 @@ h3.support {
   margin-top: 20px;
   margin-bottom: 35px;
 }
-.view-springboard-video-stories.view-display-id-page_1 .views-row .col-md-6 {
+.view-springboard-video-stories.view-display-id-page_1 .view-content .views-row .col-md-6 {
   margin: 20px 0px;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .Symptoms-Side-Effects {
+  background-color: #f9ae00;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .Relaxation-Exercises {
+  background-color: #00bbed;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .Diagnosis-Treatment {
+  background-color: #893b69;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .Support-Self-Management {
+  background-color: #158f7a;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-3 {
+  padding-top: 30px;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 span {
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #002b41;
+  float: right;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-8 {
+  padding: 0px;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-8 .col-sm-6 .col-sm-12 {
+  padding: 0px;
+}
+.view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-8 .col-sm-6 .col-sm-12 a {
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 {
+    float: initial !important;
+  }
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-4 {
+    padding-left: 0;
+  }
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 span {
+    float: left;
+  }
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-6 {
+    padding-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-6 {
+    padding-left: 0;
+  }
+  .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 span {
+    margin-bottom: 10px;
+  }
 }
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
