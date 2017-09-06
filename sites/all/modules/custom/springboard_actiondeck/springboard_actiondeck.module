@@ -1,7 +1,7 @@
 <?php
 
-//libraries_load('fpdf');
-//libraries_load('fpdi');
+libraries_load('fpdf');
+libraries_load('fpdi');
 
 
 
