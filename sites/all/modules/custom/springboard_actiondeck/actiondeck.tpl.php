@@ -8,7 +8,7 @@
     </div> <!-- end column -->
   </div> <!-- end row -->
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
       <p class="intro">
           <!-- Here is the Action Deck you built. Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later: -->
           <b>Congratulations on building your Action Deck!</b> Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later:
