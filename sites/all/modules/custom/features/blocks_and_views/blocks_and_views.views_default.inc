@@ -2082,7 +2082,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Res';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/video-stories-playlist/[name_1]" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><span class="subpage-link-title">[name]</span><p>[description]</p><div class="subpage-videos-count">[nid]</div></span></a>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="/springboard/video-stories-playlist/[name_1]" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><span class="subpage-link-title">[name]</span><p>[description]</p><div class="subpage-videos-count">[nid]</div></span></a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
