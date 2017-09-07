@@ -730,7 +730,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -775,7 +775,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 2,
     ),
   );
 
@@ -817,7 +817,7 @@ function content_types_and_fields_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 12,
+      'weight' => 9,
     ),
   );
 
@@ -859,7 +859,48 @@ function content_types_and_fields_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 11,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-springboard_action_card-field_card_txt_only'.
+  $field_instances['node-springboard_action_card-field_card_txt_only'] = array(
+    'bundle' => 'springboard_action_card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_card_txt_only',
+    'label' => 'Card TXT Only',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 15,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
     ),
   );
 
@@ -902,7 +943,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -959,7 +1000,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 10,
     ),
   );
 
@@ -997,7 +1038,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -1034,7 +1075,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 1,
     ),
   );
 
@@ -1076,7 +1117,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -1132,7 +1173,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 11,
     ),
   );
 
@@ -2036,6 +2077,7 @@ function content_types_and_fields_field_default_field_instances() {
   t('Body');
   t('Card Image JPG');
   t('Card Image PDF');
+  t('Card TXT Only');
   t('Check This Out');
   t('Close poll');
   t('Cookie duration');
