@@ -1,7 +1,7 @@
 <?php
 
-//libraries_load('fpdf');
-//libraries_load('fpdi');
+libraries_load('fpdf');
+libraries_load('fpdi');
 
 
 
@@ -313,7 +313,7 @@ function actiondeck_page_view($entity, $view_mode='full'){
 
 
 /**
- * Using FPDI library to join the individual card PDF files into an action deck for download by user
+ * Use FPDI library to join the individual actioncard PDF files into an actiondeck for user download
  * @param $entity
  */
 function print_action_deck_pdf($entity) {
@@ -360,43 +360,17 @@ function print_action_deck_pdf($entity) {
 
     }
   }
+
+  //Check ID of the action deck
+  $deck_id = end(explode('/', current_path()));
+
+  //Generate name of pdf based on actiondeck ID
+  $pdf_name = "Action_Deck_Pdf_".$deck_id.".pdf";
+
   //Output the action deck pdf
-  $file->Output('Action_deck.pdf', 'I');
-  unlink($file);
+  $file->Output($pdf_name, 'I');
+  //unlink($file);
 }
-
-
-/**
- * Old function - used to zip all the individual pdf files and present for download
- * Compiles the individual card PDF files into a zip file and streams it.
- * @param $entity
- */
-/*
-function print_action_deck_pdf($entity) {
-  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
-  $file = tempnam("tmp", "zip");
-  $zip = new ZipArchive();
-  $zip->open($file, ZipArchive::OVERWRITE);
-
-  foreach ($wrapper->field_springboard_action_cards as $action_card) {
-    if (!empty($action_card->field_card_image_pdf)) {
-      $file_array = $action_card->field_card_image_pdf->value();
-      if (!empty($file_array['uri'])) {
-        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
-        if(file_exists($pdf)) {
-          $zip->addFile($pdf, $file_array['filename']);
-        }
-      }
-    }
-  }
-  $zip->close();
-  header('Content-Type: application/zip');
-  header('Content-Length: ' . filesize($file));
-  header('Content-Disposition: attachment; filename="deckpdf.zip"');
-  readfile($file);
-  unlink($file);
-}
-*/
 
 
 /**
@@ -429,78 +403,53 @@ function print_action_deck_jpg($entity) {
 }
 
 /**
- * Compiles an action deck txt files from cards and streams it.
+ * Compiles an action deck txt file from selected actioncards and streams it to user for download.
  * @param $entity
  */
-/*
+
 function print_action_deck_txt($entity) {
+
+  //Check ID of the current action deck
+  $deck_id = end(explode('/', current_path()));
+
+  //Generate text file based on actiondeck ID
+  $file_name = 'Action_Deck_txt_' . $deck_id . '.txt';
+  $txt_file = drupal_realpath('public://') . '/' . $file_name;
+
+  //Mark the beginning of actiondeck
+  $deck_start = "------------------ Beginning Action Deck -------------------";
+  file_put_contents($txt_file, $deck_start . PHP_EOL, FILE_APPEND | LOCK_EX);
+
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
-  //$wrapper = entity_metadata_wrapper('springboard page', $entity);
-  //dpr("The selected action card pages is : " . print_r($wrapper, true) , $return = FALSE, $name = NULL);
-  $i=0;
-  foreach ($wrapper->field_springboard_action_cards as $action_page) {
-    //dpr("The selected action card pages is : " . print_r($action_page, true) , $return = FALSE, $name = NULL);
-    if(!empty($action_page->title)) {
-      //$title =
-      $file_array[$i]['title'] = $action_page->title->value();
-      //$file_array[$i]['page'] = $action_page->field_springboard_page->value();
-      $file_array[$i]['category'] = $action_page->field_action_category->optionsList();
-      $file_array[$i]['Description'] = $action_page->body->value->value();
-      //$file_array[$i]['try this'] = $action_page->field_try_this->value->value();
-      $try_this = $action_page->field_try_this->value->value();
-      $try_this = preg_replace("/\s+/", " ", $try_this);
-      $file_array[$i]['try this'] =preg_replace("/[\r\n]+/", "\n", $try_this);
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    $card_title = $action_card->title->value();
+    if (!empty($action_card->field_card_txt_only)) {
 
-      $check_this = $action_page->field_check_this_out->value->value();
-      //$check_this = preg_replace("/\s+/", " ", $check_this);
-      //$check_this = wordwrap($check_this,120, '<br/>', true);
-      //$check_this = nl2br($check_this);
-      //$check_this = preg_replace('#\R+#', '</p><p>', $check_this);
-      $file_array[$i]['check this'] = preg_replace("/[\r\n]+/", "\n", $check_this);
+      $card_text = $action_card->field_card_txt_only->value();
+      $card_delimiter = "------------------ End of '" . $card_title . "' Action Card -------------------";
 
-
-      //$file_array[$i]['check this'] = $action_page->field_check_this_out->value->value();
-      //dpr("The selected action card pages is : " . print_r($action_page->title, true) , $return = FALSE, $name = NULL);
-      if (!empty($file_array['uri'])) {
-        //dpr("The selected action card pages is : " . print_r($file_array['uri'], true) , $return = FALSE, $name = NULL);
-      }
-      dpr("[". $i. "][0]->card title is :  " . $file_array[$i]['title'] , $return = FALSE, $name = NULL);
-      dpr("[". $i. "][1]->card category is :  " . print_r($file_array[$i]['category'], true) , $return = FALSE, $name = NULL);
-      dpr("[". $i. "][2]->card description is :  " . $file_array[$i]['Description'] , $return = FALSE, $name = NULL);
-      dpr("[". $i. "][3]->card -try this- is :  \n" . $file_array[$i]['try this'], $return = FALSE, $name = NULL);
-      dpr("[". $i. "][4]->card -check this- is : \n " . $file_array[$i]['check this'] , $return = FALSE, $name = NULL);
-      dpr("\n\n",$return = FALSE, $name = NULL);
-     $i++;
+      file_put_contents($txt_file, "Action Card Name: " . $card_title . PHP_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, $card_text . PHP_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, PHP_EOL, FILE_APPEND| LOCK_EX);
+      file_put_contents($txt_file, $card_delimiter . PHP_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, PHP_EOL, FILE_APPEND| LOCK_EX);
     }
   }
-  dpr("The selected action card pages is : <pre> " . print_r($file_array, true) . "</pre>", $return = FALSE, $name = NULL);
+  //Mark the end of actiondeck
+  $deck_end = "------------------ End of Action Deck -------------------";
+  file_put_contents($txt_file, $deck_end . PHP_EOL, FILE_APPEND | LOCK_EX);
 
-  /*
-  //$wrapper = entity_metadata_wrapper('actiondeck', $entity);
-  $wrapper12 = entity_metadata_wrapper('springboard page', $entity);
-  //dpr("The selected action card pages is : " . print_r($wrapper12, true) , $return = FALSE, $name = NULL);
-  foreach ($wrapper12->field_springboard_action_cards as $action_page) {
-    dpr("The selected action card pages is : " . print_r($action_page, true) , $return = FALSE, $name = NULL);
-    //if (!empty($action_card->field_card_image_pdf)) {
-    if (!empty($action_page->title)) {
-      $file_array = $action_page->title->value();
+  header('Content-type: text/plain');
+  header('Content-Disposition: attachment; filename='.$file_name);
+  header("Content-Length: ". filesize("$file_name").";");
+  header("Content-Transfer-Encoding: binary");
+  header("Cache-Control: public");
 
-      //dpr("The selected action card pages is : " . print_r ($file_array) . "\n", $return = FALSE, $name = NULL);
-      //dpr("and this action card is of type: " . print_r ($action_card->field_action_category->value()) . "\n", $return = FALSE, $name = NULL);
-      if (!empty($file_array['uri'])) {
-        //dpr("The selected action card pages are :" . $file_array['uri'] . "\n", $return = FALSE, $name = NULL);
-        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
-        if (file_exists($pdf)) {
-          //$zip->addFile($pdf, $file_array['filename']);
+  readfile($txt_file);
+  unlink($txt_file);
 
-        }
-      }
-    }
-  }
-*/
-/*
 }
-*/
+
 
 
 /**

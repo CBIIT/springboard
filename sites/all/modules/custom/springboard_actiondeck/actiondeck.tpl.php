@@ -45,7 +45,7 @@
             <li><a href="https://twitter.com/home?status=<?php print urlencode('Check out my customized Action Deck from Springboard Beyond Cancer at ' . url('/springboard/actiondeck/' . $eid, array('absolute' => TRUE))); ?>"><div class="twitter-icon"></div>Twitter</a></li>
           </ul>
         </div> <!-- end share -->
-        <a href="" target="_top" class="btn-blue"><div class="print-icon"></div>PRINT</a>
+        <a href="/springboard/print-action-deck-pdf/<?php print $eid; ?>" target="_top" class="btn-blue"><div class="print-icon"></div>PRINT</a>
         <a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Customized%20Action%20Deck&body=Check%20out%20your%20customized%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20<?php print url('springboard/actiondeck/' . $eid, array('absolute' => TRUE)); ?>.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer."
              target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a>
       </div> <!-- end deck-share -->
