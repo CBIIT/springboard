@@ -66,6 +66,10 @@
 	</div> <!-- end row -->
 	<div class="row">
 		<div class="col-md-9">
+            <div class="col-xs-3 top-border-yellow"></div>
+            <div class="col-xs-3 top-border-purple"></div>
+            <div class="col-xs-3 top-border-blue"></div>
+            <div class="col-xs-3 top-border-green"></div>
 			<div class="row">
 				<?php print $content['additional-resources-video2']; ?>
 			</div> <!-- end row -->
