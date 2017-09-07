@@ -365,10 +365,10 @@ function print_action_deck_pdf($entity) {
   $deck_id = end(explode('/', current_path()));
 
   //Generate name of pdf based on actiondeck ID
-  $pdf_name = "Action_Deck_Pdf_".$deck_id.".pdf";
+  $pdf_name = "Action_Deck_".$deck_id.".pdf";
 
-  //Output the action deck pdf
-  $file->Output($pdf_name, 'I');
+  //Output the action deck pdf: option D- to force download, I- to preview in browser
+  $file->Output($pdf_name, 'D');
   //unlink($file);
 }
 
@@ -395,9 +395,17 @@ function print_action_deck_jpg($entity) {
     }
   }
   $zip->close();
+
+  //Check ID of the action deck
+  $deck_id = end(explode('/', current_path()));
+
+  //Generate name of pdf based on actiondeck ID
+  $file_name = "Action_Deck_".$deck_id."_jpg.zip";
+
   header('Content-Type: application/zip');
   header('Content-Length: ' . filesize($file));
-  header('Content-Disposition: attachment; filename="deck.zip"');
+  //header('Content-Disposition: attachment; filename="deck.zip"');
+  header('Content-Disposition: attachment; filename='.$file_name);
   readfile($file);
   unlink($file);
 }
@@ -413,11 +421,11 @@ function print_action_deck_txt($entity) {
   $deck_id = end(explode('/', current_path()));
 
   //Generate text file based on actiondeck ID
-  $file_name = 'Action_Deck_txt_' . $deck_id . '.txt';
+  $file_name = 'Action_Deck_' . $deck_id . '.txt';
   $txt_file = drupal_realpath('public://') . '/' . $file_name;
 
   //Mark the beginning of actiondeck
-  $deck_start = "------------------ Beginning Action Deck -------------------";
+  $deck_start = "-Beginning Action Deck-";
   file_put_contents($txt_file, $deck_start . PHP_EOL, FILE_APPEND | LOCK_EX);
 
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
@@ -426,7 +434,7 @@ function print_action_deck_txt($entity) {
     if (!empty($action_card->field_card_txt_only)) {
 
       $card_text = $action_card->field_card_txt_only->value();
-      $card_delimiter = "------------------ End of '" . $card_title . "' Action Card -------------------";
+      $card_delimiter = "-End of '" . $card_title . "' Action Card-";
 
       file_put_contents($txt_file, "Action Card Name: " . $card_title . PHP_EOL, FILE_APPEND | LOCK_EX);
       file_put_contents($txt_file, $card_text . PHP_EOL, FILE_APPEND | LOCK_EX);
@@ -436,7 +444,7 @@ function print_action_deck_txt($entity) {
     }
   }
   //Mark the end of actiondeck
-  $deck_end = "------------------ End of Action Deck -------------------";
+  $deck_end = "-End of Action Deck-";
   file_put_contents($txt_file, $deck_end . PHP_EOL, FILE_APPEND | LOCK_EX);
 
   header('Content-type: text/plain');
