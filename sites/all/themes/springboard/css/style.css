@@ -7663,7 +7663,6 @@ label.control-label input:disabled ~ .control__indicator:after {
 .video-playlists-title h2,
 .featured-videos-title h2 {
   margin-bottom: 20px;
-  margin-left: 15px;
 }
 .video-playlists-title h2 {
   margin-top: 30px;
@@ -7790,6 +7789,22 @@ h3.support {
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 span {
     margin-bottom: 10px;
   }
+}
+.view-id-video_stories .col-sm-6:nth-child(1) {
+  padding-left: 0;
+}
+.view-id-video_stories .col-sm-6:nth-child(3) {
+  padding-left: 0;
+}
+.view-id-video_stories .col-sm-6:nth-child(2) {
+  padding-right: 0;
+}
+.view-id-video_stories .col-sm-6:nth-child(4) {
+  padding-right: 0;
+}
+#boxes-box-video_stories_featured .col-md-12 {
+  padding-left: 0;
+  padding-right: 0;
 }
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
