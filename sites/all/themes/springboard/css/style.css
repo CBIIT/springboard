@@ -9084,11 +9084,13 @@ button:focus #nav-search-title {
   }
   .shrink-header .btn-nav-deck-title {
     color: #FFFFFF;
-    font-size: 22px;
     line-height: 24px;
     float: left;
     width: 50%;
     border-right: 1px solid #FFFFFF;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 24px !important;
   }
   .shrink-header #block-menu-menu-springboard > ul.menu.nav {
     top: 36px;
