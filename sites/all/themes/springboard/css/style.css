@@ -7596,6 +7596,9 @@ label.control-label input:disabled ~ .control__indicator {
 label.control-label input:disabled ~ .control__indicator:after {
   background: #7b7b7b;
 }
+.row.vdivide {
+  margin-top: 30px;
+}
 .row.vdivide [class*="col-"]:not(:last-child)::after {
   background: #e0e0e0;
   width: 1px;
@@ -7608,9 +7611,9 @@ label.control-label input:disabled ~ .control__indicator:after {
   min-height: 70px;
 }
 .intro p:only-child {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.42857143;
-  font-weight: 300;
+  font-weight: 500;
   margin: 50px 0px 30px 30px !important;
 }
 .get-support-survivors-intro,
