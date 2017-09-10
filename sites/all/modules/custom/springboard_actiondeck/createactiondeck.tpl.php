@@ -56,16 +56,20 @@
             <div class="row survivor-support">
                 <div class="survivor-intro"><div class="survivor-icon"></div><h3 class="support">Support for Cancer Survivors</h3></div>
                 <?php foreach($get_support_cards as $card_nid => $card_title): ?>
-                  <?php if ($get_support_cards[$card_title] == "survivors"):   ?>
-                    <div class="col-md-6"><a role="button" tabindex="0" class="btn btn-<?php print $card_nid; ?>"><div class="plus-icon"></div><?php print $card_title; ?></a></div>
+                  <?php if(!empty($get_support_cards[$card_title])): ?>
+                    <?php if ($get_support_cards[$card_title] == "survivors"):   ?>
+                            <div class="col-md-6"><a role="button" tabindex="0" class="btn btn-<?php print $card_nid; ?>"><div class="plus-icon"></div><?php print $card_title; ?></a></div>
+                    <?php endif; ?>
                   <?php endif; ?>
                 <?php endforeach; ?>
             </div> <!-- end row -->
             <div class="row caregiver-support">
                 <div class="caregiver-intro"><div class="caregiver-icon"></div><h3 class="support">Support for Caregivers</h3></div>
                 <?php foreach($get_support_cards as $card_nid => $card_title): ?>
-                  <?php if ($get_support_cards[$card_title] == "caregivers"):   ?>
-                    <div class="col-md-6"><a role="button" tabindex="0" class="btn btn-<?php print $card_nid; ?>"><div class="plus-icon"></div><?php print $card_title; ?></a></div>
+                  <?php if(!empty($get_support_cards[$card_title])): ?>
+                    <?php if ($get_support_cards[$card_title] == "caregivers"):   ?>
+                            <div class="col-md-6"><a role="button" tabindex="0" class="btn btn-<?php print $card_nid; ?>"><div class="plus-icon"></div><?php print $card_title; ?></a></div>
+                    <?php endif; ?>
                   <?php endif; ?>
                 <?php endforeach; ?>
               </div> <!-- end row -->

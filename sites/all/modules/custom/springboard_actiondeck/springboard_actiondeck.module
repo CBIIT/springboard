@@ -1,9 +1,15 @@
 <?php
 
-libraries_load('fpdf');
-libraries_load('fpdi');
+$fpdf_path = libraries_get_path('fpdf').'/fpdf.php';
+$fpdi_path = libraries_get_path('fpdi'). '/fpdi.php';
 
+require_once($fpdf_path);
+require_once ($fpdi_path);
 
+/*
+  libraries_load('fpdf');
+  libraries_load('fpdi');
+*/
 
 /**
  * Implements hook_init().
@@ -146,6 +152,15 @@ function springboard_actiondeck_menu() {
     'access arguments' => array('view actiondecks'),
     'type' => MENU_CALLBACK,
   );
+  $items['springboard/print-action-deck/%actiondeck'] = array(
+    'title' => 'Print your Action Deck',
+    'description' => 'Print your Action Deck',
+    'page callback' => 'print_action_deck',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -311,6 +326,66 @@ function actiondeck_page_view($entity, $view_mode='full'){
 
 }
 
+/**
+ * Use FPDI library to join the individual actioncard PDF files into an actiondeck
+ * and send to browser print utility
+ * @param $entity
+ */
+function print_action_deck($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+
+  if (class_exists('fpdi')) {
+    //Initiate FPDI
+    $file = new FPDI();
+  }
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_pdf)) {
+      $file_array = $action_card->field_card_image_pdf->value();
+      if (!empty($file_array['uri'])) {
+        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if (file_exists($pdf)) {
+
+          //check the number of pages in the pdf
+          $pageCount = $file->setSourceFile($pdf);
+
+          //import all pages in this pdf to the action deck
+          for($pageNo=1; $pageNo<=$pageCount; $pageNo++){
+
+            //read each page in an action card
+            $templateId = $file->ImportPage($pageNo);
+
+            //Check size of page in each action card
+            $size = $file->getTemplateSize($templateId);
+
+            //create a blank page in portrait mode or landscape mode - depending on page orientation
+            if($size['w'] > $size['h']) {
+              //Landscape Mode
+              $file->AddPage('L', array($size['w'] , $size['h']));
+            } else {
+              //Portrait Mode
+              $file->AddPage('P', array($size['w'] , $size['h']));
+            }
+
+            //import the page to the action deck
+            $file->useTemplate($templateId);
+          }
+        }
+      }
+    }
+  }
+
+  //Check ID of the action deck
+  $path = explode('/', current_path());
+  $deck_id = end($path);
+
+  //Generate name of pdf based on actiondeck ID
+  $pdf_name = "Action_Deck_".$deck_id.".pdf";
+
+  //Output the action deck pdf: option D- to force download, I- to preview in browser
+  $file->Output($pdf_name, 'I');
+}
+
 
 /**
  * Use FPDI library to join the individual actioncard PDF files into an actiondeck for user download
@@ -357,12 +432,13 @@ function print_action_deck_pdf($entity) {
           }
         }
       }
-
     }
   }
 
+
   //Check ID of the action deck
-  $deck_id = end(explode('/', current_path()));
+  $path = explode('/', current_path());
+  $deck_id = end($path);
 
   //Generate name of pdf based on actiondeck ID
   $pdf_name = "Action_Deck_".$deck_id.".pdf";
@@ -397,7 +473,8 @@ function print_action_deck_jpg($entity) {
   $zip->close();
 
   //Check ID of the action deck
-  $deck_id = end(explode('/', current_path()));
+  $path = explode('/', current_path());
+  $deck_id = end($path);
 
   //Generate name of pdf based on actiondeck ID
   $file_name = "Action_Deck_".$deck_id."_jpg.zip";
@@ -418,13 +495,15 @@ function print_action_deck_jpg($entity) {
 function print_action_deck_txt($entity) {
 
   //Check ID of the current action deck
-  $deck_id = end(explode('/', current_path()));
+  $path = explode('/', current_path());
+  $deck_id = end($path);
 
   //Generate text file based on actiondeck ID
   $file_name = 'Action_Deck_' . $deck_id . '.txt';
   $txt_file = drupal_realpath('public://') . '/' . $file_name;
 
   //Mark the beginning of actiondeck
+  //$deck_start = "----------------------Beginning Action Deck----------------------";
   $deck_start = "-Beginning Action Deck-";
   file_put_contents($txt_file, $deck_start . PHP_EOL, FILE_APPEND | LOCK_EX);
 
@@ -436,7 +515,7 @@ function print_action_deck_txt($entity) {
       $card_text = $action_card->field_card_txt_only->value();
       $card_delimiter = "-End of '" . $card_title . "' Action Card-";
 
-      file_put_contents($txt_file, "Action Card Name: " . $card_title . PHP_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, "Action Card Name: " . $card_title . ".". PHP_EOL, FILE_APPEND | LOCK_EX);
       file_put_contents($txt_file, $card_text . PHP_EOL, FILE_APPEND | LOCK_EX);
       file_put_contents($txt_file, PHP_EOL, FILE_APPEND| LOCK_EX);
       file_put_contents($txt_file, $card_delimiter . PHP_EOL, FILE_APPEND | LOCK_EX);
@@ -449,7 +528,6 @@ function print_action_deck_txt($entity) {
 
   header('Content-type: text/plain');
   header('Content-Disposition: attachment; filename='.$file_name);
-  header("Content-Length: ". filesize("$file_name").";");
   header("Content-Transfer-Encoding: binary");
   header("Cache-Control: public");
 
@@ -457,8 +535,6 @@ function print_action_deck_txt($entity) {
   unlink($txt_file);
 
 }
-
-
 
 /**
  * Callback for Create Actiondeck form- just need one field to hold cards.
