@@ -1,10 +1,10 @@
 <?php
 
-$fpdf_path = libraries_get_path('fpdf').'/fpdf.php';
-$fpdi_path = libraries_get_path('fpdi'). '/fpdi.php';
-
-require_once($fpdf_path);
-require_once ($fpdi_path);
+//$fpdf_path = libraries_get_path('fpdf').'/fpdf.php';
+//$fpdi_path = libraries_get_path('fpdi'). '/fpdi.php';
+//
+//require_once($fpdf_path);
+//require_once ($fpdi_path);
 
 /*
   libraries_load('fpdf');
