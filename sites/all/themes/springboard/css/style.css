@@ -7627,6 +7627,7 @@ label.control-label input:disabled ~ .control__indicator:after {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 0px;
+  border-radius: 3px;
 }
 .get-support-survivors-intro h2,
 .get-support-caregivers-intro h2 {
@@ -7718,6 +7719,33 @@ label.control-label input:disabled ~ .control__indicator:after {
   font-weight: 300;
 }
 /* create action deck page - get support tab */
+#actiondeck-select {
+  padding-left: 0px !important;
+}
+#actiondeck-intro {
+  margin-left: 15px !important;
+}
+p.actiondeck-intro,
+.intro,
+p.intro:last-child {
+  font-size: 24px;
+  line-height: 1.42857143;
+  font-weight: 300;
+  margin: 0px 0px 30px 15px;
+}
+#actiondeck-divider {
+  padding-right: 30px !important;
+}
+#actiondeck-tabs > .tabpanel > .panel {
+  border: 0px solid transparent;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#actiondeck-tabs {
+  padding-left: 0px !important;
+}
 .survivor-intro,
 .caregiver-intro {
   display: block;
@@ -8047,6 +8075,7 @@ a.subpage-link .subpage-link-box {
 .getsupport a.subpage-link .subpage-link-box {
   border-top: 6px solid #158f7a;
   border-bottom: 2px solid #e1e5e6;
+  min-height: 180px !important;
 }
 .more-related-links-view {
   margin-top: 30px;
