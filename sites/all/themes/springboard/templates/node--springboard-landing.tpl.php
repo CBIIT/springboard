@@ -3,32 +3,28 @@
       <?php if($title == 'Video Stories'): ?>
          <div class="col-lg-5">
              <div class="page-title video-stories">
-                 <h1> Video Stories from Cancer Survivors.</h1>
+                 <h1 class="videostories-title"> Video Stories from Cancer Survivors.</h1>
              </div>
          </div><!-- end column : Video Stories title -->
       <?php endif; ?>
 
       <?php if($title == 'Get Support'): ?>
-          <div class="col-lg-4">
-              <div class="page-title">
-                  <h1><?php print $title; ?></h1>
-              </div>
-          </div><!-- end column : Get Support title -->
+        <div class="landing-title">
+            <h1 class="getsupport-title"><?php print $title; ?></h1>
+        </div><!-- end column : Get Support title -->
       <?php endif; ?>
 
       <?php if($title == 'Video Stories'): ?>
           <div class="col-lg-7">
               <div class="intro">
-                  <p> Watch cancer survivors share their stories about having cancer and find out how they coped with challenges.</p>
+                  <p class="videostories-intro"> Watch cancer survivors share their stories about having cancer and find out how they coped with challenges.</p>
               </div>
           </div><!-- end column : Video Stories intro -->
       <?php endif; ?>
 
       <?php if($title == 'Get Support'): ?>
-          <div class="col-lg-8">
-              <div class="intro">
-                  <p> Cancer survivors and caregivers may need extra help during the cancer journey. Explore Springboard's support center.</p>
-              </div>
+          <div class="landing-intro">
+              <p class="getsupport-intro"> Cancer survivors and caregivers may need extra help during the cancer journey. Explore Springboard's support center.</p>
           </div><!-- end column : Get Support intro -->
       <?php endif; ?>
   </div> <!-- end row -->

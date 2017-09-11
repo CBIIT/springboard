@@ -5,14 +5,14 @@
         </div> <!-- end column : Action deck heading-->
     </div>
 
-  <div class = "col-md-8 col-lg-8">
+  <div id="actiondeck-select" class = "col-md-8 col-lg-8">
     <div class = "row"> <!-- Action deck note -->
-        <p class="intro">Use the action decks to get information, tips, and resources that address what you are going through. These decks will help you build skills, tackle challenges, and move forward along your cancer journey.</p>
+        <p id="actiondeck-intro" class="intro">Use the action decks to get information, tips, and resources that address what you are going through. These decks will help you build skills, tackle challenges, and move forward along your cancer journey.</p>
     </div><!-- end column : Action deck note -->
 
-    <div class="row"><div class="col-lg-12"><hr class="deck-divider"></div></div> <!-- horizontal line - section divider -->
+    <div class="row"><div id="actiondeck-divider" class="col-lg-12"><hr class="deck-divider"></div></div> <!-- horizontal line - section divider -->
 
-    <div class="col-md-10 col-lg-12" id="tabs"><!-- Select Topic Areas -->
+    <div class="col-md-10 col-lg-12" id="actiondeck-tabs"><!-- Select Topic Areas -->
         <h2 class="first">Select a Topic Area</h2>
         <p class="sr-only">Use the tabs below to move through the 4 topic areas; Symptoms, Stress & Mood, Wellness, and Get Support. Select cards in each topic area to add to your custom deck. You can also select one of the pre-made action decks at the bottom of the page.</p>
 

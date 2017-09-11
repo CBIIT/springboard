@@ -7596,9 +7596,6 @@ label.control-label input:disabled ~ .control__indicator {
 label.control-label input:disabled ~ .control__indicator:after {
   background: #7b7b7b;
 }
-.row.vdivide {
-  margin-top: 30px;
-}
 .row.vdivide [class*="col-"]:not(:last-child)::after {
   background: #e0e0e0;
   width: 1px;
@@ -7610,11 +7607,30 @@ label.control-label input:disabled ~ .control__indicator:after {
   right: 0;
   min-height: 70px;
 }
+.landing-title {
+  float: left;
+  margin-right: 30px;
+  padding-right: 30px;
+  border-right: 1px solid #e0e0e0;
+}
+.landing-title h1 {
+  margin-top: 0px !important;
+}
+.landing-intro p {
+  font-size: 24px;
+  line-height: 1.42857143;
+  font-weight: 300;
+  margin: 0px 0px 30px 0px;
+}
 .intro p:only-child {
   font-size: 20px;
   line-height: 1.42857143;
   font-weight: 500;
-  margin: 50px 0px 30px 30px !important;
+  /* margin: 50px 0px 30px 30px !important; */
+  margin: 30px 0px 30px 30px !important;
+}
+.vdivide .page-title h1 {
+  margin-top: 30px;
 }
 .get-support-survivors-intro,
 .get-support-caregivers-intro {
@@ -7627,6 +7643,7 @@ label.control-label input:disabled ~ .control__indicator:after {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 0px;
+  border-radius: 3px;
 }
 .get-support-survivors-intro h2,
 .get-support-caregivers-intro h2 {
@@ -7637,12 +7654,39 @@ label.control-label input:disabled ~ .control__indicator:after {
 .get-support-caregivers-intro p {
   font-size: 16px;
 }
+.getsupport-cancer-survivors .view-header,
+.getsupport-cancer-caregivers .view-header {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+h1.getsupport-title {
+  padding-left: 15px;
+}
 .pull-right {
   padding-left: 25px;
   padding-top: 30px;
 }
 .pull-left {
   padding-right: 20px;
+}
+.getsupport .pull-right {
+  padding-left: 0px;
+}
+.getsupport .pull-left {
+  padding-right: 35px;
+  margin-left: -25px !important;
+  right: -10px;
+}
+.getsupport [class*="pull-left"]::after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 70px;
 }
 .getsupport-visionboard a.subpage-link .subpage-link-box {
   padding-top: 175px !important;
@@ -7718,6 +7762,33 @@ label.control-label input:disabled ~ .control__indicator:after {
   font-weight: 300;
 }
 /* create action deck page - get support tab */
+#actiondeck-select {
+  padding-left: 0px !important;
+}
+#actiondeck-intro {
+  margin-left: 15px !important;
+}
+p.actiondeck-intro,
+.intro,
+p.intro:last-child {
+  font-size: 24px;
+  line-height: 1.42857143;
+  font-weight: 300;
+  margin: 0px 0px 30px 15px;
+}
+#actiondeck-divider {
+  padding-right: 30px !important;
+}
+#actiondeck-tabs > .tabpanel > .panel {
+  border: 0px solid transparent;
+  border-radius: 0px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#actiondeck-tabs {
+  padding-left: 0px !important;
+}
 .survivor-intro,
 .caregiver-intro {
   display: block;
@@ -8047,6 +8118,7 @@ a.subpage-link .subpage-link-box {
 .getsupport a.subpage-link .subpage-link-box {
   border-top: 6px solid #158f7a;
   border-bottom: 2px solid #e1e5e6;
+  min-height: 180px;
 }
 .more-related-links-view {
   margin-top: 30px;
