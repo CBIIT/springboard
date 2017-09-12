@@ -712,6 +712,8 @@ function get_html_version_of_deck_nav() {
               <div class="col-sm-6 col-md-3"><a href="/springboard/coping-cancer" class="btn">Coping with Cancer</a></div>
               <div class="col-sm-6 col-md-3"><a href="/springboard/social-support" class="btn">Social Support</a></div>
               <div class="col-sm-6 col-md-3"><a href="/springboard/living-well" class="btn">Living Well</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/post-treatment" class="btn">Post-Treatment</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/support-for-caregivers" class="btn">Support for Caregivers</a></div>
             </div>
           </div>
         </div>
