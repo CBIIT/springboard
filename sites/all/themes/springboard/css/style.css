@@ -11029,7 +11029,7 @@ ul.card-lists > li a {
   font-weight: 400;
   color: #a94442;
 }
-.sidebar h4 {
+.sidebar h4:not(.helpful) {
   margin-top: 0px;
   margin-bottom: 5px;
   color: #005e8c;
