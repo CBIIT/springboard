@@ -7622,10 +7622,10 @@ label.control-label input:disabled ~ .control__indicator:after {
   margin-top: 0px !important;
 }
 .landing-intro p {
-  font-size: 24px;
+  font-size: 20px !important;
   line-height: 1.42857143;
   font-weight: 300;
-  margin: 0px 0px 30px 0px;
+  margin: 15px 0px 30px 0px !important;
 }
 .intro p:only-child {
   font-size: 20px;
@@ -8230,6 +8230,9 @@ a.subpage-link:focus .subpage-link-box p {
   .fact-box p {
     font-size: 22px;
   }
+}
+.col-sm-5.box.note-box P {
+  margin-bottom: 0px !important;
 }
 .create-vision-board {
   margin-left: 30px;
