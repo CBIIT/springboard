@@ -9949,6 +9949,11 @@ a.infographic4 p {
   display: inline-block;
   font-weight: 500;
 }
+@media (max-width: 1200px) {
+  .decks #boxes-box-homepage_deck_preview .plus-action-deck .btn-title {
+    margin-top: 15px;
+  }
+}
 .decks #boxes-box-homepage_deck_preview .plus-action-deck p {
   display: inline-block;
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -9958,6 +9963,11 @@ a.infographic4 p {
   color: #002b41;
   vertical-align: top;
   margin-top: 30px;
+}
+@media (max-width: 1200px) {
+  .decks #boxes-box-homepage_deck_preview .plus-action-deck p.btn-title {
+    display: none;
+  }
 }
 .decks #boxes-box-homepage_deck_preview .embed-responsive.embed-responsive-16by9 {
   margin-top: 40px;
