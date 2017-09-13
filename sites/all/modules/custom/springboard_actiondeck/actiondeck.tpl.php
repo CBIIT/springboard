@@ -19,7 +19,7 @@
   </div><!-- end row -->
 
   <div class="row">
-    <div class="col-sm-5 box">
+    <div class="col-sm-5 box note-box">
         <p><b>Please Note: </b> You can download your desk three ways: As a PDF, JPGs in a zip file, or text only in a .txt file for accessibility</p>
     </div> <!-- end column -->
 
