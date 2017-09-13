@@ -344,6 +344,9 @@ a.infographic4 p {
 		.btn-title {
 			display: inline-block;
 			font-weight: 500;
+			@media (max-width: 1200px) {
+				margin-top: 15px;
+			}
 		}
 		p {
 			display: inline-block;
@@ -354,6 +357,11 @@ a.infographic4 p {
 			color: #002b41;
 			vertical-align: top;
 			margin-top: 30px;
+		}
+		p.btn-title {
+			@media (max-width: 1200px) {
+				display: none;
+			}
 		}
 	}
 	.embed-responsive.embed-responsive-16by9 {
