@@ -8,8 +8,33 @@
 	margin-top: 50px;
 	margin-bottom: 15px;	
 }
+.homepage .additional-resources .col-md-9 > .row:first-child {
+	background: #F2F6F7;
+	margin-bottom: 30px;
+}
+.homepage .additional-resources .col-md-9 > .row:nth-child(2) {
+	> .panel-pane {
+		padding: 0;
+	}
+}
 .homepage .additional-resources h2 {
 	margin-top: 20px;	
+}
+.homepage .additional-resources .top-border-yellow {
+	background-image: url(../images/top-border-yellow.png);
+	height: 6px;
+}
+.homepage .additional-resources .top-border-purple {
+	background-image: url(../images/top-border-purple.png);
+	height: 6px;
+}
+.homepage .additional-resources .top-border-blue {
+	background-image: url(../images/top-border-blue.png);
+	height: 6px;
+}
+.homepage .additional-resources .top-border-green {
+	background-image: url(../images/top-border-green.png);
+	height: 6px;
 }
 .homepage h3,
 #search h3 {
@@ -52,22 +77,22 @@
 	background-color:#FFFFFF;
 	border-radius:3px;
 	box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.1);
-	border-left:8px solid transparent;
+	border-top:6px solid transparent;
 	padding:15px;
 	margin:0px 0px 25px 0px;
-	width:80%;
+	//width:80%;
 }
 .homepage .symptoms .fact-box {
-	border-left-color:@symptoms;	
+	border-top-color:@symptoms;
 }
 .homepage .stressmood .fact-box {
-	border-left-color:@stressmood;	
+	border-top-color:@stressmood;
 }
 .homepage .wellness .fact-box {
-	border-left-color:@wellness;	
+	border-top-color:@wellness;
 }
 .homepage .getsupport .fact-box {
-	border-left-color:@getsupport;	
+	border-top-color:@getsupport;
 }
 .homepage .fact-box h3 {
 	font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -238,7 +263,7 @@ a.infographic4 p {
 }
 .decks .box {
 	background-image: url(../images/decks-graphic.png);
-	background-position: right bottom;
+	background-position: 120% bottom;
 	background-repeat: no-repeat;
 	min-height:650px;
 }
@@ -299,6 +324,50 @@ a.infographic4 p {
 	color: #FFFFFF;
 	text-decoration:none;
 }
+.decks #boxes-box-homepage_deck_preview {
+	.plus-action-deck {
+		height: 75px;
+		display: inherit;
+		margin-top: 50px;
+		overflow: hidden;
+		&:hover{
+			p {color: white;}
+		}
+		.circle-graphic-plus {
+			width: 60px;
+			height: 60px;
+			display: inline-block;
+			background-image: url(../images/deck-plus-icon.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+			font-weight: 500;
+			@media (max-width: 1200px) {
+				margin-top: 15px;
+			}
+		}
+		p {
+			display: inline-block;
+			font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.42857143;
+			font-weight: 300 !important;
+			color: #002b41;
+			vertical-align: top;
+			margin-top: 30px;
+		}
+		p.btn-title {
+			@media (max-width: 1200px) {
+				display: none;
+			}
+		}
+	}
+	.embed-responsive.embed-responsive-16by9 {
+		margin-top: 40px;
+	}
+}
 @media (max-width: 1200px) {
 	.decks .box {
 		background-size: 50%;
@@ -339,7 +408,9 @@ a.infographic4 p {
 #radiation-preview,
 #copingwithcancer-preview,
 #socialsupport-preview,
-#livingwell-preview {
+#livingwell-preview,
+#post-treatment-preview,
+#caregivers-preview {
 	position: absolute;
 	top: 0px;
 	left: 280px;
@@ -363,6 +434,8 @@ a.infographic4 p {
 #copingwithcancer-preview {background-image: url(../images/premade-deck-background-5.jpg);}
 #socialsupport-preview {background-image: url(../images/premade-deck-background-6.jpg);}
 #livingwell-preview {background-image: url(../images/premade-deck-background-7.jpg);}
+#post-treatment-preview {background-image: url(../images/premade-deck-background-8.jpg);}
+#caregivers-preview {background-image: url(../images/premade-deck-background-9.jpg);}
 .symptoms-box,
 .stressmood-box,
 .wellness-box,
@@ -413,10 +486,10 @@ a.infographic4 p {
 	text-decoration:underline;
 }
 @media (max-width: 1200px) {
-	#newdiagnosis-preview, #surgery-preview, #chemotherapy-preview, #radiation-preview, #copingwithcancer-preview, #socialsupport-preview, #livingwell-preview { width:600px; left: 310px; }
+	#newdiagnosis-preview, #surgery-preview, #chemotherapy-preview, #radiation-preview, #copingwithcancer-preview, #socialsupport-preview, #livingwell-preview, #post-treatment-preview, #caregivers-preview { width:600px; left: 310px; }
 }
 @media (max-width: 992px) {
-	#newdiagnosis-preview, #surgery-preview, #chemotherapy-preview, #radiation-preview, #copingwithcancer-preview, #socialsupport-preview, #livingwell-preview { display: none !important; }
+	#newdiagnosis-preview, #surgery-preview, #chemotherapy-preview, #radiation-preview, #copingwithcancer-preview, #socialsupport-preview, #livingwell-preview, #post-treatment-preview, #caregivers-preview { display: none !important; }
 }
 /* ------------------------------ Homepage Additional Resources ------------------------------ */
 p.video-summary:first-child {
@@ -431,4 +504,137 @@ h3.poll {
 	display:block;
 	width:100%;
 	margin:20px 0px;	
+}
+#boxes-box-homepage_video2 {
+	.watch-more {
+		display: inherit;
+		.circle-graphic-play {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-image: url(../images/sbc-featured-video.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+		}
+	}
+}
+
+#boxes-box-homepage_hero_video {
+	.watch-more {
+		display: inherit;
+		.circle-graphic-play {
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+			background-image: url(../images/sbc-featured-video.png);
+			background-position: left;
+			background-repeat: no-repeat;
+		}
+		.btn-title {
+			display: inline-block;
+		}
+	}
+}
+
+.view-display-id-block_12 {
+	.create-vision-board {
+		padding-left: 0;
+		padding-right: 30px;
+		a.subpage-link {
+			&:hover {
+				.subpage-link-box {
+				.subpage-link-title, p {
+				color: white;}}
+			}
+		.subpage-link-box {
+			padding-top: 25px;
+			padding-left: 25px;
+			padding-right: 25px;
+			padding-bottom: 25px;
+			border-top: 6px solid transparent;
+			border-top-color: #158f7a;
+			.subpage-link-title {
+				padding: 0px;
+				margin: 0px 0px 8px 0px;
+				font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 700;
+				color: #002b41;
+				text-decoration: none;
+			}
+			p {
+				padding: 0px;
+				margin: 0px;
+				font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-size: 16px;
+				font-weight: 300;
+				color: #002b41;
+				text-decoration: none;
+			}
+			@media (max-width: 768px) {
+				img {
+					max-height: 195px;
+				}
+			}
+		}
+			@media (max-width: 992px) {
+				.subpage-link-box {
+					height: 250px;
+				}
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		.create-vision-board {
+			padding-left: 15px;
+			padding-right: 15px;
+			margin-left: 0px;
+		}
+	}
+}
+
+#boxes-box-take_our_quiz_box {
+	.col-sm-12 {
+		padding: 0;
+	}
+	.subpage-link-box {
+		border-top: 6px solid transparent;
+		border-top-color: #005F8E;
+	}
+	@media (max-width: 992px) {
+		.subpage-link-box {
+			height: 250px;
+		}
+	}
+	@media (max-width: 768px) {
+		.col-sm-12 {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.subpage-link-box {
+			height: 220px;
+		}
+	}
+}
+
+//.equal-height {
+//	display: flex;
+//	display: -webkit-flex;
+//	flex-wrap: wrap;
+//}
+@media only screen and (min-width : 768px) {
+	.is-table-row {
+		//display: table;
+		//width: 100%;
+	}
+	.is-table-row .fact-box {
+		height: 175px;
+		//float: none;
+		//display: table-cell;
+		//vertical-align: top;
+	}
 }

@@ -1474,6 +1474,7 @@ function panels_and_pages_default_page_manager_pages() {
       'additional-resources-video3' => NULL,
       'additional-resources-poll' => NULL,
       'link-to-videos' => NULL,
+      'hero-fact4' => NULL,
     ),
   );
   $display->cache = array();
@@ -1558,28 +1559,57 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-d7ba0e8c-1758-4402-8874-23a85fff1cbc'] = $pane;
   $display->panels['additional-resources-video2'][0] = 'new-d7ba0e8c-1758-4402-8874-23a85fff1cbc';
   $pane = new stdClass();
-  $pane->pid = 'new-d494a330-9f26-488d-af79-3f3bd8994275';
+  $pane->pid = 'new-c4188045-4aef-4260-8d7a-52e5693ca7ca';
   $pane->panel = 'additional-resources-video3';
   $pane->type = 'block';
-  $pane->subtype = 'boxes-homepage_video3';
+  $pane->subtype = 'boxes-take_our_quiz_box';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
-    'override_title_heading' => 'span',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'col-sm-6',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'd494a330-9f26-488d-af79-3f3bd8994275';
-  $display->content['new-d494a330-9f26-488d-af79-3f3bd8994275'] = $pane;
-  $display->panels['additional-resources-video3'][0] = 'new-d494a330-9f26-488d-af79-3f3bd8994275';
+  $pane->uuid = 'c4188045-4aef-4260-8d7a-52e5693ca7ca';
+  $display->content['new-c4188045-4aef-4260-8d7a-52e5693ca7ca'] = $pane;
+  $display->panels['additional-resources-video3'][0] = 'new-c4188045-4aef-4260-8d7a-52e5693ca7ca';
+  $pane = new stdClass();
+  $pane->pid = 'new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
+  $pane->panel = 'additional-resources-video3';
+  $pane->type = 'block';
+  $pane->subtype = 'views-springboard-block_12';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '<none>',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'col-sm-6',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
+  $display->content['new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3'] = $pane;
+  $display->panels['additional-resources-video3'][1] = 'new-cdaa09e4-bb59-4b72-8ca4-f268e95a54f3';
   $pane = new stdClass();
   $pane->pid = 'new-65d064eb-84a0-410c-aed0-a021fd889715';
   $pane->panel = 'deckpreview';
@@ -1673,6 +1703,29 @@ function panels_and_pages_default_page_manager_pages() {
   $display->content['new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408'] = $pane;
   $display->panels['hero-fact3'][0] = 'new-f0d2ef9c-0b04-4a35-9513-c72b33d5c408';
   $pane = new stdClass();
+  $pane->pid = 'new-d5b851d8-5122-470f-ac2a-2717579a4499';
+  $pane->panel = 'hero-fact4';
+  $pane->type = 'block';
+  $pane->subtype = 'boxes-springboard_fact_box_get_support';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'd5b851d8-5122-470f-ac2a-2717579a4499';
+  $display->content['new-d5b851d8-5122-470f-ac2a-2717579a4499'] = $pane;
+  $display->panels['hero-fact4'][0] = 'new-d5b851d8-5122-470f-ac2a-2717579a4499';
+  $pane = new stdClass();
   $pane->pid = 'new-fb5b3c9d-ef6b-43b2-a968-495fb7fa8e3d';
   $pane->panel = 'hero-intro';
   $pane->type = 'block';
@@ -1746,7 +1799,7 @@ function panels_and_pages_default_page_manager_pages() {
   $pane->panel = 'link-to-videos';
   $pane->type = 'custom';
   $pane->subtype = 'custom';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'admin_title' => 'Link to Video Page',

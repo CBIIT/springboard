@@ -1,5 +1,16 @@
 <?php
 
+$fpdf_path = libraries_get_path('fpdf').'/fpdf.php';
+$fpdi_path = libraries_get_path('fpdi'). '/fpdi.php';
+
+require_once($fpdf_path);
+require_once ($fpdi_path);
+
+/*
+  libraries_load('fpdf');
+  libraries_load('fpdi');
+*/
+
 /**
  * Implements hook_init().
  */
@@ -133,6 +144,23 @@ function springboard_actiondeck_menu() {
     'access arguments' => array('view actiondecks'),
     'type' => MENU_CALLBACK,
   );
+  $items['springboard/print-action-deck-txt/%actiondeck'] = array(
+    'title' => 'Print Action Deck TXT',
+    'description' => 'Print Action Deck Text',
+    'page callback' => 'print_action_deck_txt',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['springboard/print-action-deck/%actiondeck'] = array(
+    'title' => 'Print your Action Deck',
+    'description' => 'Print your Action Deck',
+    'page callback' => 'print_action_deck',
+    'page arguments' => array(2),
+    'access arguments' => array('view actiondecks'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -174,12 +202,13 @@ function springboard_actiondeck_theme($existing, $type, $theme, $path) {
 function template_preprocess_form_create_actiondeck(&$variables) {
   $query = db_select('node', 'n');
   $query->join('field_data_field_action_category', 'cat', 'n.nid = cat.entity_id');
+  $query->leftJoin('field_data_field_get_support_for', 'sup', 'n.nid = sup.entity_id');
   $results = $query
     ->fields('n', array('nid', 'title'))
+    ->fields('sup', array('field_get_support_for_value'))
     ->fields('cat', array('field_action_category_target_id'))
     ->orderBy('title', 'ASC')
     ->condition('n.type', 'springboard_action_card', '=')
-    ->condition('n.status', 1, '=')
     ->execute();
   $wellness_cards = array();
   $symptom_cards = array();
@@ -197,6 +226,7 @@ function template_preprocess_form_create_actiondeck(&$variables) {
 
       case springboard_actiondeck_get_taxonomy_id_by_name('Get Support', 'action_categories'):
         $get_support_cards[$result->nid] = $result->title;
+        $get_support_cards[$result->title] = $result->field_get_support_for_value;
         break;
 
       case springboard_actiondeck_get_taxonomy_id_by_name('Stress & Mood', 'action_categories'):
@@ -220,6 +250,7 @@ function template_preprocess_actiondeck(&$variables) {
   $cards = array();
   $wrapper = entity_metadata_wrapper('actiondeck', $variables['element']);
   $variables['title'] = 'Action Deck: ' . $wrapper->getIdentifier();
+  $variables['name'] = $wrapper->name->value();
   $variables['eid'] = $wrapper->getIdentifier();
   $entity_references = $wrapper->field_springboard_action_cards->value();
   foreach ($entity_references as $entity_reference) {
@@ -296,33 +327,127 @@ function actiondeck_page_view($entity, $view_mode='full'){
 }
 
 /**
- * Compiles the individual card PDF files into a zip file and streams it.
+ * Use FPDI library to join the individual actioncard PDF files into an actiondeck
+ * and send to browser print utility
  * @param $entity
  */
-function print_action_deck_pdf($entity) {
+function print_action_deck($entity) {
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
-  $file = tempnam("tmp", "zip");
-  $zip = new ZipArchive();
-  $zip->open($file, ZipArchive::OVERWRITE);
+
+  if (class_exists('fpdi')) {
+    //Initiate FPDI
+    $file = new FPDI();
+  }
 
   foreach ($wrapper->field_springboard_action_cards as $action_card) {
     if (!empty($action_card->field_card_image_pdf)) {
       $file_array = $action_card->field_card_image_pdf->value();
       if (!empty($file_array['uri'])) {
         $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
-        if(file_exists($pdf)) {
-          $zip->addFile($pdf, $file_array['filename']);
+        if (file_exists($pdf)) {
+
+          //check the number of pages in the pdf
+          $pageCount = $file->setSourceFile($pdf);
+
+          //import all pages in this pdf to the action deck
+          for($pageNo=1; $pageNo<=$pageCount; $pageNo++){
+
+            //read each page in an action card
+            $templateId = $file->ImportPage($pageNo);
+
+            //Check size of page in each action card
+            $size = $file->getTemplateSize($templateId);
+
+            //create a blank page in portrait mode or landscape mode - depending on page orientation
+            if($size['w'] > $size['h']) {
+              //Landscape Mode
+              $file->AddPage('L', array($size['w'] , $size['h']));
+            } else {
+              //Portrait Mode
+              $file->AddPage('P', array($size['w'] , $size['h']));
+            }
+
+            //import the page to the action deck
+            $file->useTemplate($templateId);
+          }
         }
       }
     }
   }
-  $zip->close();
-  header('Content-Type: application/zip');
-  header('Content-Length: ' . filesize($file));
-  header('Content-Disposition: attachment; filename="deckpdf.zip"');
-  readfile($file);
+
+  //Check ID of the action deck
+  $path = explode('/', current_path());
+  $deck_id = end($path);
+
+  //Generate name of pdf based on actiondeck ID
+  $pdf_name = "Action_Deck_".$deck_id.".pdf";
+
+  //Output the action deck pdf: option D- to force download, I- to preview in browser
+  $file->Output($pdf_name, 'I');
+}
+
+
+/**
+ * Use FPDI library to join the individual actioncard PDF files into an actiondeck for user download
+ * @param $entity
+ */
+function print_action_deck_pdf($entity) {
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+
+  if (class_exists('fpdi')) {
+    //Initiate FPDI
+    $file = new FPDI();
+  }
+
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    if (!empty($action_card->field_card_image_pdf)) {
+      $file_array = $action_card->field_card_image_pdf->value();
+      if (!empty($file_array['uri'])) {
+        $pdf = drupal_realpath('public://') . '/' . str_replace('public://', '', $file_array['uri']);
+        if (file_exists($pdf)) {
+
+          //check the number of pages in the pdf
+          $pageCount = $file->setSourceFile($pdf);
+
+          //import all pages in this pdf to the action deck
+          for($pageNo=1; $pageNo<=$pageCount; $pageNo++){
+
+            //read each page in an action card
+            $templateId = $file->ImportPage($pageNo);
+
+            //Check size of page in each action card
+            $size = $file->getTemplateSize($templateId);
+
+            //create a blank page in portrait mode or landscape mode - depending on page orientation
+            if($size['w'] > $size['h']) {
+              //Landscape Mode
+              $file->AddPage('L', array($size['w'] , $size['h']));
+            } else {
+              //Portrait Mode
+              $file->AddPage('P', array($size['w'] , $size['h']));
+            }
+
+            //import the page to the action deck
+            $file->useTemplate($templateId);
+          }
+        }
+      }
+    }
+  }
+
+
+  //Check ID of the action deck
+  $path = explode('/', current_path());
+  $deck_id = end($path);
+
+  //Generate name of pdf based on actiondeck ID
+  $pdf_name = "Action_Deck_".$deck_id.".pdf";
+
+  //Output the action deck pdf: option D- to force download, I- to preview in browser
+  $file->Output($pdf_name, 'D');
   unlink($file);
 }
+
 
 /**
  * Compiles jpg files from cards into a single ZIP archive and streams it.
@@ -346,11 +471,72 @@ function print_action_deck_jpg($entity) {
     }
   }
   $zip->close();
+
+  //Check ID of the action deck
+  $path = explode('/', current_path());
+  $deck_id = end($path);
+
+  //Generate name of pdf based on actiondeck ID
+  $file_name = "Action_Deck_".$deck_id."_jpg.zip";
+
   header('Content-Type: application/zip');
   header('Content-Length: ' . filesize($file));
-  header('Content-Disposition: attachment; filename="deck.zip"');
+  //header('Content-Disposition: attachment; filename="deck.zip"');
+  header('Content-Disposition: attachment; filename='.$file_name);
   readfile($file);
   unlink($file);
+}
+
+/**
+ * Compiles an action deck txt file from selected actioncards and streams it to user for download.
+ * @param $entity
+ */
+
+function print_action_deck_txt($entity) {
+
+  //Check ID of the current action deck
+  $path = explode('/', current_path());
+  $deck_id = end($path);
+
+  //Define Line break/End of line character
+  define("TXT_EOL", "\r\n");
+  
+  //Generate text file based on actiondeck ID
+  $file_name = 'Action_Deck_' . $deck_id . '.txt';
+  $txt_file = drupal_realpath('public://') . '/' . $file_name;
+
+  //Mark the beginning of actiondeck
+  //$deck_start = "----------------------Beginning Action Deck----------------------";
+  $deck_start = "-Beginning Action Deck-";
+  file_put_contents($txt_file, $deck_start . TXT_EOL, FILE_APPEND | LOCK_EX);
+
+  $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+  foreach ($wrapper->field_springboard_action_cards as $action_card) {
+    $card_title = $action_card->title->value();
+    if (!empty($action_card->field_card_txt_only)) {
+
+      $card_text = $action_card->field_card_txt_only->value();
+      $card_delimiter = "-End of '" . $card_title . "' Action Card-";
+
+      file_put_contents($txt_file, "Action Card Name: " . $card_title . ".". TXT_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, $card_text . TXT_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, TXT_EOL, FILE_APPEND| LOCK_EX);
+      file_put_contents($txt_file, $card_delimiter . TXT_EOL, FILE_APPEND | LOCK_EX);
+      file_put_contents($txt_file, TXT_EOL, FILE_APPEND| LOCK_EX);
+    }
+  }
+  //Mark the end of actiondeck
+  $deck_end = "-End of Action Deck-";
+  file_put_contents($txt_file, $deck_end . TXT_EOL, FILE_APPEND | LOCK_EX);
+
+  header('Content-type: text/plain');
+  header('Content-Disposition: attachment; filename='.$file_name);
+  header("Content-Transfer-Encoding: binary");
+  header("Cache-Control: public");
+
+  readfile($txt_file);
+  unlink($txt_file);
+
 }
 
 /**
@@ -381,6 +567,13 @@ function form_create_actiondeck($form, &$form_state) {
     '#attributes' => array('class' => array('hidden')),
   );
 
+  $form['card_name'] = array(
+    '#type' => 'textfield',
+    '#maxlength' => 50,
+    '#size' => 20,
+    '#required' => TRUE,
+  );
+
   $form['submit_button'] = array(
     '#type' => 'submit',
     '#value' => t('Create/View Your Action Deck'),
@@ -406,7 +599,8 @@ function form_create_actiondeck($form, &$form_state) {
 function form_create_actiondeck_submit($form, &$form_state) {
 
   $new_actiondeck = entity_create('actiondeck', array());
-  $new_actiondeck->name = 'name';
+  //$new_actiondeck->name = 'name';
+  $new_actiondeck->name = $form_state['values']['card_name'];
 
   $wrapper = entity_metadata_wrapper('actiondeck', $new_actiondeck);
   $wrapper->field_springboard_action_cards->set($form_state['values']['cards']);
@@ -430,7 +624,13 @@ function form_create_actiondeck_submit($form, &$form_state) {
  */
 function form_create_actiondeck_validate($form, &$form_state) {
   if (empty($form_state['values']['cards'])) {
-    form_set_error('Please select at least one card to save a deck');
+    form_set_error('', 'Please select at least one card to save a deck.');
+  }
+  if(empty($form_state['values']['card_name'])){
+    form_set_error('card_name', 'Name of your action deck is a required field.');
+  }
+  if(webpurify_api_check($form_state['values']['card_name']) == 1){
+    form_set_error('card_name', 'Profanity is not allowed in the name of an action deck. Please choose a different name.');
   }
 }
 
@@ -481,7 +681,7 @@ switch($delta) {
     // Commenting out because the client no longer wants load deck function. If
     // they change their mind, uncomment to render form instead of raw html.
 
-    /* $block['content'] = drupal_get_form('deck_nav_form'); */
+    $block['content'] = drupal_get_form('deck_nav_form');
     $block['content'] = get_html_version_of_deck_nav();
     break;
 
@@ -515,6 +715,8 @@ function get_html_version_of_deck_nav() {
               <div class="col-sm-6 col-md-3"><a href="/springboard/coping-cancer" class="btn">Coping with Cancer</a></div>
               <div class="col-sm-6 col-md-3"><a href="/springboard/social-support" class="btn">Social Support</a></div>
               <div class="col-sm-6 col-md-3"><a href="/springboard/living-well" class="btn">Living Well</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/post-treatment" class="btn">Post-Treatment</a></div>
+              <div class="col-sm-6 col-md-3"><a href="/springboard/support-for-caregivers" class="btn">Support for Caregivers</a></div>
             </div>
           </div>
         </div>

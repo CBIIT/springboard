@@ -16,12 +16,12 @@
 
 	<div class="container" id="header-row">
 		<div class="row">
-			<div class="col-sm-6 col-md-3">
+			<div class="col-sm-6 col-md-2">
 				<?php if (!empty($page['Springboard_Logo'])): ?>
           			<?php print render($page['Springboard_Logo']); ?>
         		<?php endif; ?>
 			</div> <!-- end column -->
-			<div class="col-sm-12 col-md-9">
+			<div class="col-sm-12 col-md-10">
 				<nav class="nav-container" role="navigation">
 					<!-- Site Navigation -->
 					<?php if (!empty($page['navigation'])): ?>
@@ -166,6 +166,11 @@
 	'type' => 'file',
 	'scope' => 'footer',
 	'weight' => 4));
+    drupal_add_js("sites/all/themes/springboard/js/jquery.matchHeight-min.js",
+    array(
+        'type' => 'file',
+        'scope' => 'footer',
+        'weight' => 5));
 ?>
 
 

@@ -12,12 +12,16 @@
 ?>
 
 <div class="container">
-	<div class="row">
-		<div class="col-lg-12">
-			<?php print $content['pagetitle']; ?>
-			<?php print $content['pageintro']; ?>
-		</div> <!-- end column -->
-	</div> <!-- end row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="landing-title">
+                <?php print $content['pagetitle']; ?>
+            </div><!-- end column : landing page title -->
+            <div class ="landing-intro">
+                <?php print $content['pageintro']; ?>
+            </div><!-- end column : landing page intro -->
+        </div> <!-- end column -->
+    </div> <!-- end row -->
 </div> <!-- end container -->
 
 <div class="list-of-links">

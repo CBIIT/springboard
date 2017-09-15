@@ -730,7 +730,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 44,
+      'weight' => 4,
     ),
   );
 
@@ -775,7 +775,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 42,
+      'weight' => 2,
     ),
   );
 
@@ -817,7 +817,7 @@ function content_types_and_fields_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 48,
+      'weight' => 9,
     ),
   );
 
@@ -859,7 +859,48 @@ function content_types_and_fields_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 47,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-springboard_action_card-field_card_txt_only'.
+  $field_instances['node-springboard_action_card-field_card_txt_only'] = array(
+    'bundle' => 'springboard_action_card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_card_txt_only',
+    'label' => 'Card TXT Only',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 15,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 7,
     ),
   );
 
@@ -902,7 +943,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 46,
+      'weight' => 6,
     ),
   );
 
@@ -959,7 +1000,45 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 49,
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-springboard_action_card-field_get_support_for'.
+  $field_instances['node-springboard_action_card-field_get_support_for'] = array(
+    'bundle' => 'springboard_action_card',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_get_support_for',
+    'label' => 'Get support for',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
@@ -996,7 +1075,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 41,
+      'weight' => 1,
     ),
   );
 
@@ -1038,7 +1117,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 45,
+      'weight' => 5,
     ),
   );
 
@@ -1094,7 +1173,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 50,
+      'weight' => 11,
     ),
   );
 
@@ -1384,6 +1463,99 @@ function content_types_and_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-springboard_landing-body'.
+  $field_instances['node-springboard_landing-body'] = array(
+    'bundle' => 'springboard_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_landing-field_paragraphs'.
+  $field_instances['node-springboard_landing-field_paragraphs'] = array(
+    'bundle' => 'springboard_landing',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'block_reference' => 'block_reference',
+      ),
+      'bundle_weights' => array(
+        'block_reference' => 2,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 41,
+    ),
+  );
+
   // Exported field_instance: 'node-springboard_pages-body'.
   $field_instances['node-springboard_pages-body'] = array(
     'bundle' => 'springboard_pages',
@@ -1425,7 +1597,7 @@ function content_types_and_fields_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1469,7 +1641,7 @@ function content_types_and_fields_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -1509,7 +1681,7 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1549,7 +1721,7 @@ function content_types_and_fields_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1589,7 +1761,44 @@ function content_types_and_fields_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-springboard_pages-field_support_for'.
+  $field_instances['node-springboard_pages-field_support_for'] = array(
+    'bundle' => 'springboard_pages',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_support_for',
+    'label' => 'Support for',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
     ),
   );
 
@@ -1726,14 +1935,149 @@ function content_types_and_fields_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-springboard_video-field_video_playlist'.
+  $field_instances['node-springboard_video-field_video_playlist'] = array(
+    'bundle' => 'springboard_video',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video_playlist',
+    'label' => 'Video Playlist',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-block_reference-field_block_layout_class'.
+  $field_instances['paragraphs_item-block_reference-field_block_layout_class'] = array(
+    'bundle' => 'block_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block_layout_class',
+    'label' => 'Block Layout Class',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-block_reference-field_block_reference'.
+  $field_instances['paragraphs_item-block_reference-field_block_reference'] = array(
+    'bundle' => 'block_reference',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'blockreference',
+        'settings' => array(
+          'show_empty_blocks' => FALSE,
+        ),
+        'type' => 'blockreference_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_block_reference',
+    'label' => 'Block Reference',
+    'required' => 0,
+    'settings' => array(
+      'blockreference_modules' => array(
+        'advpoll' => 0,
+        'backup_migrate' => 0,
+        'block' => 'block',
+        'boxes' => 'boxes',
+        'menu' => 0,
+        'node' => 0,
+        'print' => 0,
+        'print_pdf' => 0,
+        'print_ui' => 0,
+        'search' => 0,
+        'shortcut' => 0,
+        'springboard_actiondeck' => 0,
+        'system' => 0,
+        'user' => 0,
+        'views' => 'views',
+        'webform' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Action Category');
   t('Add at least 2 choices for your poll.  Write-in values indicate user generated content.  If you approve of a choice that has been written in by a user, uncheck it and it will be integrated into the poll for others to vote upon.');
   t('Approval voting weighs each vote against each individual choice rather than pooling all votes.');
+  t('Block Layout Class');
+  t('Block Reference');
   t('Body');
   t('Card Image JPG');
   t('Card Image PDF');
+  t('Card TXT Only');
   t('Check This Out');
   t('Close poll');
   t('Cookie duration');
@@ -1742,11 +2086,13 @@ function content_types_and_fields_field_default_field_instances() {
   t('Enter a comma-separated list of words to describe your content.');
   t('Facebook Link');
   t('Fact Box');
+  t('Get support for');
   t('If the poll\'s voting availability is being controlled by a cookie, this value determine how long to wait between votes in minutes.');
   t('Image');
   t('Intro');
   t('Maximum choices');
   t('More Related Links');
+  t('Paragraphs');
   t('Permission settings are necessary for allowing write-in voting, visibility of individual votes and administration of electoral lists.');
   t('Poll Choice');
   t('Poll availability');
@@ -1756,11 +2102,13 @@ function content_types_and_fields_field_default_field_instances() {
   t('Springboard Page');
   t('Springboard Video Description');
   t('Springboard Video Link');
+  t('Support for');
   t('Tags');
   t('This value determines when to show the results of a poll.  By default, while voting is on going, users will see the results so long as they are no longer eligible to vote.  To display results without allowing an opportunity to vote, select \'After poll is closed\' and close the poll.');
   t('Try This');
   t('Twitter Link');
   t('Upload an image to go with this article.');
+  t('Video Playlist');
   t('Vote storage mode');
   t('Voting behavior');
   t('Voting options');

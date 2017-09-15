@@ -116,7 +116,7 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<div class="box">
 	<div class="row">
-		<div class="col-sm-9 col-md-7">
+		<div class="col-sm-12 col-md-12">
 			<h2>Create your own action deck or choose an action deck we’ve made for you.</h2>
 		</div>
 		<!-- end column --> 
@@ -125,10 +125,6 @@ function blocks_and_views_default_box() {
 	<div class="row">
 		<div class="col-md-4 col-lg-3">
 			<ul class="list-unstyled premade-deck-links" id="accordion">
-				<li><a href="/springboard/create-action-deck" class="btn-create">
-					<div class="plus-icon-large"></div>
-					<div class="btn-create-title">Create an Action Deck</div>
-					Create an Action Deck with the topics that are most important to you. </a> </li>
 				<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/new-diagnosis">
 					<div class="border-to-arrow"></div>
 					<div class="btn-title">New Diagnosis</div>
@@ -747,11 +743,200 @@ function blocks_and_views_default_box() {
 						</div> <!-- end collapse -->
 					</div> <!-- end deck-previews -->
 				</li>
+<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/post-treatment">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Post-Treatment</div>
+					</a> <a class="btn hidden-xs hidden-sm" data-toggle="collapse" data-parent="#accordion" href="#post-treatment-preview" aria-expanded="false" aria-controls="collapse">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Post-Treatment</div>
+					</a>
+					<div class="deck-previews">
+						<div id="post-treatment-preview" class="collapse">
+							<div class="row">
+								<div class="col-lg-9">
+									<h2>Post-Treatment</h2>
+									<p>Some of the challenges of cancer continue after you finish treatment. Find out what you can expect when treatment ends</p>
+									<a class="btn" href="/springboard/post-treatment">
+									<div class="border-to-arrow"></div>
+									<div class="btn-title">View the Post-Treatment Deck</div>
+									</a>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="stressmood-box">
+												<h3>Stress &amp; Mood</h3>
+												<ul class="list-unstyled">
+												    <li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+													<li><a href="/springboard/stress-mood/fear-of-recurrence-card">Fear of Recurrence</a></li>
+													<li><a href="/springboard/stress-mood/distress-card">Distress</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="symptoms-box">
+												<h3>Symptoms</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/symptoms/fatigue-card">Fatigue</a></li>
+													<li><a href="/springboard/symptoms/chemo-brain-card">Chemo-Brain &amp; Memory Problems</a></li>
+													<li>Sexual Problems for <a href="/springboard/symptoms/sexual-problems-for-men-card">Men</a> and <a href="/springboard/symptoms/sexual-problems-for-women-card">Women</a></li>
+													<li><a href="/springboard/symptoms/hot-flashes-card">Hot Flashes &amp; Night Sweats</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column -->
+										<div class="col-md-6">
+											<div class="wellness-box">
+												<h3>Wellness</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/wellness/healthy-eating-card">Healthy Eating</a></li>
+													<li><a href="/springboard/wellness/be-active-card">Be Active</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="getsupport-box">
+												<h3>Get Support</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/get-support/in-the-workplace-card">In the Workplace</a></li>
+													<li><a href="/springboard/get-support/health-care-team-card">Health Care Team</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column --> 
+									</div>
+									<!-- end row -->
+									<div class="bottom-links"> 
+										<!-- Download Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="download-icon"></div>
+											DOWNLOAD ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Post_Treatment_Deck.pdf">
+													<div class="pdf-icon"></div>
+													PDF</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Post_Treatment.zip">
+													<div class="jpg-icon"></div>
+													JPGs</a></li>
+											</ul>
+										</div>
+										<!-- end download --> 
+										<!-- Share Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="share-icon"></div>
+											SHARE ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/post-treatment" title="Share on Facebook">
+													<div class="facebook-icon"></div>
+													Facebook</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://twitter.com/home?status=Finishing%20treatment%20starts%20a%20new%20chapter%20in%20your%20#CancerJourney.%20Find%20out%20what%20to%20expect:%20http%3A//survivorship.cancer.gov/springboard/post-treatment" title="Share on Twitter">
+													<div class="twitter-icon"></div>
+													Twitter</a></li>
+											</ul>
+										</div>
+										<!-- end share --> 
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Post Treatment%20Action%20Deck&amp;body=Check%20out%20the%20Post%20Treatment%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/post-treatment.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+									<!-- end bottom-links --> 
+								</div>
+								<!-- end column --> 
+							</div>
+							<!-- end row --> 
+						</div> <!-- end collapse -->
+					</div> <!-- end deck-previews -->
+				</li>
+<li> <a class="btn visible-xs-block visible-sm-block" href="/springboard/support-for-caregivers">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Support for Caregivers</div>
+					</a> <a class="btn hidden-xs hidden-sm" data-toggle="collapse" data-parent="#accordion" href="#caregivers-preview" aria-expanded="false" aria-controls="collapse">
+					<div class="border-to-arrow"></div>
+					<div class="btn-title">Support for Caregivers</div>
+					</a>
+					<div class="deck-previews">
+						<div id="caregivers-preview" class="collapse">
+							<div class="row">
+								<div class="col-lg-9">
+									<h2>Support for Caregivers</h2>
+									<p>As a caregiver, you need to know how to take care of yourself and the cancer patient in your life.</p>
+									<a class="btn" href="/springboard/support-for-caregivers">
+									<div class="border-to-arrow"></div>
+									<div class="btn-title">View the Support for Caregivers Deck</div>
+									</a>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="getsupport-box">
+												<h3>Get Support</h3>
+												<ul class="list-unstyled">
+													<li><a href="/springboard/get-support/being-a-caregiver">Being a Caregiver</a></li>
+													<li><a href="/springboard/get-support/care-for-your-mind">Care for Your Body</a></li>
+													<li><a href="/springboard/get-support/care-for-your-body">Care for Your Mind</a></li>
+													<li><a href="/springboard/get-support/finding-meaning-purpose">Finding Meaning & Purpose</a></li>
+													<li><a href="/springboard/get-support/after-treatment-ends">After Treatment Ends</a></li>
+												</ul>
+											</div>
+										</div>
+										<!-- end column --> 
+									</div>
+									<!-- end row -->
+									<div class="bottom-links"> 
+										<!-- Download Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="download-icon"></div>
+											DOWNLOAD ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Support_Caregivers.pdf">
+													<div class="pdf-icon"></div>
+													PDF</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Support_Caregivers.zip">
+													<div class="jpg-icon"></div>
+													JPGs</a></li>
+											</ul>
+										</div>
+										<!-- end download --> 
+										<!-- Share Action Deck -->
+										<div class="btn-group">
+											<button type="button" class="dropdown-toggle btn-dropdown-blue " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<div class="share-icon"></div>
+											SHARE ACTION DECK</button>
+											<ul class="dropdown-menu">
+												<li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//survivorship.cancer.gov/springboard/support-for-caregivers" title="Share on Facebook">
+													<div class="facebook-icon"></div>
+													Facebook</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="https://twitter.com/home?status=Build%20self-management%20skills%20for%20yourself%20to%20help%20you%20be%20an%20effective%20cancer%20caregiver:%20http%3A//survivorship.cancer.gov/springboard/support-for-caregivers" title="Share on Twitter">
+													<div class="twitter-icon"></div>
+													Twitter</a></li>
+											</ul>
+										</div>
+										<!-- end share --> 
+										<a href="mailto:?subject=Springboard%20Beyond%20Cancer%20Support for Caregivers%20Action%20Deck&amp;body=Check%20out%20the%20Support%20Caregivers%20Action%20Deck%20from%20Springboard%20Beyond%20Cancer%20at%20https://survivorship.cancer.gov/springboard/support-for-caregivers.%20It%20has%20helpful%20actions%20and%20resources%20for%20dealing%20with%20the%20challenges%20and%20experiences%20of%20cancer." target="_top" class="btn-blue"><div class="email-icon"></div>EMAIL</a> </div>
+									<!-- end bottom-links --> 
+								</div>
+								<!-- end column --> 
+							</div>
+							<!-- end row --> 
+						</div> <!-- end collapse -->
+					</div> <!-- end deck-previews -->
+				</li>
 			</ul>
 		</div>
 		<!-- end column --> 
 		<div class="col-md-8 col-lg-9">
-			<p class="deck-summary">Your experience with cancer is unique. You can build an action deck with topics that are important to you. Or select an action deck that gives you tips and tools on a specific topic about cancer or treatment.</p>
+<div class="col-md-8 col-lg-8">
+<p style=" font-weight: 500; "><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offer action deck. Watch this video to learn how to create action deck and use them in your self-management journey. </p>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s3hjuqTEn7I?rel=0"></iframe></div>
+<a class="btn plus-action-deck" href="/springboard/create-action-deck">
+			<div class="border-to-arrow"></div>
+<div class="circle-graphic-plus"></div>
+			<div class="btn-title">Create an Action Deck</div>
+<p class="btn-title">Create an Action Deck with topics that are most important to you. </p>
+		</a>
+</div>
+			<!-- <p class="deck-summary">Your experience with cancer is unique. You can build an action deck with topics that are important to you. Or select an action deck that gives you tips and tools on a specific topic about cancer or treatment.</p>-->
 		</div>
 		<!-- end column -->
 	</div>
@@ -864,8 +1049,11 @@ function blocks_and_views_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/iHFJ2vznMtA?rel=0"></iframe></div>
+<a class="btn watch-more" href="/springboard/video-stories"><div class="border-to-arrow"></div>
+<div class="circle-graphic-play"></div>
+<div class="btn-title">Watch More Video Stories</div></a>
 <!-- end youtube embed -->',
-      'format' => 'full_html',
+      'format' => 'raw_html',
     ),
     'additional_classes' => '',
   );
@@ -1053,17 +1241,22 @@ function blocks_and_views_default_box() {
   $box->options = array(
     'body' => array(
       'value' => '<div class="col-md-8">
-<h3>Angie\'s Experience With Breast Cancer - Fatigue</h3>
+<h3>Featured Video Story</h3>
 
 <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ipM_QF9sbpE?rel=0"></iframe></div>
+<a class="btn watch-more" href="/springboard/video-stories"><div class="border-to-arrow"></div>
+<div class="circle-graphic-play"></div>
+<div class="btn-title">Watch More Video Stories</div></a>
 <!-- end youtube embed --></div>
 <!-- end column -->
 
 <div class="col-md-4">
+<h3>Angie\'s Experience With Breast Cancer - Fatigue</h3>
+
 <p class="video-summary">Angie, a breast cancer survivor, talks about her cancer diagnosis and treatment, as well as her fatigue symptoms during chemotherapy and radiation. By walking between treatments and playing tennis, Angie was able to boost her energy levels and battle fatigue. Angie recommends finding a physical activity you enjoy and pursuing it in a modified way until you\'re able to return to a fully active lifestyle. Visit the <a href="/springboard/symptoms/fatigue">Fatigue</a> page for more information.</p>
 </div>
 <!-- end column -->',
-      'format' => 'full_html',
+      'format' => 'raw_html',
     ),
     'additional_classes' => '',
   );
@@ -1996,6 +2189,28 @@ function blocks_and_views_default_box() {
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
   $box->api_version = 1;
+  $box->delta = 'springboard_fact_box_get_support';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Springboard Homepage Fact Box Get Support';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="getsupport">
+<div class="fact-box">
+<h3>Are you a <a href="/springboard/get-support/being-a-caregiver-card">caregiver</a>?</h3>
+
+<p>Understand the importance of taking care of yourself while being there for your loved one. </p>
+</div>
+<!-- end fact-box --></div>
+',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['springboard_fact_box_get_support'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
   $box->delta = 'springboard_helpful_tips';
   $box->plugin_key = 'simple';
   $box->title = '';
@@ -2010,6 +2225,34 @@ function blocks_and_views_default_box() {
     'additional_classes' => '',
   );
   $export['springboard_helpful_tips'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'springboard_more_btn';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Springboard More Button Open';
+  $box->options = array(
+    'body' => array(
+      'value' => '<button id="nav-more" aria-expanded="false">
+						<div class="nav-more-btn">
+							<img src="/sites/all/themes/springboard/images/more-btn.png" id="nav-more-icon" alt="More Open and Close">
+							<div id="nav-more-title">MORE</div>
+						</div>
+					</button>
+<ul id="more-dropdown" class="dropdown-menu more-dropdown">
+<li><a href="/springboard/about">About Springboard Beyond Cancer</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="/springboard/springboard-stress-quiz">Take Our Quiz</a></li>
+<li role="separator" class="divider"></li>
+<li><a href="/springboard/video-stories">Video Stories</a></li>
+</ul>',
+      'format' => 'raw_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['springboard_more_btn'] = $box;
 
   $box = new stdClass();
   $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
@@ -2029,6 +2272,46 @@ function blocks_and_views_default_box() {
     'additional_classes' => '',
   );
   $export['stress'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'take_our_quiz_box';
+  $box->plugin_key = 'simple';
+  $box->title = '<none>';
+  $box->description = 'Take our quiz box';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="col-sm-12 col-md-12 col-lg-12">
+
+	<div>        <span><a href="/springboard/springboard-stress-quiz" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><div class="col-xs-6"><span class="subpage-link-title">Take Our Quiz</span><p>Take this short quiz to understand how much stress you\'re experiencing and find out how you can manage it. </p></div><div class="col-xs-6" style="margin-top: 5%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/graphic.png"></div>
+	</span></a></span>  </div>  </div> ',
+      'format' => 'raw_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['take_our_quiz_box'] = $box;
+
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'video_stories_featured';
+  $box->plugin_key = 'simple';
+  $box->title = 'Featured Video';
+  $box->description = 'Video Stories Featured Video';
+  $box->options = array(
+    'body' => array(
+      'value' => '<div class="col-md-12">
+<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W3B7SWwHBiU?rel=0"></iframe></div>
+
+<h3>Carolyn\'s Breast Cancer Experience — Getting Through the Tough Days</h3>
+
+<p class="video-summary">Carolyn, a breast cancer survivor, talks about her initial diagnosis and treatment, and difficult decisions she had to make during her treatment process due to unexpected bumps in the road, including testing positive for the breast cancer gene. She discusses the need to keep moving, how to get through the tough days, and the importance of taking things one day at a time.</p>
+</div>',
+      'format' => 'raw_html',
+    ),
+  );
+  $export['video_stories_featured'] = $box;
 
   return $export;
 }
