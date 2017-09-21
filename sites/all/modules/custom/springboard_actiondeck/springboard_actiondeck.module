@@ -569,6 +569,8 @@ function form_create_actiondeck($form, &$form_state) {
 
   $form['card_name'] = array(
     '#type' => 'textfield',
+//      '#format' => 'plain_text',
+//      '#rows' => 1,
     '#maxlength' => 50,
     '#size' => 20,
     '#required' => TRUE,
@@ -794,4 +796,17 @@ function deck_nav_form_validate($form, &$form_state) {
   }
 }
 
+//function sprintboard_actiondeck_form_alter(&$form, &$form_state, $form_id) {
+//    // We want this on a specific node type
+//    if ($form_id == 'form-create-actiondeck') {
+//        $form['#after_build'][] = 'CUSTOM_MODULE_NODE_TYPE_node_form_after_build';
+//    }
+//}
+//
+//// afterbuild function
+//function CUSTOM_MODULE_NODE_TYPE_node_form_after_build($form) {
+//    // We want this on a specific field
+//    $form['YOUR_FIELD']['und']['0']['format']['#access'] = FALSE;
+//    return $form;
+//}
 
