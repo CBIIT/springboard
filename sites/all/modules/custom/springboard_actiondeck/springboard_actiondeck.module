@@ -252,6 +252,7 @@ function template_preprocess_actiondeck(&$variables) {
   $variables['title'] = 'Action Deck: ' . $wrapper->getIdentifier();
   $variables['name'] = $wrapper->name->value();
   $variables['eid'] = $wrapper->getIdentifier();
+  $variables['path_alias'] = drupal_get_path_alias();
   $entity_references = $wrapper->field_springboard_action_cards->value();
   foreach ($entity_references as $entity_reference) {
     $this_card = array();
