@@ -13,7 +13,7 @@
           <!-- Here is the Action Deck you built. Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later: -->
           <b>Congratulations on building your Action Deck!</b> Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later:
       <?php
-        print l(url('/springboard/actiondeck/' . $eid, array('absolute' => TRUE)), url('/springboard/actiondeck/' . $eid, array('absolute' => TRUE)));
+        print l(url($path_alias, array('absolute' => TRUE)), url($path_alias, array('absolute' => TRUE)));
       ?></p>
     </div> <!-- end column -->
   </div><!-- end row -->
