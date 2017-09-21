@@ -568,9 +568,9 @@ function form_create_actiondeck($form, &$form_state) {
   );
 
   $form['card_name'] = array(
-    '#type' => 'text_format',
-      '#format' => 'plain_text',
-      '#rows' => 1,
+    '#type' => 'textfield',
+//      '#format' => 'plain_text',
+//      '#rows' => 1,
     '#maxlength' => 50,
     '#size' => 20,
     '#required' => TRUE,

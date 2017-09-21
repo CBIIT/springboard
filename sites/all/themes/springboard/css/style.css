@@ -7885,9 +7885,6 @@ h3.support {
   padding-left: 0;
   padding-right: 0;
 }
-#form-create-actiondeck .sidebar #edit-card-name-format {
-  display: none;
-}
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;

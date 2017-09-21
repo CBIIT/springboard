@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <h1><?php // print "Your Custom Action Deck: " . $title; ?></h1>
-      <?php $deck_name =  ($name != 'name' ? $name : $title) ?>
+      <?php $deck_name =  ($name != 'name' ? $name : $title); $deck_name = check_plain($deck_name); ?>
       <h1><?php print "Your Custom Action Deck: <b>" . $deck_name ."</b>"; ?></h1>
 	  <p class="sr-only">The number above represents your custom action deck. You can reference this action deck again by bookmarking this URL.</p>
     </div> <!-- end column -->
