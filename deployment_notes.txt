@@ -1,3 +1,7 @@
+Springboard 1.2 2017-09-26
+-----------------------
+- SBC-128 Actiondeck redesign
+
 Springboard 1.1 2017-07-13
 -----------------------
 - SBC-134 Adds more for you links to the bottom of Springboard pages

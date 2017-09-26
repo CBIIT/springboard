@@ -395,6 +395,7 @@ function print_action_deck($entity) {
 function print_action_deck_pdf($entity) {
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
 
+
   if (class_exists('fpdi')) {
     //Initiate FPDI
     $file = new FPDI();
@@ -444,9 +445,32 @@ function print_action_deck_pdf($entity) {
   //Generate name of pdf based on actiondeck ID
   $pdf_name = "Action_Deck_".$deck_id.".pdf";
 
+
+  // Send headers
+  header("Content-Type: application/pdf");
+  header("Pragma: public");
+  header("Expires: 0");
+  header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+  header("Content-Type: application/force-download");
+  header("Content-Type: application/octet-stream");
+  header("Content-Type: application/download");
+  header('Content-Disposition: attachment; filename="'.$pdf_name.'"');
+  header("Content-Transfer-Encoding: binary ");
+
+
+
+
   //Output the action deck pdf: option D- to force download, I- to preview in browser
-  $file->Output($pdf_name, 'D');
+  $file_name = $file->Output($pdf_name, 'D');
+
+  //destroy the file object and delete the file from memory.
+  $file->close();
+  $file_name->close();
   unlink($file);
+  unlink($file_name);
+  unset($file);
+  unset($file_name);
+
 }
 
 

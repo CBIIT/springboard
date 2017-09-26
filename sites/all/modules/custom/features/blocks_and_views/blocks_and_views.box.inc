@@ -1133,7 +1133,7 @@ function blocks_and_views_default_box() {
   $box->description = 'Homepage Random Fact Box 2';
   $box->options = array(
     'body' => array(
-      'value' => '<div class="getsupport">
+      'value' => '<div class="stressmood">
 <div class="fact-box" id="randomize-facts">
 <script>
 (function() {
@@ -1228,6 +1228,7 @@ function blocks_and_views_default_box() {
 ',
       'format' => 'raw_html',
     ),
+    'additional_classes' => '',
   );
   $export['homepage_random_block_2'] = $box;
 
