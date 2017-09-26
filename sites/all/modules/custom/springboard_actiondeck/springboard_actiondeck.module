@@ -446,7 +446,7 @@ function print_action_deck_pdf($entity) {
 
   //Output the action deck pdf: option D- to force download, I- to preview in browser
   $file->Output($pdf_name, 'D');
-  $file->cleanUp();
+  unlink($file);
 }
 
 
