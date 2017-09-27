@@ -389,11 +389,24 @@ function print_action_deck($entity) {
 
 
 /**
+ * Get action deck name from action deck ID
+ * @param integer $deck_id
+ */
+function _get_actiondeck_name($deck_id) {
+  return db_select('actiondeck', 'ad')
+    ->fields('ad', array('name'))
+    ->condition('ad.pid', $deck_id )
+    ->execute()
+    ->fetchField();
+}
+
+/**
  * Use FPDI library to join the individual actioncard PDF files into an actiondeck for user download
  * @param $entity
  */
 function print_action_deck_pdf($entity) {
   $wrapper = entity_metadata_wrapper('actiondeck', $entity);
+
 
   if (class_exists('fpdi')) {
     //Initiate FPDI
@@ -441,12 +454,37 @@ function print_action_deck_pdf($entity) {
   $path = explode('/', current_path());
   $deck_id = end($path);
 
-  //Generate name of pdf based on actiondeck ID
-  $pdf_name = "Action_Deck_".$deck_id.".pdf";
+  //Get name of actiondeck from actiondeck ID
+  $temp_name = _get_actiondeck_name($deck_id);
+
+  //If actiondeck name has whitespaces, replace with underscore
+  $temp_name = str_replace(' ', '_', $temp_name);
+
+  //Set name of new action deck pdf for download
+  $pdf_name = $temp_name.".pdf";
+
+  //$pdf_file = drupal_realpath('public://') . '/' . $pdf_name;
+
+  // Send headers
+  header('Content-Transfer-Encoding: binary');  // For Gecko browsers mainly
+  header('Accept-Ranges: bytes');  // Allow support for download resume
+  header('Content-Encoding: none');
+  header("Content-Type: application/download");
+  header('Content-Type: application/pdf');  // Change the mime type if the file is not PDF
+  header("Content-Type: application/octet-stream");
+  header('Content-Disposition: attachment; filename=' . $pdf_name);
+
+  //header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($path)) . ' GMT');
+  // header('Content-Length: ' . filesize($path));  // File size
 
   //Output the action deck pdf: option D- to force download, I- to preview in browser
   $file->Output($pdf_name, 'D');
-  unlink($file);
+
+  //destroy the file object and delete the file from memory.
+  unlink($pdf_name);
+  //unset($pdf_file);
+  unset($file);
+
 }
 
 
@@ -477,8 +515,14 @@ function print_action_deck_jpg($entity) {
   $path = explode('/', current_path());
   $deck_id = end($path);
 
-  //Generate name of pdf based on actiondeck ID
-  $file_name = "Action_Deck_".$deck_id."_jpg.zip";
+  //Get name of actiondeck from actiondeck ID
+  $temp_name = _get_actiondeck_name($deck_id);
+
+  //If actiondeck name has whitespaces, replace with underscore
+  $temp_name = str_replace(' ', '_', $temp_name);
+
+  //Set name of new action deck jpg for download
+  $file_name = $temp_name."_jpg.zip";
 
   header('Content-Type: application/zip');
   header('Content-Length: ' . filesize($file));
@@ -501,9 +545,16 @@ function print_action_deck_txt($entity) {
 
   //Define Line break/End of line character
   define("TXT_EOL", "\r\n");
-  
-  //Generate text file based on actiondeck ID
-  $file_name = 'Action_Deck_' . $deck_id . '.txt';
+
+  //Get name of actiondeck from actiondeck ID
+  $temp_name = _get_actiondeck_name($deck_id);
+
+  //If actiondeck name has whitespaces, replace with underscore
+  $temp_name = str_replace(' ', '_', $temp_name);
+
+  //Set name of new text action deck for download
+  $file_name = $temp_name . '.txt';
+
   $txt_file = drupal_realpath('public://') . '/' . $file_name;
 
   //Mark the beginning of actiondeck
