@@ -444,32 +444,27 @@ function print_action_deck_pdf($entity) {
 
   //Generate name of pdf based on actiondeck ID
   $pdf_name = "Action_Deck_".$deck_id.".pdf";
-
+  //$pdf_file = drupal_realpath('public://') . '/' . $pdf_name;
 
   // Send headers
-  header("Content-Type: application/pdf");
-  header("Pragma: public");
-  header("Expires: 0");
-  header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
-  header("Content-Type: application/force-download");
-  header("Content-Type: application/octet-stream");
+  header('Content-Transfer-Encoding: binary');  // For Gecko browsers mainly
+  header('Accept-Ranges: bytes');  // Allow support for download resume
+  header('Content-Encoding: none');
   header("Content-Type: application/download");
-  header('Content-Disposition: attachment; filename="'.$pdf_name.'"');
-  header("Content-Transfer-Encoding: binary ");
+  header('Content-Type: application/pdf');  // Change the mime type if the file is not PDF
+  header("Content-Type: application/octet-stream");
+  header('Content-Disposition: attachment; filename=' . $pdf_name);
 
-
-
+  //header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($path)) . ' GMT');
+  // header('Content-Length: ' . filesize($path));  // File size
 
   //Output the action deck pdf: option D- to force download, I- to preview in browser
-  $file_name = $file->Output($pdf_name, 'D');
+  $file->Output($pdf_name, 'D');
 
   //destroy the file object and delete the file from memory.
-  $file->close();
-  $file_name->close();
-  unlink($file);
-  unlink($file_name);
+  unlink($pdf_name);
+  //unset($pdf_file);
   unset($file);
-  unset($file_name);
 
 }
 
