@@ -477,6 +477,9 @@ function print_action_deck_pdf($entity) {
   //header('Last-Modified: ' . gmdate('D, d M Y H:i:s', filemtime($path)) . ' GMT');
   // header('Content-Length: ' . filesize($path));  // File size
 
+  //Exclude this page from cache
+  drupal_page_is_cacheable(FALSE);
+
   //Output the action deck pdf: option D- to force download, I- to preview in browser
   $file->Output($pdf_name, 'D');
 
