@@ -811,11 +811,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Post_Treatment_Deck.pdf">
+												<li><a href="/sites/default/files/SBC_Post_Treatment_Deck_0.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Post_Treatment.zip">
+												<li><a href="/sites/default/files/SBC_Post_Treatment_0.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -886,11 +886,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Support_Caregivers.pdf">
+												<li><a href="/sites/default/files/SBC_Caregiver_Deck_0.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Support_Caregivers.zip">
+												<li><a href="/sites/default/files/SBC_Caregiver_0.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -926,9 +926,9 @@ function blocks_and_views_default_box() {
 		<!-- end column --> 
 		<div class="col-md-8 col-lg-9">
 <div class="col-md-8 col-lg-8">
-<p style=" font-weight: 500; "><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offer action deck. Watch this video to learn how to create action deck and use them in your self-management journey. </p>
+<p style=" font-weight: 500; "><a href="/springboard/wellness/self-management">Self-Management</a> means taking action, which is why Springboard offers action decks. Watch this video to learn how to create action decks and use them in your self-management journey. </p>
 <div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s3hjuqTEn7I?rel=0"></iframe></div>
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CJmJOHDY2Yg"></iframe></div>
 <a class="btn plus-action-deck" href="/springboard/create-action-deck">
 			<div class="border-to-arrow"></div>
 <div class="circle-graphic-plus"></div>
@@ -960,9 +960,9 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<div class="wellness">
 <div class="fact-box">
-<h3>Want to take control of your health?</h3>
+<h3>Want to take an active role in your health?</h3>
 
-<p>Learn about <a href="/springboard/wellness/self-management">Self-Management</a> and the steps you can take to actively manage your health.</p>
+<p>Learn to advocate for yourself&nbsp;and navigate cancer’s challenges with <a href="/springboard/wellness/self-management">self-management</a>.</p>
 </div>
 <!-- end fact-box --></div>
 ',
@@ -1029,9 +1029,7 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<h1>Manage Cancer—Your Way</h1>
 
-<p class="intro">Cancer can bring many challenges. Springboard Beyond Cancer gives you information and resources to help you cope and be in control.</p>
-
-<h2>Springboard Beyond Cancer Can Help</h2>
+<p class="intro"><b>Springboard Beyond Cancer can help.</b>Take control of your health and manage the challenges of cancer through self-management. <a href="/springboard/wellness/self-management">Self-management</a> is all of the actions you take to deal with problems and prevent new ones. Watch this video to learn more about the power of self-management.</p>
 ',
       'format' => 'full_html',
     ),
@@ -2198,14 +2196,15 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<div class="getsupport">
 <div class="fact-box">
-<h3>Are you a <a href="/springboard/get-support/being-a-caregiver-card">caregiver</a>?</h3>
+<h3>Are you a <a href="/springboard/get-support">caregiver</a>?</h3>
 
-<p>Understand the importance of taking care of yourself while being there for your loved one. </p>
+<p>Understand the importance of taking care of yourself while being there for your loved one.</p>
 </div>
-<!-- end fact-box --></div>
+</div>
 ',
-      'format' => 'raw_html',
+      'format' => 'full_html',
     ),
+    'additional_classes' => '',
   );
   $export['springboard_fact_box_get_support'] = $box;
 
