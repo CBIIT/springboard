@@ -19,3 +19,22 @@ Springboard 1.2 2017-07-27
 Springboard 1.2 2017-07-27
 -----------------------
 - SBC-151 Fix for unpublished cards appearing on action deck
+
+Springboard 1.3 2017-09-29
+-----------------------
+- SBC-163 Creates path alias for custom decks
+- SBC-146 Adds caregiver content action deck
+- SBC-155 Design changes to homepage
+- SBC-129 Allows user naming of custom action decks
+- SBC-144 Creates Get Support landing page
+- SBC-160 Ameliorates security vulnerability discovered in internal scan
+- SBC-162 Adds security kit module
+- SBC-128 Custom action deck redesign
+- SBC-141 Adds profanity checker module
+- SBC-145 Create custom action deck
+- SBC-165 Fixes bug in PDF downloads being broken when cached
+- SBC-166 Makes downloaded files have same name as custom actin decks
+- SBC-156 Fixes header responsiveness bug
+- SBC-157 Fixes styling of the number of cards in custom decks display
+- SBC-158 Create an action button responsiveness issues
+- SBC-164 Various styling bugs on Video stories pages
