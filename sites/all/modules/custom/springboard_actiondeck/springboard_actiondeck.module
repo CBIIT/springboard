@@ -383,6 +383,9 @@ function print_action_deck($entity) {
   //Generate name of pdf based on actiondeck ID
   $pdf_name = "Action_Deck_".$deck_id.".pdf";
 
+  //Exclude this page from cache
+  drupal_page_is_cacheable(FALSE);
+
   //Output the action deck pdf: option D- to force download, I- to preview in browser
   $file->Output($pdf_name, 'I');
 }
@@ -527,6 +530,9 @@ function print_action_deck_jpg($entity) {
   //Set name of new action deck jpg for download
   $file_name = $temp_name."_jpg.zip";
 
+  //Exclude this page from cache
+  drupal_page_is_cacheable(FALSE);
+
   header('Content-Type: application/zip');
   header('Content-Length: ' . filesize($file));
   //header('Content-Disposition: attachment; filename="deck.zip"');
@@ -583,6 +589,9 @@ function print_action_deck_txt($entity) {
   //Mark the end of actiondeck
   $deck_end = "-End of Action Deck-";
   file_put_contents($txt_file, $deck_end . TXT_EOL, FILE_APPEND | LOCK_EX);
+
+  //Exclude this page from cache
+  drupal_page_is_cacheable(FALSE);
 
   header('Content-type: text/plain');
   header('Content-Disposition: attachment; filename='.$file_name);
