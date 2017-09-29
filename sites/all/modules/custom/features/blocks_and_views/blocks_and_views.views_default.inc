@@ -1016,7 +1016,25 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<div class="caregiver-icon"></div><div class="col-sm-12 get-support-caregivers-intro"><h2>Support for Caregivers</h2><p>People who provide care and support sometimes need some help too. Find out what is means to be a cancer caregiver and get information on how to take care of yourself and the cancer patient in your life. </p></div>';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_springboard_page_node']['id'] = 'reverse_field_springboard_page_node';
+  $handler->display->display_options['relationships']['reverse_field_springboard_page_node']['table'] = 'node';
+  $handler->display->display_options['relationships']['reverse_field_springboard_page_node']['field'] = 'reverse_field_springboard_page_node';
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'get_support_caregiver' => 'get_support_caregiver',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Sort criterion: Content: Published */
   $handler->display->display_options['sorts']['status']['id'] = 'status';
   $handler->display->display_options['sorts']['status']['table'] = 'node';
@@ -1064,6 +1082,12 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['filters']['field_support_for_value']['value'] = array(
     'caregivers' => 'caregivers',
   );
+  /* Filter criterion: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
 
   /* Display: Create Your Own Vision Board - Home */
   $handler = $view->new_display('block', 'Create Your Own Vision Board - Home', 'block_12');
