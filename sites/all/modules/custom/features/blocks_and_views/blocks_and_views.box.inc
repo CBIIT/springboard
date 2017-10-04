@@ -868,11 +868,11 @@ function blocks_and_views_default_box() {
 											<div class="getsupport-box">
 												<h3>Get Support</h3>
 												<ul class="list-unstyled">
-													<li><a href="/springboard/get-support/being-a-caregiver">Being a Caregiver</a></li>
-													<li><a href="/springboard/get-support/care-for-your-mind">Care for Your Body</a></li>
-													<li><a href="/springboard/get-support/care-for-your-body">Care for Your Mind</a></li>
-													<li><a href="/springboard/get-support/finding-meaning-purpose">Finding Meaning & Purpose</a></li>
-													<li><a href="/springboard/get-support/after-treatment-ends">After Treatment Ends</a></li>
+													<li><a href="/springboard/get-support/being-a-caregiver-card">Being a Caregiver</a></li>
+													<li><a href="/springboard/get-support/care-for-your-mind-card">Care for Your Body</a></li>
+													<li><a href="/springboard/get-support/care-for-your-body-card">Care for Your Mind</a></li>
+													<li><a href="/springboard/get-support/finding-meaning-purpose-card">Finding Meaning & Purpose</a></li>
+													<li><a href="/springboard/get-support/after-treatment-ends-card">After Treatment Ends</a></li>
 												</ul>
 											</div>
 										</div>
