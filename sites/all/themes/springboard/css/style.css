@@ -9945,6 +9945,11 @@ a.infographic4 p {
   background-position: left;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 360px) {
+  .decks #boxes-box-homepage_deck_preview .plus-action-deck .circle-graphic-plus {
+    display: none;
+  }
+}
 .decks #boxes-box-homepage_deck_preview .plus-action-deck .btn-title {
   display: inline-block;
   font-weight: 500;
