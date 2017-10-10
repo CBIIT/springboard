@@ -544,7 +544,7 @@ function blocks_and_views_default_box() {
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Coping_With_Cancer.zip">
+												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Coping_with_Cancer.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
