@@ -672,6 +672,7 @@ function roles_and_permissions_user_default_permissions() {
     'name' => 'create springboard_action_card content',
     'roles' => array(
       'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
     ),
     'module' => 'node',
   );
@@ -681,6 +682,7 @@ function roles_and_permissions_user_default_permissions() {
     'name' => 'create springboard_action_deck content',
     'roles' => array(
       'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
     ),
     'module' => 'node',
   );
@@ -690,6 +692,7 @@ function roles_and_permissions_user_default_permissions() {
     'name' => 'create springboard_pages content',
     'roles' => array(
       'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
     ),
     'module' => 'node',
   );
@@ -1531,7 +1534,6 @@ function roles_and_permissions_user_default_permissions() {
     'name' => 'use text format filtered_html',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
