@@ -687,6 +687,16 @@ function roles_and_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'create springboard_landing content'.
+  $permissions['create springboard_landing content'] = array(
+    'name' => 'create springboard_landing content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'create springboard_pages content'.
   $permissions['create springboard_pages content'] = array(
     'name' => 'create springboard_pages content',
@@ -808,6 +818,15 @@ function roles_and_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete any springboard_landing content'.
+  $permissions['delete any springboard_landing content'] = array(
+    'name' => 'delete any springboard_landing content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'delete any springboard_pages content'.
   $permissions['delete any springboard_pages content'] = array(
     'name' => 'delete any springboard_pages content',
@@ -903,6 +922,15 @@ function roles_and_permissions_user_default_permissions() {
   // Exported permission: 'delete own springboard_action_deck content'.
   $permissions['delete own springboard_action_deck content'] = array(
     'name' => 'delete own springboard_action_deck content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own springboard_landing content'.
+  $permissions['delete own springboard_landing content'] = array(
+    'name' => 'delete own springboard_landing content',
     'roles' => array(
       'administrator' => 'administrator',
     ),
@@ -1125,6 +1153,16 @@ function roles_and_permissions_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit any springboard_landing content'.
+  $permissions['edit any springboard_landing content'] = array(
+    'name' => 'edit any springboard_landing content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: 'edit any springboard_pages content'.
   $permissions['edit any springboard_pages content'] = array(
     'name' => 'edit any springboard_pages content',
@@ -1245,6 +1283,16 @@ function roles_and_permissions_user_default_permissions() {
   // Exported permission: 'edit own springboard_action_deck content'.
   $permissions['edit own springboard_action_deck content'] = array(
     'name' => 'edit own springboard_action_deck content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'springboard content admin' => 'springboard content admin',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own springboard_landing content'.
+  $permissions['edit own springboard_landing content'] = array(
+    'name' => 'edit own springboard_landing content',
     'roles' => array(
       'administrator' => 'administrator',
       'springboard content admin' => 'springboard content admin',
