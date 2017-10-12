@@ -873,6 +873,7 @@ function blocks_and_views_default_box() {
 													<li><a href="/springboard/get-support/care-for-your-body-card">Care for Your Mind</a></li>
 													<li><a href="/springboard/get-support/finding-meaning-purpose-card">Finding Meaning & Purpose</a></li>
 													<li><a href="/springboard/get-support/after-treatment-ends-card">After Treatment Ends</a></li>
+													<li><a href="/springboard/get-support/end-of-life-care-bereavement-card">End-of-Life Care & Bereavement</a></li>
 												</ul>
 											</div>
 										</div>
