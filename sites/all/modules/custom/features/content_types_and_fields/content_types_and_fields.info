@@ -94,6 +94,7 @@ features[field_instance][] = node-springboard_video-body
 features[field_instance][] = node-springboard_video-field_springboard_video_descript
 features[field_instance][] = node-springboard_video-field_springboard_video_link
 features[field_instance][] = node-springboard_video-field_video_playlist
+features[field_instance][] = node-webform-body
 features[field_instance][] = paragraphs_item-block_reference-field_block_layout_class
 features[field_instance][] = paragraphs_item-block_reference-field_block_reference
 features[node][] = advpoll
