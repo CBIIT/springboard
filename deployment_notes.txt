@@ -1,3 +1,7 @@
+Springboard 1.3 2017-10-19
+-----------------------
+- SBC-176 Removing media files from git
+
 Springboard 1.2 2017-09-26
 -----------------------
 - SBC-128 Actiondeck redesign
