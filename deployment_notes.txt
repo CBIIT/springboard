@@ -5,6 +5,9 @@ Springboard 1.3 2017-10-19
 Springboard 1.2 2017-09-26
 -----------------------
 - SBC-128 Actiondeck redesign
+- SBC-174 Adding missing permissions
+- SBC-171 New action card
+- SBC-179 Fixing more for you link
 
 Springboard 1.1 2017-07-13
 -----------------------
