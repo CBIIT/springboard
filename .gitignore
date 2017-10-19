@@ -2,6 +2,6 @@
 .idea/
 .project/
 .vagrant/
-!/sites/default/files
+/sites/default/files
 /sites/default
 /sites/springboard-dev.dd
