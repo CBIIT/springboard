@@ -4,16 +4,15 @@
  * The primary PHP file for this theme.
  */
 
-//Zhao, Add placeholder for Searchbar
+/**
+ * Implements hook_form_alter().
+ *
+ */
 function springboard_form_alter(&$form, &$form_state, $form_id){
+    // Add placeholder for Search bar
     if($form_id == "views_exposed_form" && $form['#id'] == 'views-exposed-form-springboard-search-page'){
         $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
     }
-    if ($form_id == "user-login"){
-        print "Hello World";
-    }
-    //dpm($form);
-    //print_r('<pre>');print_r($form);print_r('</pre>');
 }
 
 /**
@@ -118,17 +117,10 @@ function springboard_preprocess_node(&$variables) {
   }
 }
 
-function springboard_preprocess_block(&$variables) {
-  //print_r($variables['block']);
-}
-
-function springboard_preprocess_page(&$vars) {
-//  $path = drupal_get_path_alias();
-//  if (drupal_match_path($path, 'travel')) {
-//
-//  }
-}
-
+/**
+ * Implements hook_preprocess_html().
+ *
+ */
 function springboard_preprocess_html(&$variables) {
   drupal_add_js(drupal_get_path('theme', 'springboard') . '/js/jquery.cookie.js', 'file');
 }
@@ -204,6 +196,10 @@ function springboard_webform_element($variables) {
   return $output;
 }
 
+/**
+ * Implements hook_theme().
+ *
+ */
 function springboard_theme() {
   $items = array();
 	
