@@ -31,13 +31,6 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<?php print $head; ?>
   	<title><?php print $head_title; ?></title>
-  
-  <!-- Social Media Share -->
-	<meta property="og:site_name" content="Springboard Beyond Cancer">
-	<meta property="og:title" content="Springboard Beyond Cancer">
-	<meta property="og:description" content="Manage Cancer — Your Way. Cancer can bring many challenges. Springboard Beyond Cancer gives you information and resources to help you cope and be in control.">
-	<meta property="og:image" content="/sites/all/themes/springboard/images/SBC-Share.png">
-	<meta property="og:type" content="index">
 	
   	<!-- Disable tap highlight on IE -->
 	<meta name="msapplication-tap-highlight" content="no">
