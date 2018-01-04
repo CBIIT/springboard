@@ -186,7 +186,7 @@ function blocks_and_views_default_box() {
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_New_Diagnosis.zip">
+												<li><a href="/sites/default/files/SBC_New_Diagnosis.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -546,7 +546,7 @@ function blocks_and_views_default_box() {
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Coping_with_Cancer.zip">
+												<li><a href="/sites/default/files/SBC_Coping_With_Cancer_1.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -630,7 +630,7 @@ function blocks_and_views_default_box() {
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Social_Support.zip">
+												<li><a href="/sites/default/files/SBC_Social_Support_0.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
