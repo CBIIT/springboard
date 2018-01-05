@@ -149,7 +149,7 @@ function blocks_and_views_default_box() {
 												<ul class="list-unstyled">
 													<li><a href="/springboard/stress-mood/coping-with-cancer-card">Coping with Cancer in Everyday Life</a></li>
 													<li><a href="/springboard/stress-mood/distress-card">Distress</a></li>
-													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness & Relaxation</a></li>
 												</ul>
 											</div>
 											<div class="wellness-box">
@@ -165,7 +165,8 @@ function blocks_and_views_default_box() {
 											<div class="getsupport-box">
 												<h3>Get Support</h3>
 												<ul class="list-unstyled">
-													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family, Friends, and Caregivers</a></li>
+													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family & Friends</a></li>
+<li><a href="/springboard/get-support/financial-burden-cancer-card">Financial Burden of Cancer</a></li>
 													<li><a href="/springboard/get-support/health-care-team-card">Health Care Team</a></li>										
 													<li><a href="/springboard/get-support/in-the-workplace-card">In the Workplace</a></li>
 												</ul>
@@ -181,11 +182,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_New_Diagnosis_Deck.pdf">
+												<li><a href="/sites/default/files/SBC_New_Diagnosis_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_New_Diagnosis.zip">
+												<li><a href="/sites/default/files/SBC_New_Diagnosis.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -332,10 +333,10 @@ function blocks_and_views_default_box() {
 													<li><a href="/springboard/symptoms/fatigue-card">Fatigue</a></li>
 													<li><a href="/springboard/symptoms/hairloss-card">Hair Loss</a></li>
 													<li><a href="/springboard/symptoms/infections-card">Infections</a></li>
-													<li><a href="/springboard/symptoms/mouth-gum-throat-problems-card">Mouth and Gum Problems</a></li>
+													<li><a href="/springboard/symptoms/mouth-gum-throat-problems-card">Mouth & Gum Problems</a></li>
 													<li><a href="/springboard/symptoms/nausea-card">Nausea</a></li>
 													<li>Sexual Problems for <a href="/springboard/symptoms/sexual-problems-for-men-card">Men</a> and <a href="/springboard/symptoms/sexual-problems-for-women-card">Women</a></li>
-													<li><a href="/springboard/symptoms/tingling-burning-numbness-card">Tingling, Burning, and Numbness (Neuropathy)</a></li>
+													<li><a href="/springboard/symptoms/tingling-burning-numbness-card">Tingling, Burning & Numbness (Neuropathy)</a></li>
 												</ul>
 											</div>
 										</div>
@@ -423,7 +424,7 @@ function blocks_and_views_default_box() {
 												<ul class="list-unstyled">
 													<li><a href="/springboard/symptoms/fatigue-card">Fatigue</a></li>
 													<li><a href="/springboard/symptoms/infections-card">Infections</a></li>
-													<li><a href="/springboard/symptoms/skin-and-nail-changes-card">Skin and Nail Changes</a></li>
+													<li><a href="/springboard/symptoms/skin-and-nail-changes-card">Skin & Nail Changes</a></li>
 												</ul>
 											</div>
 										</div>
@@ -515,7 +516,7 @@ function blocks_and_views_default_box() {
 													<li><a href="/springboard/stress-mood/depression-card">Depression</a></li>
 													<li><a href="/springboard/stress-mood/distress-card">Distress</a></li>
 													<li><a href="/springboard/stress-mood/fear-of-recurrence-card">Fear of Recurrence</a></li>
-													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness & Relaxation</a></li>
 												</ul>
 											</div>
 										</div>
@@ -524,7 +525,8 @@ function blocks_and_views_default_box() {
 											<div class="getsupport-box">
 												<h3>Get Support</h3>
 												<ul class="list-unstyled">
-													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family, Friends, and Caregivers</a></li>
+													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family & Friends</a></li>
+<li><a href="/springboard/get-support/financial-burden-cancer-card">Financial Burden of Cancer</a></li>
 													<li><a href="/springboard/get-support/health-care-team-card">Health Care Team</a></li>
 													<li><a href="/springboard/get-support/peer-to-peersupport-card">Peer-to-Peer Support</a></li>
 												</ul>
@@ -540,11 +542,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Coping_With_Cancer_Deck.pdf">
+												<li><a href="/sites/default/files/SBC_Coping_With_Cancer_Deck.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Coping_With_Cancer.zip">
+												<li><a href="/sites/default/files/SBC_Coping_With_Cancer_1.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -606,7 +608,7 @@ function blocks_and_views_default_box() {
 											<div class="getsupport-box">
 												<h3>Get Support</h3>
 												<ul class="list-unstyled">
-													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family, Friends, and Caregivers</a></li>
+													<li><a href="/springboard/get-support/family-friends-caregivers-card">Family & Friends</a></li>
 													<li><a href="/springboard/get-support/health-care-team-card">Health Care Team</a></li>
 													
 													<li><a href="/springboard/get-support/in-the-workplace-card">In the Workplace</a></li>
@@ -624,11 +626,11 @@ function blocks_and_views_default_box() {
 											<div class="download-icon"></div>
 											DOWNLOAD ACTION DECK</button>
 											<ul class="dropdown-menu">
-												<li><a href="/sites/all/themes/springboard/cards/pdf/SBC_Social_Support_Deck.pdf">
+												<li><a href="/sites/default/files/SBC_Social_Support_Deck_0.pdf">
 													<div class="pdf-icon"></div>
 													PDF</a></li>
 												<li role="separator" class="divider"></li>
-												<li><a href="/sites/all/themes/springboard/cards/jpg/SBC_Social_Support.zip">
+												<li><a href="/sites/default/files/SBC_Social_Support_0.zip">
 													<div class="jpg-icon"></div>
 													JPGs</a></li>
 											</ul>
@@ -682,7 +684,7 @@ function blocks_and_views_default_box() {
 												<h3>Stress &amp; Mood</h3>
 												<ul class="list-unstyled">
 													<li><a href="/springboard/stress-mood/fear-of-recurrence-card">Fear of Recurrence</a></li>
-													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+													<li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness & Relaxation</a></li>
 												</ul>
 											</div>
 										</div>
@@ -765,7 +767,7 @@ function blocks_and_views_default_box() {
 											<div class="stressmood-box">
 												<h3>Stress &amp; Mood</h3>
 												<ul class="list-unstyled">
-												    <li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness and Relaxation</a></li>
+												    <li><a href="/springboard/stress-mood/practice-mindfulness-card">Practice Mindfulness & Relaxation</a></li>
 													<li><a href="/springboard/stress-mood/fear-of-recurrence-card">Fear of Recurrence</a></li>
 													<li><a href="/springboard/stress-mood/distress-card">Distress</a></li>
 												</ul>
