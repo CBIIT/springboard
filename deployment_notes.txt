@@ -1,3 +1,8 @@
+Springboard 1.5 2018-01-11
+-----------------------
+- SBC-225 Cleaning up JS
+- SBC-226 Adding new actioncards
+
 Springboard 1.4 2017-11-17
 -----------------------
 - SBC-184 Adding linkchecker module
