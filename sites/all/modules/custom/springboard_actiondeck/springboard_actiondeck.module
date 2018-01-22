@@ -116,6 +116,7 @@ function springboard_actiondeck_menu() {
     'access arguments' => array('administer actiondecks'),
   );
   $items['springboard/actiondeck/%actiondeck'] = array(
+      'title' => 'Custom Action Deck',
     'page callback' => 'actiondeck_page_view',
     'page arguments' => array(2),
     'access arguments' => array('view actiondecks'),
