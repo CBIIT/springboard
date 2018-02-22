@@ -1,5 +1,10 @@
 Springboard 1.5 2018-01-11
 -----------------------
+- SBC-231 Entity module security update
+- SBC-233 Drupal core update
+
+Springboard 1.5 2018-01-11
+-----------------------
 - SBC-225 Cleaning up JS
 - SBC-226 Adding new actioncards
 
