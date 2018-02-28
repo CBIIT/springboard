@@ -171,7 +171,7 @@
 	} else if (window.location.href.indexOf("/springboard/wellness/") > -1) {
 		$('#block-menu-menu-springboard ul.menu li:eq(3) a').addClass('active');
 		$('.card-box .top-banner').addClass('wellness');
-	} else if (window.location.href.indexOf("/springboard/get-support/") > -1) {
+	} else if (window.location.pathname.substring(0, 24) == "/springboard/get-support") {
 		$('#block-menu-menu-springboard ul.menu li:eq(4) a').addClass('active');
 		$('.card-box .top-banner').addClass('getsupport');
 	}
