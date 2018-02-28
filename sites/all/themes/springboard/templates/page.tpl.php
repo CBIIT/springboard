@@ -52,7 +52,7 @@
         ?>
 			</div>
 		</div>
-		<div class="row search-extras">
+		<div class="row search-extras hidden-xs hidden-sm">
 			<div class="col-md-6">
 				<?php if (!empty($page['Common_Symptoms'])): ?>
           			<?php print render($page['Common_Symptoms']); ?>
