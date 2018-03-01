@@ -10382,6 +10382,11 @@ article.node-springboard-pages header,
 article.node-springboard-pages footer {
   display: none !important;
 }
+/* SBC-242 */
+.node-springboard-pages .embed-responsive-item {
+  max-height: 312px;
+  max-width: 560px;
+}
 /* ------------------------------ Quiz Banner ------------------------------ */
 #take-our-quiz {
   background-color: #005e8c;
