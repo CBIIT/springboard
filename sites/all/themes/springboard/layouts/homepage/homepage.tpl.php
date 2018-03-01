@@ -24,16 +24,16 @@
             <?php print $content['hero-video']; ?>
         </div> <!-- end column -->
 		<div class="col-md-6 is-table-row">
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <?php print $content['hero-fact1']; ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <?php print $content['hero-fact2']; ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <?php print $content['hero-fact3']; ?>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 col-sm-6">
                 <?php print $content['hero-fact4']; ?>
             </div>
 		</div> <!-- end column -->
