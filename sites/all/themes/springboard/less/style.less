@@ -92,7 +92,14 @@ hr.deck-divider {
 #main-content {
 	padding-top:100px;
 	padding-bottom:50px;
-	background-color:#FFFFFF;	
+	background-color:#FFFFFF;
+
+	/* SBC-241 */
+	.text-center .pagination {
+		.pager-first, .pager-last {
+			display: none;
+		}
+	}
 }
 #main-content:focus {
 	outline-style: none;
