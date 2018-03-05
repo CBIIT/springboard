@@ -7607,6 +7607,11 @@ label.control-label input:disabled ~ .control__indicator:after {
   right: 0;
   min-height: 70px;
 }
+@media (max-width: 1200px) {
+  .row.vdivide [class*="col-"]:not(:last-child)::after {
+    width: 0px;
+  }
+}
 .page-springboard-symptoms #block-system-main .container .row .col-lg-12,
 .page-springboard-stress-mood #block-system-main .container .row .col-lg-12,
 .page-springboard-wellness #block-system-main .container .row .col-lg-12 {
@@ -7617,6 +7622,12 @@ label.control-label input:disabled ~ .control__indicator:after {
   margin-right: 30px;
   padding-right: 30px;
   border-right: 1px solid #e0e0e0;
+}
+@media (max-width: 768px) {
+  .landing-title {
+    float: none;
+    border-right: none;
+  }
 }
 .landing-title h1 {
   margin-top: 0px !important;
@@ -7633,6 +7644,11 @@ label.control-label input:disabled ~ .control__indicator:after {
   font-weight: 500;
   /* margin: 50px 0px 30px 30px !important; */
   margin: 30px 0px 30px 30px !important;
+}
+@media (max-width: 1200px) {
+  .intro p:only-child {
+    margin: 30px 0px 30px 0px !important;
+  }
 }
 .vdivide {
   margin: 40px 0 20px 0;
@@ -7666,9 +7682,6 @@ label.control-label input:disabled ~ .control__indicator:after {
 .getsupport-cancer-caregivers .view-header {
   margin-left: 15px !important;
   margin-right: 15px !important;
-}
-h1.getsupport-title {
-  padding-left: 15px;
 }
 .pull-right {
   padding-left: 25px;
