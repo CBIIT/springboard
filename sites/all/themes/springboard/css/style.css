@@ -8238,6 +8238,11 @@ a.subpage-link:focus .subpage-link-box p {
   margin-left: 30px;
   padding-left: 10px;
 }
+.node-type-springboard-landing .create-vision-board {
+  margin-left: 5px;
+  padding-left: 10px;
+  padding-right: 25px;
+}
 /* ------------------------------ Icons ------------------------------ */
 .share-icon,
 .card-icon,
