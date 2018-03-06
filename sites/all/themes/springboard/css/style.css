@@ -8149,7 +8149,7 @@ a.subpage-link .subpage-link-box {
   border-bottom: 2px solid #e1e5e6;
   min-height: 200px;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 991px) {
   .getsupport a.subpage-link .subpage-link-box {
     min-height: 140px;
   }
