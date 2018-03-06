@@ -896,7 +896,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-8 col-lg-6';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-6 col-lg-6';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
@@ -1003,7 +1003,7 @@ function blocks_and_views_views_default_views() {
   $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-8 col-lg-6';
+  $handler->display->display_options['style_options']['row_class'] = 'col-sm-12 col-md-6 col-lg-6';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
   $handler->display->display_options['style_options']['row_class_special'] = FALSE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
