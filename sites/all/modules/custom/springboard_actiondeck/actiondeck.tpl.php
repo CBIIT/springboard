@@ -1,3 +1,4 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
@@ -12,9 +13,20 @@
       <p class="intro">
           <!-- Here is the Action Deck you built. Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later: -->
           <b>Congratulations on building your Action Deck!</b> Each card in the deck has helpful tips and links to more information on a specific topic. Save the deck the way that works best for you. You can download or email it, or bookmark the URL and come back to it later:
-      <?php
-        print l(url($path_alias, array('absolute' => TRUE)), url($path_alias, array('absolute' => TRUE)));
-      ?></p>
+          <span id="custom-deck-link-div">
+            <input readonly id="custom-deck-link" value="<?php print url($path_alias, array('absolute' => TRUE)); ?>">
+            <button class="button btn-white" id="custom-deck-link-copy-btn" data-clipboard-text="<?php print url($path_alias, array('absolute' => TRUE)); ?>" alt="Copy Link" title="Copy Link">
+                Copy Link
+            </button>
+          </span>
+
+        <script>
+          (function(){
+            new Clipboard('#custom-deck-link-copy-btn');
+          })();
+        </script>
+
+      </p>
     </div> <!-- end column -->
   </div><!-- end row -->
 

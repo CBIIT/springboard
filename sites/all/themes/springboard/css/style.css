@@ -10198,8 +10198,8 @@ h3.poll {
   border-top-color: #158f7a;
 }
 .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box .subpage-link-title {
-  padding: 0px;
-  margin: 0px 0px 8px 0px;
+  padding: 0;
+  margin: 0 0 8px 0;
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 24px;
@@ -10208,8 +10208,8 @@ h3.poll {
   text-decoration: none;
 }
 .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box p {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -10230,7 +10230,10 @@ h3.poll {
   .view-display-id-block_12 .create-vision-board {
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 0px;
+    margin-left: 0;
+  }
+  .view-display-id-block_12 .create-vision-board .subpage-link-box:nth-child(1) {
+    padding: 0;
   }
 }
 #boxes-box-take_our_quiz_box .col-sm-12 {
@@ -10251,7 +10254,10 @@ h3.poll {
     padding-right: 15px;
   }
   #boxes-box-take_our_quiz_box .subpage-link-box {
-    height: 220px;
+    height: 250px;
+  }
+  #boxes-box-take_our_quiz_box .subpage-link-box :nth-child(2) {
+    padding: 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -11154,6 +11160,21 @@ ul.card-lists > li a {
 .decks-nav-box .input-group .input-group-btn .btn:focus,
 .decks-nav-box .input-group .input-group-btn .btn:hover {
   background-color: #002b41;
+}
+.page-springboard-actiondeck h1 {
+  word-break: break-all;
+}
+#custom-deck-link-div #custom-deck-link {
+  width: 400px;
+}
+@media only screen and (max-width: 1200px) {
+  #custom-deck-link-div {
+    width: 100%;
+    display: block;
+  }
+  #custom-deck-link-div #custom-deck-link {
+    width: 65%;
+  }
 }
 #homepage-poll span.submitted {
   display: none;
