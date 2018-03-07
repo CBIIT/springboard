@@ -2287,7 +2287,7 @@ function blocks_and_views_default_box() {
     'body' => array(
       'value' => '<div class="col-sm-12 col-md-12 col-lg-12">
 
-	<div>        <span><a href="/springboard/springboard-stress-quiz" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><div class="col-xs-6"><span class="subpage-link-title">Take Our Quiz</span><p>Take this short quiz to understand how much stress you\'re experiencing and find out how you can manage it. </p></div><div class="col-xs-6" style="margin-top: 5%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/graphic.png"></div>
+	<div>        <span><a href="/springboard/springboard-stress-quiz" class="subpage-link" style="opacity: 1; top: 0px;"><span class="subpage-link-box"><div class="col-xs-8 col-sm-7 col-md-6"><span class="subpage-link-title">Take Our Quiz</span><p>Take this short quiz to understand how much stress you\'re experiencing and find out how you can manage it. </p></div><div class="col-xs-4 col-sm-5 col-md-6" style="margin-top: 5%;"><img class="img-responsive" alt="take our quiz" src="/sites/all/themes/springboard/images/graphic.png"></div>
 	</span></a></span>  </div>  </div> ',
       'format' => 'raw_html',
     ),

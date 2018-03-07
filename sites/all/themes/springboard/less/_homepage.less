@@ -583,12 +583,22 @@ h3.poll {
 					max-height: 195px;
 				}
 			}
+			@media (max-width: 400px) {
+				padding-left:15px;
+				padding-right:15px;
+
+				> div {
+					padding-left:5px;
+					padding-right:5px;
+				}
+			}
 		}
 			@media (max-width: 992px) {
 				.subpage-link-box {
 					height: 250px;
 				}
 			}
+
 		}
 	}
 	@media (max-width: 768px) {
@@ -622,6 +632,17 @@ h3.poll {
 			height: 220px;
 		}
 	}
+	@media (max-width: 400px) {
+		.subpage-link-box {
+			padding-left:15px;
+			padding-right:15px;
+		}
+		.subpage-link-box > div {
+			padding-left:5px;
+			padding-right:5px;
+		}
+	}
+
 }
 
 //.equal-height {
