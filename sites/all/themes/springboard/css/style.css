@@ -8261,6 +8261,20 @@ a.subpage-link:focus .subpage-link-box p {
   .fact-box p {
     font-size: 22px;
   }
+  .symptoms a.subpage-link .subpage-link-box,
+  .stressmood a.subpage-link .subpage-link-box,
+  .wellness a.subpage-link .subpage-link-box,
+  .getsupport a.subpage-link .subpage-link-box {
+    min-height: 180px !important;
+  }
+}
+@media (max-width: 450px) {
+  .symptoms a.subpage-link .subpage-link-box,
+  .stressmood a.subpage-link .subpage-link-box,
+  .wellness a.subpage-link .subpage-link-box,
+  .getsupport a.subpage-link .subpage-link-box {
+    min-height: 245px !important;
+  }
 }
 .col-sm-5.box.note-box P {
   margin-bottom: 0px !important;
