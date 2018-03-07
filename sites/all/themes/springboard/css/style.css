@@ -7906,6 +7906,16 @@ h3.support {
     padding-top: 34px;
   }
 }
+@media (max-width: 768px) {
+  .node-type-springboard-landing .vdivide > .col-lg-5 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .node-type-springboard-landing .vdivide > .col-lg-7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
