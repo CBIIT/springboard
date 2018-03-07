@@ -10221,6 +10221,16 @@ h3.poll {
     max-height: 195px;
   }
 }
+@media (max-width: 400px) {
+  .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box > div {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
 @media (max-width: 992px) {
   .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box {
     height: 250px;
@@ -10252,6 +10262,16 @@ h3.poll {
   }
   #boxes-box-take_our_quiz_box .subpage-link-box {
     height: 220px;
+  }
+}
+@media (max-width: 400px) {
+  #boxes-box-take_our_quiz_box .subpage-link-box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #boxes-box-take_our_quiz_box .subpage-link-box > div {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 @media only screen and (min-width: 768px) {
