@@ -27,7 +27,7 @@
       <div class="deck-share">
         <!-- Download Action Card -->
         <div class="btn-group">
-          <button type="button" class="dropdown-toggle btn-dropdown-blue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="download-icon"></div>DOWNLOAD ACTION DECK</button>
+          <button type="button" class="dropdown-toggle btn-dropdown-blue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="download-icon"></div>DOWNLOAD</button>
           <ul class="dropdown-menu">
             <li><a href="/springboard/print-action-deck-pdf/<?php print $eid; ?>"><div class="pdf-icon"></div>PDF</a></li>
             <li role="separator" class="divider"></li>
@@ -38,7 +38,7 @@
         </div> <!-- end download -->
         <!-- Share Action Deck -->
         <div class="btn-group">
-          <button type="button" class="dropdown-toggle btn-dropdown-blue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="share-icon"></div>SHARE ACTION DECK</button>
+          <button type="button" class="dropdown-toggle btn-dropdown-blue" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><div class="share-icon"></div>SHARE</button>
           <ul class="dropdown-menu">
             <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php print(urlencode(url('/springboard/actiondeck/' . $eid, array('absolute' => TRUE)))); ?>"><div class="facebook-icon"></div>Facebook</a></li>
             <li role="separator" class="divider"></li>
