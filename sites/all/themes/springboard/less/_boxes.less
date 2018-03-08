@@ -53,7 +53,15 @@ a.subpage-link .subpage-link-box {
 .getsupport a.subpage-link .subpage-link-box {
 	border-top:6px solid @getsupport;
 	border-bottom:2px solid @mediumgray;
-	min-height: 180px;
+	min-height: 200px;
+	@media (min-width: 480px) and (max-width: 991px) {
+		min-height: 140px;
+	}
+}
+.getsupport a.subpage-link {
+	@media (min-width: 480px) and (max-width: 991px) {
+		width: 100%;
+	}
 }
 .more-related-links-view {
 	margin-top: 30px;
@@ -170,4 +178,10 @@ a.subpage-link:focus .subpage-link-box p {
 .create-vision-board {
 	margin-left: 30px;
 	padding-left: 10px;
+}
+
+.node-type-springboard-landing .create-vision-board {
+	margin-left: 5px;
+	padding-left: 10px;
+	padding-right: 25px;
 }
