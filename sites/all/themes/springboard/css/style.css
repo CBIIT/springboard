@@ -8126,7 +8126,17 @@ a.subpage-link .subpage-link-box {
 .getsupport a.subpage-link .subpage-link-box {
   border-top: 6px solid #158f7a;
   border-bottom: 2px solid #e1e5e6;
-  min-height: 180px;
+  min-height: 200px;
+}
+@media (min-width: 480px) and (max-width: 991px) {
+  .getsupport a.subpage-link .subpage-link-box {
+    min-height: 140px;
+  }
+}
+@media (min-width: 480px) and (max-width: 991px) {
+  .getsupport a.subpage-link {
+    width: 100%;
+  }
 }
 .more-related-links-view {
   margin-top: 30px;
@@ -8237,6 +8247,11 @@ a.subpage-link:focus .subpage-link-box p {
 .create-vision-board {
   margin-left: 30px;
   padding-left: 10px;
+}
+.node-type-springboard-landing .create-vision-board {
+  margin-left: 5px;
+  padding-left: 10px;
+  padding-right: 25px;
 }
 /* ------------------------------ Icons ------------------------------ */
 .share-icon,
