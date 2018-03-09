@@ -930,6 +930,9 @@ label.control-label input:disabled ~ .control__indicator:after {
   bottom: 0;
   right: 0;
   min-height: 70px;
+  @media (max-width: 1200px) {
+    width: 0px;
+  }
 }
 
 .page-springboard-symptoms, .page-springboard-stress-mood, .page-springboard-wellness {
@@ -940,6 +943,10 @@ label.control-label input:disabled ~ .control__indicator:after {
 
 .landing-title {
   float: left;
+  @media (max-width: @screen-sm-min) {
+    float: none;
+    border-right: none;
+  }
   margin-right: 30px;
   padding-right: 30px;
   border-right: 1px solid #e0e0e0;
@@ -962,6 +969,9 @@ label.control-label input:disabled ~ .control__indicator:after {
   font-weight: 500;
  /* margin: 50px 0px 30px 30px !important; */
   margin: 30px 0px 30px 30px !important;
+  @media (max-width: 1200px) {
+    margin: 30px 0px 30px 0px !important;
+  }
 }
 
 .vdivide {
@@ -1002,10 +1012,6 @@ label.control-label input:disabled ~ .control__indicator:after {
 .getsupport-cancer-caregivers .view-header {
   margin-left: 15px !important;
   margin-right: 15px !important;
-}
-
-h1.getsupport-title {
-  padding-left: 15px;
 }
 
 .pull-right {
@@ -1269,5 +1275,25 @@ h3.support {
   .col-md-12 {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.landing-intro .video-top-intro {
+  @media (min-width: 1200px) {
+    padding-left: 15px;
+    padding-top: 34px;
+  }
+}
+
+.node-type-springboard-landing .vdivide {
+  @media (max-width: @screen-sm-min) {
+  > .col-lg-5 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  > .col-lg-7 {
+    padding-left: 0;
+    padding-right: 0;
+  }
   }
 }

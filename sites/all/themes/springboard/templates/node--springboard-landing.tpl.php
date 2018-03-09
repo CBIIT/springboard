@@ -16,8 +16,8 @@
 
       <?php if($title == 'Video Stories'): ?>
           <div class="col-lg-7">
-              <div class="intro">
-                  <p class="videostories-intro"> Watch cancer survivors share their stories about having cancer and find out how they coped with challenges.</p>
+              <div class="landing-intro">
+                  <p class="intro video-top-intro"> Watch cancer survivors share their stories about having cancer and find out how they coped with challenges.</p>
               </div>
           </div><!-- end column : Video Stories intro -->
       <?php endif; ?>
