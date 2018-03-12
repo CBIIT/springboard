@@ -82,7 +82,7 @@
   <div class = "col-md-4 col-lg-4 sidebar"> <!-- sidebar with selected action cards -->
         <?php print render($form['cards'])?>
         <div class="create-deck-box">
-          <div class="header">
+          <div class="header hidden-xs hidden-sm hidden-md">
             <div class="row">
               <div class="col-xs-4">
                 <div class="circle-graphic">
