@@ -7916,6 +7916,12 @@ h3.support {
     padding-right: 0;
   }
 }
+.node-type-springboard-action-card .view-card-page-link .btn .btn-title {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 body {
   font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
