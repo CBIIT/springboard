@@ -100,9 +100,11 @@
     $('.create-deck-box .circle-graphic .card-number').bind("DOMSubtreeModified",function(){
         if ($(this).text() == 1 || $(this).text() == 0){
             $('.create-deck-box .header > .row > div > h2').text('Card in Your Action Deck');
+            $('.create-deck-box .header > .row > div > h3').text('Card in Your Action Deck');
         }
         else {
             $('.create-deck-box .header > .row > div > h2').text('Cards in Your Action Deck');
+            $('.create-deck-box .header > .row > div > h3').text('Cards in Your Action Deck');
         }
     });
 // Landing Page Card Animation
