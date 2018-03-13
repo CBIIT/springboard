@@ -94,13 +94,17 @@
 	});
 	// Deck number singular
     $('.create-deck-box .circle-graphic .card-number').bind("DOMSubtreeModified",function(){
-        if ($(this).text() == 1 || $(this).text() == 0){
+        var tmp = $(".create-deck-box .circle-graphic .card-number").html();
+        console.log(tmp);
+        if ($(this).text() == 1){
             $('.create-deck-box .header > .row > div > h2').text('Card in Your Action Deck');
             $('.create-deck-box .header > .row > div > h3').text('Card in Your Action Deck');
+            $('.btn-nav-deck .btn-nav-deck-custom').text(' CARD IN DECK').prepend('<span class="card-number">'+tmp+'</span>');
         }
         else {
             $('.create-deck-box .header > .row > div > h2').text('Cards in Your Action Deck');
             $('.create-deck-box .header > .row > div > h3').text('Cards in Your Action Deck');
+            $('.btn-nav-deck .btn-nav-deck-custom').text(' CARDS IN DECK').prepend('<span class="card-number">'+tmp+'</span>');
         }
     });
 // Landing Page Card Animation
