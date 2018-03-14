@@ -10233,7 +10233,7 @@ h3.poll {
 }
 @media (max-width: 992px) {
   .view-display-id-block_12 .create-vision-board a.subpage-link .subpage-link-box {
-    min-height: 250px;
+    min-height: 250px !important;
   }
 }
 @media (max-width: 768px) {
@@ -10252,7 +10252,7 @@ h3.poll {
 }
 @media (max-width: 992px) {
   #boxes-box-take_our_quiz_box .subpage-link-box {
-    min-height: 250px;
+    min-height: 250px !important;
   }
 }
 @media (max-width: 768px) {
