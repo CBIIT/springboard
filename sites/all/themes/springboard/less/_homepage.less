@@ -391,19 +391,42 @@ a.infographic4 p {
 	.decks p.deck-summary {
 		font-size:18px;
 		position:relative;
-		top:0px;
-		left:0px;
+		top:0;
+		left:0;
 		width:auto;	
 	}
 }
 @media (min-width: 992px) {
-	/* .premade-deck-links .btn:focus, */
 	.premade-deck-links .btn:hover,
 	.premade-deck-links .btn.active {
 		-webkit-transform: translateX(20px);
 		transform: translateX(20px);
 	}
 }
+@media (min-width:450px) and (max-width:991px) {
+	a.btn,
+	a.btn.sbc-rss-btn,
+	button.btn {
+		width:55%;
+		min-width:275px;
+		margin-right:auto;
+		margin-left:auto;
+		display:block;
+	}
+	.premade-deck-links {
+		> li {
+			margin-left:auto;
+			margin-right:auto;
+			width:55%;
+			min-width:300px;
+			> * {
+				margin-right:auto;
+				margin-left:auto;
+			}
+		}
+	}
+}
+
 /* ------------------------------ Homepage - Deck Previews ------------------------------ */
 #newdiagnosis-preview,
 #surgery-preview,
