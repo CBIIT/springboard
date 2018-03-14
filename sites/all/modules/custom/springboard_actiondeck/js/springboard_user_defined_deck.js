@@ -6,7 +6,6 @@
         if (deck.length > 0) {
             Drupal.behaviors.springboard_actiondeck_cookies.replace_deck(deck);
         }
-        alert(ClipboardJS.isSupported());
     };
 
     $(document).ready(function(){
