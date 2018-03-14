@@ -99,7 +99,6 @@
 	// Deck number singular
     $('.create-deck-box .circle-graphic .card-number').bind("DOMSubtreeModified",function(){
         var tmp = $(".create-deck-box .circle-graphic .card-number").html();
-        console.log(tmp);
         if ($(this).text() == 1){
             $('.create-deck-box .header > .row > div > h2').text('Card in Your Action Deck');
             $('.create-deck-box .header > .row > div > h3').text('Card in Your Action Deck');
