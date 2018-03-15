@@ -11077,11 +11077,7 @@ ul.card-lists > li a {
   background: transparent url("../images/action-deck-counter.svg") no-repeat;
   background-size: cover;
 }
-.circle-graphic.circle-large {
-  height: 82px;
-  width: 82px;
-}
-.circle-graphic.circle-small {
+.circle-graphic.circle-small .circle-image {
   height: 56px;
   width: 56px;
 }
