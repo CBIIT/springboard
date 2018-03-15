@@ -46,7 +46,9 @@
 	});
 	// fix known issue tap twice for mobile
     $("a.btn").on("touchend", function(event) {
-        window.location.href = $(this).attr("href");
+        if($(this).attr('href') !== undefined) {
+            window.location.href = $(this).attr("href");
+        }
     });
 // More Open and Close
     function moreOverlay() {
