@@ -1,3 +1,7 @@
+Springboard 1.5 2018-03-15
+-----------------------
+Responsive Improvements and Fixes
+
 Springboard 1.5 2018-01-11
 -----------------------
 - SBC-231 Entity module security update
