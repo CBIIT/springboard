@@ -7863,6 +7863,8 @@ h3.support {
 @media (max-width: 992px) {
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 {
     float: initial !important;
+    display: inline-block;
+    margin-left: 23%;
   }
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-4 {
     padding-left: 0;
