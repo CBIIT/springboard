@@ -7863,8 +7863,6 @@ h3.support {
 @media (max-width: 992px) {
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 {
     float: initial !important;
-    display: inline-block;
-    margin-left: 23%;
   }
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 .col-sm-4 {
     padding-left: 0;
@@ -7882,6 +7880,12 @@ h3.support {
   }
   .view-springboard-video-stories.view-display-id-page_1 .view-footer .col-md-9 span {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .view-id-video_stories.view-id-video_stories .view-footer {
+    display: inline-block;
+    margin-left: 23%;
   }
 }
 @media (min-width: 768px) {
