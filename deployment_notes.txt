@@ -1,3 +1,8 @@
+Springboard 1.7 2018-04-25
+-----------------------
+
+Updating drupal code to 7.59 (security update)
+
 Springboard 1.6 2018-03-28
 -----------------------
 
