@@ -35,10 +35,6 @@
           <div class="col-xs-4 col-sm-6">
             <h3>Try This</h3>
           </div> <!-- end column -->
-          <div class="col-xs-8 col-sm-6">
-            <h4 class="helpful">Was this information helpful?</h4>
-			<p class="sr-only">Let us know below if the tips under Try This was helpful.</p>
-          </div> <!-- end column -->
         </div> <!-- end row -->
 
         <?php print render($content['field_try_this']); ?>
