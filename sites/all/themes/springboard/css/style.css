@@ -10941,6 +10941,9 @@ ul.card-lists > li a {
 .checkbox {
   text-align: right;
 }
+.field-type-text-with-summary .checkbox {
+  display: none;
+}
 .card-box .checkbox input[type="checkbox"] {
   right: 6px;
 }
